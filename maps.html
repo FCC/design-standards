@@ -12,6 +12,7 @@
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/mapbox.css" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link href="css/maki-sprite.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -68,7 +69,7 @@
             <section id="sect-mcontrols">
                 <h1>Map Controls</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In viverra consequat consectetur. Nam eleifend cursus sem, vitae pharetra sapien ullamcorper nec.</p>
-                <div class="row">
+                <div class="row pad4">
                   <div class="col-xs-12 col-sm-6 col-md-3">
                     <div class="leaflet-control-zoom leaflet-bar leaflet-control">
                       <a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a>
@@ -94,10 +95,14 @@
                     </ul>
                   </div>
                   <div class="col-xs-12 col-sm-6 col-md-3">
+                    <div class="leaflet-control-mapbox-share leaflet-bar leaflet-control">
+                      <a class="mapbox-share mapbox-icon mapbox-icon-share" href="#"></a>
+                    </div>
                     <div class="download">
                       <a href="#"><i class="fa fa-arrow-circle-o-down"></i></a>
                     </div>
                     <ul class="unstyled mcontrol">
+                      <li>Share</li>
                       <li>Download</li>
                     </ul>
                   </div>
@@ -105,20 +110,1045 @@
                 </div>
             </section>
             <section id="sect-micons">
-              <h1>Icons <small>Subtext for header</small></h1>
+              <h1>Icons</h1>
               
-              <p>Maki is a clean point of interest icon set made for web cartography. It includes 114 different symbols at 3 sizes each for a total of 342 icons and growing.</p>  
+              <p>Maki is a clean point of interest icon set made for web cartography. It includes 114 different symbols at 3 sizes each for a total of 342 icons and growing.</p>
+
+              <div id="maki-set" class="clearfix pad4">
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon circle-stroked"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full circle-stroked"></span>
+                    Circle stroked
+                    <small>circle-stroked</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon circle"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full circle"></span>
+                    Circle solid
+                    <small>circle</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon square-stroked"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full square-stroked"></span>
+                    Square stroked
+                    <small>square-stroked</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon square"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full square"></span>
+                    Square solid
+                    <small>square</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon triangle-stroked"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full triangle-stroked"></span>
+                    Triangle stroked
+                    <small>triangle-stroked</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon triangle"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full triangle"></span>
+                    Triangle solid
+                    <small>triangle</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon star-stroked"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full star-stroked"></span>
+                    Star stroked
+                    <small>star-stroked</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon star"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full star"></span>
+                    Star solid
+                    <small>star</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon cross"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full cross"></span>
+                    Cross
+                    <small>cross</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon marker-stroked"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full marker-stroked"></span>
+                    Marker Stroke
+                    <small>marker-stroked</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon marker"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full marker"></span>
+                    Marker Solid
+                    <small>marker</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon religious-jewish"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full religious-jewish"></span>
+                    Religious Jewish
+                    <small>religious-jewish</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon religious-christian"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full religious-christian"></span>
+                    Religious Christian
+                    <small>religious-christian</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon religious-muslim"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full religious-muslim"></span>
+                    Religious Muslim
+                    <small>religious-muslim</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon cemetery"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full cemetery"></span>
+                    Cemetery
+                    <small>cemetery</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon rocket"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full rocket"></span>
+                    Rocket
+                    <small>rocket</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon airport"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full airport"></span>
+                    Airport
+                    <small>airport</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon heliport"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full heliport"></span>
+                    Heliport
+                    <small>heliport</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon rail"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full rail"></span>
+                    Rail
+                    <small>rail</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon rail-metro"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full rail-metro"></span>
+                    Rail Metro
+                    <small>rail-metro</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon rail-light"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full rail-light"></span>
+                    Rail Light
+                    <small>rail-light</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon bus"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full bus"></span>
+                    Bus
+                    <small>bus</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon fuel"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full fuel"></span>
+                    Fuel
+                    <small>fuel</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon parking"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full parking"></span>
+                    Parking
+                    <small>parking</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon parking-garage"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full parking-garage"></span>
+                    Parking Garage
+                    <small>parking-garage</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon airfield"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full airfield"></span>
+                    Airfield
+                    <small>airfield</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon roadblock"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full roadblock"></span>
+                    Roadblock
+                    <small>roadblock</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon ferry"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full ferry"></span>
+                    Ferry
+                    <small>ferry</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon harbor"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full harbor"></span>
+                    Harbor
+                    <small>harbor</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon bicycle"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full bicycle"></span>
+                    Bicycle
+                    <small>bicycle</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon park"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full park"></span>
+                    Park
+                    <small>park</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon park2"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full park2"></span>
+                    Park 2
+                    <small>park2</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon museum"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full museum"></span>
+                    Museum
+                    <small>museum</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon lodging"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full lodging"></span>
+                    Lodging
+                    <small>lodging</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon monument"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full monument"></span>
+                    Monument
+                    <small>monument</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon zoo"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full zoo"></span>
+                    Zoo
+                    <small>zoo</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon garden"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full garden"></span>
+                    Garden
+                    <small>garden</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon campsite"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full campsite"></span>
+                    Campsite
+                    <small>campsite</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon theatre"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full theatre"></span>
+                    Theatre
+                    <small>theatre</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon art-gallery"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full art-gallery"></span>
+                    Art gallery
+                    <small>art-gallery</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon pitch"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full pitch"></span>
+                    Pitch
+                    <small>pitch</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon soccer"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full soccer"></span>
+                    Soccer
+                    <small>soccer</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon america-football"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full america-football"></span>
+                    American Football
+                    <small>america-football</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon tennis"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full tennis"></span>
+                    Tennis
+                    <small>tennis</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon basketball"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full basketball"></span>
+                    Basketball
+                    <small>basketball</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon baseball"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full baseball"></span>
+                    Baseball
+                    <small>baseball</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon golf"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full golf"></span>
+                    Golf
+                    <small>golf</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon swimming"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full swimming"></span>
+                    Swimming
+                    <small>swimming</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon cricket"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full cricket"></span>
+                    Cricket
+                    <small>cricket</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon skiing"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full skiing"></span>
+                    Skiing
+                    <small>skiing</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon school"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full school"></span>
+                    School
+                    <small>school</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon college"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full college"></span>
+                    College
+                    <small>college</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon library"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full library"></span>
+                    Library
+                    <small>library</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon post"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full post"></span>
+                    Post
+                    <small>post</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon fire-station"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full fire-station"></span>
+                    Fire station
+                    <small>fire-station</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon town-hall"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full town-hall"></span>
+                    Town hall
+                    <small>town-hall</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon police"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full police"></span>
+                    Police
+                    <small>police</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon prison"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full prison"></span>
+                    Prison
+                    <small>prison</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon embassy"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full embassy"></span>
+                    Embassy
+                    <small>embassy</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon beer"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full beer"></span>
+                    Beer
+                    <small>beer</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon restaurant"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full restaurant"></span>
+                    Restaurant
+                    <small>restaurant</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon cafe"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full cafe"></span>
+                    Cafe
+                    <small>cafe</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon shop"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full shop"></span>
+                    Shop
+                    <small>shop</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon fast-food"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full fast-food"></span>
+                    Fast Food
+                    <small>fast-food</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon bar"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full bar"></span>
+                    Bar
+                    <small>bar</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon bank"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full bank"></span>
+                    Bank
+                    <small>bank</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon grocery"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full grocery"></span>
+                    Grocery
+                    <small>grocery</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon cinema"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full cinema"></span>
+                    Cinema
+                    <small>cinema</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon pharmacy"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full pharmacy"></span>
+                    Pharmacy
+                    <small>pharmacy</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon hospital"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full hospital"></span>
+                    Hospital
+                    <small>hospital</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon danger"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full danger"></span>
+                    Danger
+                    <small>danger</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon industrial"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full industrial"></span>
+                    Industrial
+                    <small>industrial</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon warehouse"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full warehouse"></span>
+                    Warehouse
+                    <small>warehouse</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon commercial"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full commercial"></span>
+                    Commercial
+                    <small>commercial</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon building"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full building"></span>
+                    Building
+                    <small>building</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon place-of-worship"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full place-of-worship"></span>
+                    Place of worship
+                    <small>place-of-worship</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon alcohol-shop"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full alcohol-shop"></span>
+                    Alcohol shop
+                    <small>alcohol-shop</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon logging"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full logging"></span>
+                    Logging
+                    <small>logging</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon oil-well"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full oil-well"></span>
+                    Oil well
+                    <small>oil-well</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon slaughterhouse"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full slaughterhouse"></span>
+                    Slaughterhouse
+                    <small>slaughterhouse</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon dam"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full dam"></span>
+                    Dam
+                    <small>dam</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon water"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full water"></span>
+                    Water
+                    <small>water</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon wetland"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full wetland"></span>
+                    Wetland
+                    <small>wetland</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon disability"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full disability"></span>
+                    Disability
+                    <small>disability</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon telephone"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full telephone"></span>
+                    Telephone
+                    <small>telephone</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon emergency-telephone"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full emergency-telephone"></span>
+                    Emergency Telephone
+                    <small>emergency-telephone</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon toilets"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full toilets"></span>
+                    Toilets
+                    <small>toilets</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon waste-basket"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full waste-basket"></span>
+                    Waste Basket
+                    <small>waste-basket</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon music"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full music"></span>
+                    Music
+                    <small>music</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon land-use"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full land-use"></span>
+                    Land Use
+                    <small>land-use</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon city"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full city"></span>
+                    City
+                    <small>city</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon town"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full town"></span>
+                    Town
+                    <small>town</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon village"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full village"></span>
+                    Village
+                    <small>village</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon farm"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full farm"></span>
+                    Farm
+                    <small>farm</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon bakery"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full bakery"></span>
+                    Bakery
+                    <small>bakery</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon dog-park"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full dog-park"></span>
+                    Dog Park
+                    <small>dog-park</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon lighthouse"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full lighthouse"></span>
+                    Lighthouse
+                    <small>lighthouse</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon clothing-store"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full clothing-store"></span>
+                    Clothing Store
+                    <small>clothing-store</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon polling-place"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full polling-place"></span>
+                    Polling Place
+                    <small>polling-place</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon playground"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full playground"></span>
+                    Playground
+                    <small>playground</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon entrance"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full entrance"></span>
+                    Entrance
+                    <small>entrance</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon heart"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full heart"></span>
+                    Heart
+                    <small>heart</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon camera"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full camera"></span>
+                    Camera
+                    <small>camera</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon laundry"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full laundry"></span>
+                    Laundry
+                    <small>laundry</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon car"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full car"></span>
+                    Car
+                    <small>car</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon suitcase"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full suitcase"></span>
+                    Suitcase
+                    <small>suitcase</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon hairdresser"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full hairdresser"></span>
+                    Hairdresser
+                    <small>hairdresser</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon chemist"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full chemist"></span>
+                    Chemist
+                    <small>chemist</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon mobilephone"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full mobilephone"></span>
+                    Mobile phone
+                    <small>mobilephone</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon scooter"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full scooter"></span>
+                    Scooter
+                    <small>scooter</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon gift"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full gift"></span>
+                    Gift
+                    <small>gift</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon ice-cream"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full ice-cream"></span>
+                    Ice cream
+                    <small>ice-cream</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon dentist"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full dentist"></span>
+                    Dentist
+                    <small>dentist</small>
+                  </li>
+                </ul>
+              
+                <ul class="icon-set pad2 clearfix">
+                  <li class="maki-icon aerialway"> icon</li>
+                  <li class="title-box">
+                    <span class="maki-icon full aerialway"></span>
+                    Aerialway
+                    <small>aerialway</small>
+                  </li>
+                </ul>
+              </div>  
             </section>
             <section id="sect-moverlays">
               <div class="row">
                 <h1>Map overlays</h1>
-                <div class="col-md-2"><div class="circle1 color1"></div><div><p>hex: #13428b; </p></div></div>
-                <div class="col-md-2"><div class="circle1 color1"></div><div><p>hex: #13428b; </p></div></div>
-                <div class="col-md-2"><div class="circle1 color1"></div><div><p>hex: #13428b; </p></div></div>
               </div>
             </section>
             <section id="sect-mshading">
-              <h1>Map shading <small>Visualize data. Uncover surprising patterns.</small></h1>
+              <h1>Map shading</h1>
               
             </section>
           </div>
