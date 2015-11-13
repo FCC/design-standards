@@ -170,8 +170,15 @@
         } 
       });
       $('.nav-menu').affix({
-        offset: 100
+        offset: {
+          top: 100,
+          bottom: function () {
+            console.log(this.bottom = $('.footer').outerHeight(true))
+            return (this.bottom = $('.footer').outerHeight(true))
+          }
+        }
       })
+
     });
     </script>
   </body>
