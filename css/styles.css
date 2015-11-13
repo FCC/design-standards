@@ -7,7 +7,7 @@ body { font-family:"Open Sans", "Helvetica", "Arial", sans-serif; padding-top: 1
 h1, h2, h3, h4, h5, h6 {font-weight: 300;}
 h1 small { display:block; line-height: 40px; font-weight:300;}
 section { border-bottom: 1px solid #eee; padding-bottom:20px;}
-aside section,.nav-menu li:last-child{border-bottom:none;}
+aside section,.nav-menu li:last-child, .nav-menu{border-bottom:none;}
 
 .navbar {margin-bottom: 0; border:none; border-radius: 0;}
 /*.nav-menu { margin-top:50px;}*/
@@ -16,6 +16,8 @@ aside section,.nav-menu li:last-child{border-bottom:none;}
 
 .nav-menu li { border-bottom: 1px solid #eee;}
 .nav-menu h3 { font-weight: 700;}
+.nav { border-top: 5px solid #ffd34d;}
+.navbar-nav {border-top: none;} 
 
 .row { margin:0; }
 
@@ -36,7 +38,7 @@ aside section,.nav-menu li:last-child{border-bottom:none;}
 .btn-geo-current { top: 0; z-index: 9; }
 .btn-geo-nation { top: 29px; z-index: 9; }
 .btn-geo-legend { top: 60px; z-index: 9; }
-.download {position: absolute; z-index: 999; top: 29px;}
+.download {position: absolute; z-index: 8; top: 29px;}
 .download a {content: ''; display: inline-block; /*width: 26px; height: 16px;*/ vertical-align: middle; background:#fff; border: 1px solid #999; text-align: center; color: #404040; border-radius: 3px; padding:2px 7px;}
 
 .title-box{position:absolute;background:#FFF;left:-42px;right:0;bottom:60px;width:150px;text-align:center;white-space:nowrap;display:none;border:1px solid #ddd;-webkit-border-radius:2px;-moz-border-radius:2px;border-radius:2px;margin:auto;padding:10px;}
@@ -166,7 +168,7 @@ ul.icon-set {float: left;position: relative;}
     body {padding-top: 400px;}
     .affix-top, .affix, .affix-bottom {
       position: fixed;
-      top: 115px;
+      top: 90px;
       left: 0;
       background: #eee;
       z-index: 10;
