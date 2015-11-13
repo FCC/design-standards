@@ -19,7 +19,39 @@
     <![endif]-->
   </head>
   <body>
-    <!--#include virtual="inc/header.shtm" -->
+    <header class="navbar navbar-fixed-top">
+  <nav role="navigation" class="navbar navbar-default">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar header">
+          <div class="container">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <button type="button" data-target="#navigation" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="https://prototype.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
+              <img src="img/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
+            </a>  
+            <h1>Design Standards</h1>
+            </div>
+            </div>
+        </div>
+        <!-- Collection of nav links and other content for toggling -->
+        <div id="navigation" class="collapse navbar-collapse">
+        <div class="container">
+            <ul class="nav navbar-nav">
+                <li><a href="index.html" class="active">Overview</a></li>
+                <li><a href="styles.html">Styles</a></li>
+                <li><a href="layouts.html">Layouts</a></li>
+                <li><a href="maps.html">Maps</a></li>
+                <li><a href="forms.html">Forms</a></li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+</header>
 
     <div class="container">
       <div class="row">
@@ -47,7 +79,77 @@
         </div>  
       </div>  
     </div>
-    <!--#include virtual="inc/footer.shtm" -->
+    <footer>
+
+      <div class="nav-footer">
+      <div class="styleguide">These pages are for design standards for GIS maps.</div>
+      <div class="footergriditems">
+        <div class="grid-item">
+          <address>
+            Federal Communications Commission<br />
+            445 12th Street SW, Washington, DC 20554
+          </address>
+
+          <ul class="footermenu footermenu__phone">
+            <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+            <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+            <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+            <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+            <a class="contactus" href="/about/contact">Contact Us</a></li>
+          </ul>
+
+          <ul class="socialmediaicons">
+          <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+          <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+          <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+          <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+          </ul>
+
+        </div>
+
+        <div class="grid-item">
+        <ul class="footermenu footermenu__categories">
+          <li><a href="#">Website Policies &amp; Notices</a></li>
+          <li><a href="#">FOIA</a></li>
+          <li><a href="#">No Fear Act Data</a></li>
+          <li><a href="#">FCC Digital Strategy</a></li>
+          <li><a href="#">Open Government Directive</a></li>
+          <li><a href="#">Plain Writing Act</a></li>
+          <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+          <li><a href="#">Disability Rights</a></li>
+        </ul>
+        </div>
+        <div class="grid-item">
+        <ul class="footermenu footermenu__categories">
+          <li>CATEGORIES</li>
+          <li><a href="/about/overview">About the FCC</a></li>
+          <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+          <li><a href="/licensing">Licensing &amp; Databases</a></li>
+          <li><a href="/reports-research">Reports &amp; Research</a></li>
+          <li><a href="/news-events">News &amp; Events</a></li>
+          <li><a href="/consumers">For Consumers</a></li>
+        </ul>
+        </div>
+        <div class="grid-item">
+        <ul class="footermenu footermenu__bureaus">
+          <li>BUREAUS &amp; OFFICES</li>
+          <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+          <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+          <li><a href="#">Inspector General</a></li>
+          <li><a href="/international#block-menu-block-4">International</a></li>
+          <li><a href="/media#block-menu-block-4">Media</a></li>
+          <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+          <li><a href="#">Wireless</a></li>
+          <li><a href="#">Wireline</a></li>
+          <li><a href="#">Offices</a></li>
+        </ul>
+        </div>
+      </div>
+      <div class="fcc-seal">
+        Federal Communications Commission
+      </div>
+    </div>
+    </footer>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
