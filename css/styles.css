@@ -30,6 +30,8 @@ aside section,.nav-menu li:last-child, .nav-menu{border-bottom:none;}
 .bigtext { font-size: 140px; padding:0; margin:0; line-height: 120px;}
 .circle1 { width: 100px; height: 100px; -moz-border-radius: 50px; -webkit-border-radius: 50px; border-radius: 50px; margin-right: 15px;}
 .color1 {background: #13428b; }
+.color2 {background: #2c75d6;}
+.color3 {background: #ffd34d;}
 
 .mcontrol li { padding:4px 0 4px 35px;}
 .layers {margin-top: 3px}
