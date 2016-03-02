@@ -1,0 +1,291 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Popovers - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/site/css/docs.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<header class="pl-header navbar navbar-fixed-top navbar-inverse">
+    <a href="https://www.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
+        <img src="../images/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
+    </a>
+    <h1>Design Standards</h1>
+</header>
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/site/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/grid.html"> Grid </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/icons.html"> Icons </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/site/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/site/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/menus.html"> Menus </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/metadata.html"> Metadata </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/pagination.html"> Pagination </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/popovers.html"> Popovers </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tabs.html"> Tabs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tags.html"> Tags </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tooltips.html"> Tooltips </a>
+    </li>
+    <!-- <li class="category">patterns</li>
+    <li>
+        <a href="patterns/dataFormats.html"> Data formats </a>
+    </li>
+    <li>
+        <a href="patterns/fileUpload.html"> File upload </a>
+    </li>
+    <li>
+        <a href="patterns/filters.html"> Filters </a>
+    </li>
+    <li>
+        <a href="patterns/help.html"> Help </a>
+    </li>
+    <li>
+        <a href="patterns/search.html"> Search </a>
+    </li>
+    <li>
+        <a href="patterns/settings.html"> Settings </a>
+    </li>
+    <li>
+        <a href="patterns/tours.html"> Tours </a>
+    </li>
+    <li>
+        <a href="patterns/wizards.html"> Wizards </a>
+    </li> -->    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+    <div class="pl-pattern">
+        <h3>Popovers</h3>
+        <h4 id="purpose">Purpose</h4>
+        <p>Users need to be able to access additional related information or functionality without a change in context.</p>
+        <h4 id="description">Description</h4>
+        <ul>
+            <li>Popovers are a cross between a dialog and a tooltip</li>
+            <li>Popovers are smaller contextual dialogs that are generally triggered by a click</li>
+            <li>They may or may not provide additional interactive controls</li>
+            <li>Popovers display information or functionality related to a particular item or control</li>
+            <li>Popovers can be dismissed via a close icon, clicking the control that opened it, or by clicking anywhere outside of the popover</li>
+            <li>The amount of content in a popover should be relatively short, but they can be scrollable if necessary</li>
+            <li>Popovers should be positioned based on the screen space available,</li>
+        </ul>
+        <p>Use a popover instead of a tooltip or dialog when:</p>
+        <ul>
+            <li>You want a contextual relationship that a dialog can’t provide</li>
+            <li>You need to provide relatively simple interactions</li>
+            <li>You have more text/content than can comfortably fit in a tooltip</li>
+        </ul>
+        <div class="pl-preview">
+            <div style="position: relative; display: block; margin-left: 0;" class="popover left">
+                <div class="arrow"></div>
+                <h3 class="popover-title">Add note</h3>
+                <div class="popover-content">
+                    <textarea rows="3" id="" name="" class="form-control" placeholder="Enter note here"></textarea>
+                </div>
+                <div class="popover-toolbar">
+                    <button class="btn btn-hover btn-icon-only"><i class="icon icon-image"></i><span class="sr-only">Add image</span></button>
+                    <button class="btn btn-hover btn-icon-only"><i class="icon icon-chain"></i><span class="sr-only">Add link</span></button>
+                    <button class="btn btn-primary pull-right">Add</button>
+                </div>
+            </div>
+            <div style="position: relative; display: block; margin-left: 0; margin-top: 20px;" class="popover right">
+                <div class="arrow"></div>
+                <div class="popover-content">
+                    <p>Simple search: Type a term in the search field and select the search button.</p>
+                    <p>Advanced search: Advanced boolean operators may be used. The default operator when searching multiple terms is “AND”.</p>
+                    <a href="">Learn more</a>
+                </div>
+            </div>
+            <hr>
+            <button data-content="&lt;p&gt;Simple search: Type a term in the search field and select the search button.&lt;/p&gt;
+    &lt;p&gt;Advanced  search: Advanced boolean operators may be used. The default operator when searching multiple terms is “AND”.&lt;/p&gt; &lt;a href=''&gt;Learn more&lt;/a&gt;" data-trigger="focus" data-container="body" data-toggle="popover" data-html="true" class="btn btn-default">Show popover</button>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"popover left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"arrow"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;h3</span> <span class="na">class=</span><span class="s">"popover-title"</span><span class="nt">&gt;</span>Add note<span class="nt">&lt;/h3&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"popover-content"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;textarea</span> <span class="na">placeholder=</span><span class="s">"Enter note here"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">name=</span><span class="s">""</span> <span class="na">id=</span><span class="s">""</span> <span class="na">rows=</span><span class="s">"3"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"popover-toolbar"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-hover btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-image"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Add image<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-hover btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-chain"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Add link<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-primary pull-right"</span><span class="nt">&gt;</span>Add<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+    </div>
+</section>
+
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="../js/vendor/vendor.js"></script>
+<script src="../js/vendor/plugins.js"></script>
+<script src="../js/main.js"></script>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Progress and Loadings - FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="progress-bars">Progress bars</h3>
+                <p>Progress bars should be used when there is a determinate amount of time/progress related to a process (e.g., uploading a file). An indeterminate progress can be used in conjunction with a determinate progress bar.</p>
+                <h4 id="determinate-progress-bar">Determinate progress bar</h4>
+                <div class="pl-preview">
+                    <div style="max-width: 200px;">
+                        <div class="progress-label">
+                            Importing...
+                            <span class="pull-right text-muted" id="exampleProgressBarValue">60%</span>
+                        </div>
+                        <div class="progress">
+                            <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar" id="exampleProgressBar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-labels"</span><span class="nt">&gt;</span>
+    Importing...
+    <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"exampleProgressBarValue"</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>60%<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"exampleProgressBar"</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"60"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 60%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="indeterminate-progress-bar">Indeterminate progress bar</h4>
+                <div class="pl-preview">
+                    <div style="max-width: 200px;">
+                        <div class="progress-label">
+                            Finalizing...
+                            <span class="pull-right text-muted" id="exampleProgressBarValue">100%</span>
+                        </div>
+                        <div class="progress">
+                            <div style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" class="progress-bar progress-bar-striped active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-label"</span><span class="nt">&gt;</span>
+    Finalizing...
+    <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"exampleProgressBarValue"</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>100%<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar progress-bar-striped active"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"100"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 100%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="load-spinners">Load spinners</h3>
+                <p>Load spinners should be used when there is an indeterminate amount of time/progress related to a process (e.g., downloading data).</p>
+                <h4 id="loading-button-with-text">Loading button with text</h4>
+                <p>For buttons with text, the load spinner can appear where the icon would appear. The text may change to reflect the current state.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default">Load more</button>
+                    <button disabled="" class="btn btn-default"><i class="loading-icon"></i> Loading...</button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Load more<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Loading...<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-button-with-icon-only">Loading button with icon only</h4>
+                <p>If a simple action is initiated from an icon-only button, the icon can be replaced with the load spinner until the action is complete.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default btn-icon-only"><i class="icon icon-star-o"></i></button>
+                    <button disabled="" class="btn btn-default btn-icon-only loading-background"><i class="icon icon-star-o" style="visibility: hidden;"></i></button>
+                    <button class="btn btn-default btn-icon-only"><i class="icon icon-star"></i></button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-star-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only loading-background"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">style=</span><span class="s">"visibility: hidden;"</span> <span class="na">class=</span><span class="s">"icon icon-star-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-overlay">Loading overlay</h4>
+                <p>In some situations during the process of loading, it may be desired to overlay and block functionality until loading is complete.</p>
+                <div class="pl-preview">
+                    <div style="position: relative; padding: 40px; background: #fff;">
+                        <table style="opacity: .5;" class="table table-inverse">
+                            <thead>
+                                <tr>
+                                    <th>Project name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Invoice</td>
+                                    <td><span>Add invoice confirmation</span></td>
+                                    <td><span>$4,500</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Templates</td>
+                                    <td><span>Refactor templates to use the new templating library</span></td>
+                                    <td><span>$9,000</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Payments</td>
+                                    <td><span>Process payments using third party api</span></td>
+                                    <td><span>$5,400</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Account Management</td>
+                                    <td><span>Improve account management workflow</span></td>
+                                    <td><span>$6,000</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="loading-overlay">
+                            <i class="loading-icon"></i>
+                            <div>Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading-overlay"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;&lt;div&gt;</span>Loading...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-standalone">Loading standalone</h4>
+                <p>When loading data for the first time or loading additional data, use a flat load spinner with a label.</p>
+                <div class="pl-preview">
+                    <div class="loading">
+                        <i class="loading-icon"></i>
+                    </div>
+                    <div class="text-center text-muted">Loading cases...</div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center text-muted"</span><span class="nt">&gt;</span>Loading cases...<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>

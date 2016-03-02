@@ -1,0 +1,10 @@
+{
+  "name": "FCC-GISP-Design-Standards",
+  "private": true,
+  "dependencies": {
+    "jquery": "~1.11.0",
+    "font-awesome": "~4.2.0",
+    "bootstrap": "~3.3.6",
+    "nouislider": "~7.0.10"
+  }
+}
