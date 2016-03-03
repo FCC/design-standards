@@ -21,12 +21,37 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header class="pl-header navbar navbar-fixed-top navbar-inverse">
+<!-- <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+    <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
     <a href="https://www.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
         <img src="../images/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
     </a>
     <h1>Design Standards</h1>
+</header> -->
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <div class="text-prefix">GISP</div>
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
 </header>
+
     <div class="pl-container">
         <nav class="docs-sidebar">
             <ul class="nav nav-stacked">
@@ -151,6 +176,7 @@
                 </ul>
                 <p>Depending on the complexity of the navigational hierarchy and the type of page or application, it may make sense for the breadcrumb to represent only part of the hierarchy while sub tabs/trees/navigation represent the remaining hierarchy. In that case, you may want to make the far right element clickable.</p>
                 <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
                     <ol class="breadcrumb">
                         <li class="active">Home</li>
                     </ol>
@@ -163,13 +189,15 @@
                         <li><a href="#">Library</a></li>
                         <li class="active">Data</li>
                     </ol>
-                </div>
-                <div class="highlight">
-                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                    <div class="docs-codeblock">
+                        <div class="highlight">
+<pre><code data-lang="html" class="language-html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span cla{ss="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
   <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Data<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Data<span c}lass="nt">&lt;/li&gt;</span>
 <span class="nt">&lt;/ol&gt;</span></code></pre>
+                                </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -255,6 +283,10 @@
 </footer>
 
     </div>
+    <script src="../js/vendor/vendor.js"></script>
+<script src="../js/vendor/plugins.js"></script>
+<script src="../js/docs.js"></script>
+
 </body>
 
 </html>

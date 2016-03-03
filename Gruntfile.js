@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['front/scripts/{,*/}*.js', 'docs/**/*.html'],
-                tasks: ['jshint', 'ssi', 'concat:mainjs', 'concat:appDemojs']
+                tasks: ['jshint', 'ssi', 'concat:mainjs']
             },
             less: {
                 files: ['bootstrap-gisp/less/**/*.less', 'front/styles/**/*.less'],
@@ -188,14 +188,14 @@ module.exports = function(grunt) {
             },
             // main js
             mainjs: {
-                src: ['front/scripts/main.js'],
-                dest: '<%= paths.assets %>/js/main.js'
+                src: ['front/scripts/docs.js'],
+                dest: '<%= paths.assets %>/js/docs.js'
             },
             // appDemo js
-            appDemojs: {
-                src: ['front/scripts/appDemo.js'],
-                dest: '<%= paths.assets %>/scripts/appDemo.js'
-            },
+            // appDemojs: {
+            //     src: ['front/scripts/appDemo.js'],
+            //     dest: '<%= paths.assets %>/scripts/appDemo.js'
+            // },
             // vendor css
             vendorcss: {
                 src: [
@@ -237,12 +237,12 @@ module.exports = function(grunt) {
                     cwd: 'front/vendor/',
                     src: ['html5shiv/*.*', 'matchMedia/*.*'],
                     dest: '<%= paths.assets %>/vendor/'
-                }, { // icon sprite to assets folder
+                }, { // fonts to fonts folder
                     dot: true,
                     expand: true,
-                    cwd: 'bootstrap-gisp/images/icons',
-                    src: '*.svg',
-                    dest: '<%= paths.assets %>/images/icons'
+                    cwd: 'bower_components/font-awesome/fonts',
+                    src: '*.*',
+                    dest: '<%= paths.assets %>/fonts'
                 }, { // favicon sprite to assets folder
                     dot: true,
                     expand: true,

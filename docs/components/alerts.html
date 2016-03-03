@@ -34,16 +34,11 @@
                     <li><strong>Danger</strong> alerts should be used when the system has failed to perform an action, or when the user has made an error.</li>
                 </ul>
                 <div class="pl-preview">
-                    <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
+                <h5 class="docs-hd-example">Example &amp; Code</h5>
                     <div style="max-width: 450px;">
                         <div class="alert alert-info">
                             <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                             <i class="alert-icon alert-icon-info"></i> Press the <strong>'A'</strong> key to automatically assign a case.
-                        </div>
-                        <div class="alert alert-success">
-                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                            <button class="btn btn-sm btn-link alert-link pull-right">Undo</button>
-                            <i class="alert-icon alert-icon-success"></i> Case assigned to <strong>Jerry</strong>.
                         </div>
                         <div class="alert alert-success">
                             <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
@@ -54,15 +49,12 @@
                             <i class="alert-icon-warning alert-icon"></i> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
                         </div>
                         <div class="alert alert-danger">
-                            <button class="btn btn-sm btn-link alert-link pull-right">Retry</button>
-                            <i class="alert-icon-danger alert-icon"></i> There was a network error assigning case <strong>90/934,382</strong>.
-                        </div>
-                        <div class="alert alert-danger">
                             <i class="alert-icon-danger alert-icon"></i> Please fix the 3 errors.
                         </div>
                     </div>
-                </div>
-                <div class="highlight">
+                
+                    <br>
+                    <div class="highlight">
                     <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"alert alert-info"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"alert-icon-info alert-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Press the <span class="nt">&lt;strong&gt;</span>'A'<span class="nt">&lt;/strong&gt;</span> key to automatically assign a case.
@@ -88,91 +80,9 @@
     <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"alert-icon-danger alert-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Please fix the 3 errors.
 <span class="nt">&lt;/div&gt;</span></code></pre>
                 </div>
-            </div>
-            <div class="pl-pattern">
-                <h3 id="system-notifications">System notifications</h3>
-                <h4 id="purpose-1">Purpose</h4>
-                <p>Users need to be aware of important information related to the system.</p>
-                <h4 id="description-1">Description</h4>
-                <ul>
-                    <li>System notifications appear in in the top right corner of the screen</li>
-                    <li>They are usually triggered by events <em>unrelated</em> to the user’s interactions</li>
-                    <li>They can be closable and can have other action buttons or links.</li>
-                    <li>Notifications with low importance (info or success) can close automatically after 5 seconds (if desired)</li>
-                    <li>Notifications with high importance (warning or danger) should not close automatically, unless the situation has been resolved in some other way</li>
-                </ul>
-                <p><strong>Types:</strong></p>
-                <ul>
-                    <li><strong>Info</strong> notifications can be used for general messages that aren’t particularly critical</li>
-                    <li><strong>Success</strong> notifications can be used for positive messages that don’t have a context to associate it with</li>
-                    <li><strong>Warning</strong> notifications can be used for messages that likely require attention</li>
-                    <li><strong>Danger</strong> notifications can be used for critical messages that require immediate attention</li>
-                </ul>
-                <div class="pl-preview">
-                    <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
-                    <div class="toast-list" style="max-width: 400px;">
-                        <div class="toast toast-success">
-                            <div class="toast-content">
-                                <button class="close">
-                                    <span>×</span>
-                                </button>
-                                <span>Message sent to Jerry.</span>
-                            </div>
-                        </div>
-                        <div class="toast toast-info">
-                            <div class="toast-content">
-                                <button class="close">
-                                    <span>×</span>
-                                </button>
-                                <span>Jerry added a comment to one of your cases (90/098,881).</span>
-                            </div>
-                            <div class="toast-actions">
-                                <button type="button" class="btn btn-link">View comment</button>
-                            </div>
-                        </div>
-                        <div class="toast toast-warning">
-                            <div class="toast-content">
-                                <button type="button" class="close">
-                                    <span>×</span>
-                                </button>
-                                <span>Case 90/842,381 is due tomorrow.</span>
-                            </div>
-                            <div class="toast-actions">
-                                <button type="button" class="btn btn-link">View case</button>
-                                <button type="button" class="btn btn-link">Snooze <span class="caret"></span></button>
-                            </div>
-                        </div>
-                        <div class="toast toast-danger">
-                            <div class="toast-content">
-                                <button type="button" class="close">
-                                    <span>×</span>
-                                </button>
-                                <span>Connection has been lost. Retrying in 30 seconds.</span>
-                            </div>
-                            <div class="toast-actions">
-                                <button type="button" class="btn btn-link">Retry now</button>
-                            </div>
-                        </div>
                     </div>
-                    <button type="button" data-toast-target="#example-toasts" class="btn btn-default show-toasts">Toggle notifications</button>
                 </div>
-                <div class="highlight">
-                    <pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-list"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast toast-warning"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-content"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;span&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;</span>
-            <span class="nt">&lt;/button&gt;</span>
-            <span class="nt">&lt;span&gt;</span>Case 90/842,381 is due tomorrow.<span class="nt">&lt;/span&gt;</span>
-        <span class="nt">&lt;/div&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"toast-actions"</span><span class="nt">&gt;</span>
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>View case<span class="nt">&lt;/button&gt;</span> 
-            <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Snooze <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span> 
-        <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre>
-                </div>
-            </div>
+                            
         </section>
         <!--#include file="_footer.shtml" -->
     </div>

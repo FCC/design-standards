@@ -28,12 +28,37 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header class="pl-header navbar navbar-fixed-top navbar-inverse">
+<!-- <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+    <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
     <a href="https://www.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
         <img src="../images/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
     </a>
     <h1>Design Standards</h1>
+</header> -->
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <div class="text-prefix">GISP</div>
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
 </header>
+
     <div class="pl-container">
         <nav class="docs-sidebar">
             <ul class="nav nav-stacked">
@@ -147,89 +172,91 @@
             <div class="pl-pattern">
                 <h3>Anatomy of a map</h3>
                 <p>At a minimum, a map should have the following features:</p>
-                <table class="docs-table-mapAnatomy table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>Icon</th>
-                            <th>Feature</th>
-                            <th>Position</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <div class="clearfix" style="display: inline-block">
-                                    <div class="leaflet-control-zoom leaflet-bar leaflet-control">
-                                        <a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a>
-                                        <a class="leaflet-control-zoom-out" href="#" title="Zoom out">-</a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <b>Zoom</b>
-                                <p>description</p>
-                            </td>
-                            <td>top left</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="clearfix" style="display: inline-block">
-                                    <div class="leaflet-control-zoom leaflet-bar leaflet-control layers">
-                                        <a class="leaflet-control-layers-toggle" href="#" title="Layers"></a>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <b>Layers</b>
-                                <p>Maps should have with 3 base layers:</p>
-                                <ul>
-                                    <li>street (default)</li>
-                                    <li>satellite</li>
-                                    <li>terrain</li>
-                                </ul>
-                            </td>
-                            <td>top left next to zoom</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <button type="button" class="leaflet-control-layers btn-legend">
-                                    <span>
-                                              <span class="glyphicon glyphicon-th-list"></span>
-                                    <span class="sr-only">Map Legend</span>
-                                    </span>
-                                </button>
-                            </td>
-                            <td>
-                                <b>Legend</b>
-                                <p>description</p>
-                            </td>
-                            <td>bottom left corner above scale</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="clearfix" style="display: inline-block">
-                                    <div class="leaflet-control-scale leaflet-control">
-                                        <div class="leaflet-control-scale-line" style="width: 68px;">10 km</div>
-                                        <div class="leaflet-control-scale-line" style="width: 52px;">5 mi</div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td>
-                                <b>Scale</b>
-                                <p>description</p>
-                            </td>
-                            <td>bottom left corner</td>
-                        </tr>
-                        <tr>
-                            <td></<td>
+                <div class="table-responsive">
+                    <table class="docs-table-mapAnatomy table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Icon</th>
+                                <th>Feature</th>
+                                <th>Position</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
                                 <td>
-                                    <b>Attribution</b>
+                                    <div class="clearfix" style="display: inline-block">
+                                        <div class="leaflet-control-zoom leaflet-bar leaflet-control">
+                                            <a class="leaflet-control-zoom-in" href="#" title="Zoom in">+</a>
+                                            <a class="leaflet-control-zoom-out" href="#" title="Zoom out">-</a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <b>Zoom</b>
                                     <p>description</p>
                                 </td>
-                                <td>bottom right corner</td>
-                        </tr>
-                    </tbody>
-                </table>
+                                <td>top left</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="clearfix" style="display: inline-block">
+                                        <div class="leaflet-control-zoom leaflet-bar leaflet-control layers">
+                                            <a class="leaflet-control-layers-toggle" href="#" title="Layers"></a>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <b>Layers</b>
+                                    <p>Maps should have with 3 base layers:</p>
+                                    <ul>
+                                        <li>street (default)</li>
+                                        <li>satellite</li>
+                                        <li>terrain</li>
+                                    </ul>
+                                </td>
+                                <td>top left next to zoom</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="button" class="leaflet-control-layers btn-legend">
+                                        <span>
+                                                              <span class="icon icon-list"></span>
+                                        <span class="sr-only">Map Legend</span>
+                                        </span>
+                                    </button>
+                                </td>
+                                <td>
+                                    <b>Legend</b>
+                                    <p>description</p>
+                                </td>
+                                <td>bottom left corner above scale</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="clearfix" style="display: inline-block">
+                                        <div class="leaflet-control-scale leaflet-control">
+                                            <div class="leaflet-control-scale-line" style="width: 68px;">10 km</div>
+                                            <div class="leaflet-control-scale-line" style="width: 52px;">5 mi</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <b>Scale</b>
+                                    <p>description</p>
+                                </td>
+                                <td>bottom left corner</td>
+                            </tr>
+                            <tr>
+                                <td></<td>
+                                    <td>
+                                        <b>Attribution</b>
+                                        <p>description</p>
+                                    </td>
+                                    <td>bottom right corner</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <div class="pl-preview">
                     <h5 class="docs-hd-example">Example &amp; Code</h5>
                     <div id="map-container"></div>
@@ -242,7 +269,7 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
                                 <div class="highlight">
-<pre class="language-markup">
+                                    <pre class="language-markup">
 <code>&lt;div id="map-container"&gt;&lt;/div&gt;</code>
 </pre>
                                 </div>
@@ -378,13 +405,13 @@ L.control.scale({
     </div>
     <script src="../js/vendor/vendor.js"></script>
 <script src="../js/vendor/plugins.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/docs.js"></script>
 
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-        var map = L.mapbox.map('map-container', 'mapbox.streets')
-                .setView([40, -74.50], 9);*/
+            var map = L.mapbox.map('map-container', 'mapbox.streets')
+                    .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {

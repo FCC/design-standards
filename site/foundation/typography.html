@@ -21,12 +21,37 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header class="pl-header navbar navbar-fixed-top navbar-inverse">
+<!-- <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+    <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
     <a href="https://www.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
         <img src="../images/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
     </a>
     <h1>Design Standards</h1>
+</header> -->
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <div class="text-prefix">GISP</div>
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
 </header>
+
     <div class="pl-container">
         <nav class="docs-sidebar">
             <ul class="nav nav-stacked">
@@ -137,124 +162,127 @@
 
         </nav>
         <section class="pl-content">
-        <div class="pl-pattern">
-            <h3 id="fonts">Fonts</h3>
-            <p>Font load and fallback order: <strong>"Open Sans","Helvetica","Arial",sans-serif</strong></p>
-            <h4 id="font-availability">Font availability</h4>
-            <dl>
-                <dt>Open Sans</dt>
-                <dd>Available via Google Fonts.</dd>
-                <dt>Helvetica Neue</dt>
-                <dd>Ships with OSX.</dd>
-                <dt>Arial</dt>
-                <dd>Ships with most operating systems.</dd>
-            </dl>
-            <p>&nbsp;</p>
-        </div>
-        <div class="pl-pattern">
-            <h3 id="weights">Weights</h3>
-            <div class="pl-preview">
-                <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
-                <div style="font-size: 15px">
-                    <p style="font-weight: 700">700 - Bold: The quick brown fox jumps over the lazy dog</p>
-                    <p style="font-weight: 400">400 - Regular: The quick brown fox jumps over the lazy dog</p>
-                    <p style="font-weight: 300">300 - Light: The quick brown fox jumps over the lazy dog</p>
+            <div class="pl-pattern">
+                <h3 id="fonts">Fonts</h3>
+                <p>Font load and fallback order: <strong>"Open Sans","Helvetica","Arial",sans-serif</strong></p>
+                <h4 id="font-availability">Font availability</h4>
+                <dl>
+                    <dt>Open Sans</dt>
+                    <dd>Available via Google Fonts.</dd>
+                    <dt>Helvetica Neue</dt>
+                    <dd>Ships with OSX.</dd>
+                    <dt>Arial</dt>
+                    <dd>Ships with most operating systems.</dd>
+                </dl>
+                <p>&nbsp;</p>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="weights">Weights</h3>
+                <div class="pl-preview">
+                    <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
+                    <div style="font-size: 15px">
+                        <p style="font-weight: 700">700 - Bold: The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-weight: 400">400 - Regular: The quick brown fox jumps over the lazy dog</p>
+                        <p style="font-weight: 300">300 - Light: The quick brown fox jumps over the lazy dog</p>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="pl-pattern">
-            <h3 id="headings">Headings</h3>
-            
-            <div class="pl-preview">
-                <table class=" docs-table-type table">
-                    <tbody>
-                        <tr>
-                            <td><h1>h1</h1></td>
-                            <td>
-                                <h1>Heading 1</h1></td>
-                        </tr>
-                        <tr>
-                            <td><h2>h2</h2></td>
-                            <td>
-                                <h2>Heading 2</h2></td>
-                        </tr>
-                        <tr>
-                            <td><h3>h3</h3></td>
-                            <td>
-                                <h3>Heading 3</h3></td>
-                        </tr>
-                        <tr>
-                            <td><h4>h4</h4></td>
-                            <td>
-                                <h4>Heading 4</h4></td>
-                        </tr>
-                        <tr>
-                            <td><h5>h5</h5></td>
-                            <td>
-                                <h5>Heading 5</h5></td>
-                        </tr>
-                        <tr>
-                            <td><h6>h6</h6></td>
-                            <td>
-                                <h6>Heading 6</h6></td>
-                        </tr>                        
-                    </tbody>
-                </table>
+            <div class="pl-pattern">
+                <h3 id="headings">Headings</h3>
+                <div class="pl-preview">
+                    <div class="table-responsive">
+                        <table class=" docs-table-type table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <h1>h1</h1></td>
+                                    <td>
+                                        <h1>Heading 1</h1></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h2>h2</h2></td>
+                                    <td>
+                                        <h2>Heading 2</h2></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h3>h3</h3></td>
+                                    <td>
+                                        <h3>Heading 3</h3></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4>h4</h4></td>
+                                    <td>
+                                        <h4>Heading 4</h4></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>h5</h5></td>
+                                    <td>
+                                        <h5>Heading 5</h5></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h6>h6</h6></td>
+                                    <td>
+                                        <h6>Heading 6</h6></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
-             
-        </div>
-        <div class="pl-pattern">
-            <h3 id="bodyCopy">Body Copy</h3>
-            <p>Default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>.</p>
-            <div class="pl-preview">
-                 Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
-            </div> 
-        </div>
-        <div class="pl-pattern">
-            <h3 id="lists">Lists</h3>
-            <h4 id="unordered">Unordered</h4>
-            <div class="pl-preview">
-                <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
-                <ul>
-                    <li>List item 1</li>
-                    <li>List item 2</li>
-                    <li>List item 3
-                        <ul>
-                            <li>Nested list item 1 </li>
-                            <li>Nested list item 2 </li>
-                        </ul>
-                    </li>
-                </ul>
+            <div class="pl-pattern">
+                <h3 id="bodyCopy">Body Copy</h3>
+                <p>Default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>1.428</strong>.</p>
+                <div class="pl-preview">
+                    Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+                </div>
             </div>
-            <h4 id="ordered">Ordered</h4>
-            <div class="pl-preview">
-                <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
-                <ol>
-                    <li>List item 1</li>
-                    <li>List item 2</li>
-                    <li>List item 3
-                        <ol>
-                            <li>Nested list item 1 </li>
-                            <li>Nested list item 2 </li>
-                        </ol>
-                    </li>
-                </ol>
+            <div class="pl-pattern">
+                <h3 id="lists">Lists</h3>
+                <h4 id="unordered">Unordered</h4>
+                <div class="pl-preview">
+                    <ul>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3
+                            <ul>
+                                <li>Nested list item 1 </li>
+                                <li>Nested list item 2 </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <h4 id="ordered">Ordered</h4>
+                <div class="pl-preview">
+                    <ol>
+                        <li>List item 1</li>
+                        <li>List item 2</li>
+                        <li>List item 3
+                            <ol>
+                                <li>Nested list item 1 </li>
+                                <li>Nested list item 2 </li>
+                            </ol>
+                        </li>
+                    </ol>
+                </div>
             </div>
-        </div>
-        <div class="pl-pattern">
-            <h3 id="colors">Colors</h3>
-            <div class="pl-preview">
-                <div class="pl-toggle-code"><i class="icon icon-code"></i> View source</div>
-                <p class="text-primary">This is text-primary</p>
-                <p class="text-warning">This is text-warning</p>
-                <p class="text-success">This is text-success</p>
-                <p class="text-danger">This is text-danger</p>
-                <p class="text-info">This is text-info</p>
-                <p class="text-muted">This is text-muted</p>
+            <div class="pl-pattern">
+                <h3 id="colors">Colors</h3>
+                <div class="pl-preview">
+                    <p class="text-primary">This is text-primary</p>
+                    <p class="text-warning">This is text-warning</p>
+                    <p class="text-success">This is text-success</p>
+                    <p class="text-danger">This is text-danger</p>
+                    <p class="text-info">This is text-info</p>
+                    <p class="text-muted">This is text-muted</p>
+                </div>
             </div>
-        </div>
-    </section>
-    
+        </section>
+        
 <footer>
 <div class="docs-attribution">
     <section>
@@ -338,7 +366,7 @@
     </div>
     <script src="../js/vendor/vendor.js"></script>
 <script src="../js/vendor/plugins.js"></script>
-<script src="../js/main.js"></script>
+<script src="../js/docs.js"></script>
 
 </body>
 
