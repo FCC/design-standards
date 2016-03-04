@@ -1,0 +1,80 @@
+<ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>

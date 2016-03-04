@@ -1,0 +1,449 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Buttons - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/docs.css" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/vendor.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Buttons</h3>
+                <p>Buttons are used as triggers for actions. Depending on the use case, buttons contain a label and/or an icon. There are a variety of styles, sizes, and variations that can be used for different situations.</p>
+                <p>All button labels are sentence case. They should be as short as possible while clearly explaining what will happen when the button is clicked.</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="button-styles">Button styles</h3>
+                <p>There are 6 button styles:</p>
+                <ul>
+                    <li><strong>Default</strong>, the general button style.</li>
+                    <li><strong>Primary</strong>, indicates the critical, or most important action on a form/page.</li>
+                    <li><strong>Danger</strong>, indicates a dangerous, generally destructive action, such as deleting.</li>
+                    <li><strong>Success</strong>, indicates a positive action.</li>
+                    <li><strong>Warning</strong>, indicates an action that may have some side effects, such as giving a user admin access.</li>
+                    <li><strong>Link</strong>, used for non-critical actions. Useful for keeping the interface simple.</li>
+                </ul>
+                <p>All buttons are prefixed with the <code>btn</code> class. The <code>btn</code> class can be applied to any element. Try to use <code>&lt;button&gt;</code> elements when an action won’t change the URL/route, and <code>&lt;a&gt;</code> elements when the action will change the URL/route.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default" type="button">Default</button>
+                    <button class="btn btn-primary" type="button">Primary</button>
+                    <button class="btn btn-danger" type="button">Danger</button>
+                    <button class="btn btn-success" type="button">Success</button>
+                    <button class="btn btn-warning" type="button">Warning</button>
+                    <button class="btn btn-link" type="button">Link</button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+                <p>&nbsp;</p>
+                <h5 id="disabled-state">Disabled state</h5>
+                <div class="pl-preview">
+                    <button class="btn btn-default" type="button" disabled="">Default</button>
+                    <button class="btn btn-primary" type="button" disabled="">Primary</button>
+                    <button class="btn btn-danger" type="button" disabled="">Danger</button>
+                    <button class="btn btn-success" type="button" disabled="">Success</button>
+                    <button class="btn btn-warning" type="button" disabled="">Warning</button>
+                    <button class="btn btn-link" type="button" disabled="">Link</button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Default<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Primary<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Danger<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-warning"</span><span class="nt">&gt;</span>Warning<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">disabled</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-link"</span><span class="nt">&gt;</span>Link<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="button-sizes">Button sizes</h3>
+                <p>There are 4 different button sizes:</p>
+                <ul>
+                    <li><strong>Large</strong>, use the <code>btn-lg</code> class.</li>
+                    <li><strong>Normal</strong>, no extra classes necessary.</li>
+                    <li><strong>Small</strong>, use the <code>btn-sm</code> class.</li>
+                    <li><strong>Extra small</strong>, use the <code>btn-xs</code> class.</li>
+                </ul>
+                <div class="pl-preview">
+                    <button class="btn btn-lg btn-default" type="button">Button</button>
+                    <button class="btn btn-default" type="button">Button</button>
+                    <button class="btn btn-sm btn-default" type="button">Button</button>
+                    <button class="btn btn-xs btn-default" type="button">Button</button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-lg btn-default"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-sm btn-default"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-xs btn-default"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+                <h4 id="block-level-buttons">Block level buttons</h4>
+                <p>Use the <code>btn-block</code> class for buttons that fill the width of their container. These are useful for narrow containers and cleaning up alignment.</p>
+                <div class="pl-preview">
+                    <div style="width: 280px;">
+                        <button class="btn btn-primary btn-block" type="button">Block level</button>
+                        <button class="btn btn-default btn-block" type="button">Block level</button>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default btn-block"</span><span class="nt">&gt;</span>Block level<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="button-groups">Button groups</h3>
+                <p>Related buttons can be grouped together to show associations and improve clarity. Button groups can be sized using the <code>btn-group-lg</code>, <code>btn-group-sm</code>, and <code>btn-group-xs</code> classes.</p>
+                <div class="pl-preview">
+                    <div class="btn-group">
+                        <button class="btn btn-default" type="button">Left</button>
+                        <button class="btn btn-default" type="button">Middle</button>
+                        <button class="btn btn-default" type="button">Right</button>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Middle<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="toggle-buttons">Toggle buttons</h3>
+                <p>Similar to a checkbox, toggle buttons can be toggled between active or not active.</p>
+                <p>Add the <code>active</code> class and the <code>aria-pressed="true"</code> attribute to a button.</p>
+                <div class="pl-preview">
+                    <button aria-pressed="true" class="btn btn-default active" type="button">Active</button>
+                    <button class="btn btn-default" type="button">Normal</button>
+                    <div class="btn-group">
+                        <button class="btn btn-default" type="button">Left</button>
+                        <button aria-pressed="true" class="btn btn-default active" type="button">Active</button>
+                        <button class="btn btn-default" type="button">Right</button>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default active"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/button&gt;</span> 
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Left<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default active"</span> <span class="na">aria-pressed=</span><span class="s">"true"</span><span class="nt">&gt;</span>Active<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Right<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="dropdown-buttons">Dropdown buttons</h3>
+                <p>Dropdown buttons can provide a menu or popover when clicked.</p>
+                <div class="pl-preview">
+                    <div class="btn-group">
+                        <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">Dropdown <span class="caret"></span></button>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+    Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="split-buttons">Split buttons</h3>
+                <p>Split buttons contain both a button and a dropdown. Clicking the button performs the action. Clicking the dropdown reveals other actions. Generally, the button is the primary or most common action, and items in the dropdown are secondary or less common actions.</p>
+                <div class="pl-preview">
+                    <div class="btn-group">
+                        <button class="btn btn-default" type="button">Action</button>
+                        <button data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" type="button">Action</button>
+                        <button data-toggle="dropdown" class="btn btn-primary dropdown-toggle" type="button">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul role="menu" class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Toggle Dropdown<span class="nt">&lt;/span&gt;</span>
+  <span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Another action<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Something else here<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Separated link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="icon-buttons">Icon buttons</h3>
+                <p>Icon buttons are buttons with an icon inside. An icon button may or may not have text. Icon buttons can help save space or improve the ability to scan/find buttons quickly.</p>
+                <p>Use <code>btn-icon-only</code> for buttons with only an icon in it. This optimizes the padding.</p>
+                <p>For an icon without chrome, use a <code>btn-hover</code>.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default" type="button"><i class="icon icon-comment"></i> &nbsp;Comment</button>
+                    <button class="btn btn-icon-only btn-default" type="button"><i class="icon icon-print"></i><span class="sr-only">Print</span></button>
+                    <button class="btn btn-icon-only btn-primary" type="button"><i class="icon icon-inverse icon-floppy-o"></i><span class="sr-only">Save</span></button>
+                    <button class="btn btn-icon-only btn-hover" type="button"><i class="icon icon-calendar-o"></i><span class="sr-only">Calendar</span></button>
+                    <button class="btn btn-default" type="button">Lock&nbsp; <i class="icon icon-arrow-right"></i></button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-comment"</span><span class="nt">&gt;&lt;/i&gt;</span> <span class="ni">&amp;nbsp;</span>Comment<span class="nt">&lt;/button&gt;</span> 
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon-only btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-print"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Print<span class="nt">&lt;/span&gt;&lt;/button&gt;</span> 
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon-only btn-primary"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-inverse icon-floppy-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/span&gt;&lt;/button&gt;</span> 
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-icon-only btn-hover"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-calendar-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Calendar<span class="nt">&lt;/span&gt;&lt;/button&gt;</span> 
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Lock<span class="ni">&amp;nbsp;</span> <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-arrow-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span></code></pre>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="/design-standards/1.x/js/vendor/vendor.js"></script>
+<script src="/design-standards/1.x/js/vendor/plugins.js"></script>
+<script src="/design-standards/1.x/js/docs.js"></script>
+
+</body>
+
+</html>

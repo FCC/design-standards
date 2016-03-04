@@ -1,0 +1,612 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Dialogs - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/site/css/docs.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+<!-- <header class="pl-header navbar navbar-fixed-top navbar-inverse">
+    <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+    <a href="https://www.fcc.gov/" title="Home" rel="home" class="header_logo" id="logo">
+        <img src="../images/fcc-logo-lg.png" alt="Home" class="header_logo-image img-responsive">
+    </a>
+    <h1>Design Standards</h1>
+</header> -->
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <div class="text-prefix">GISP</div>
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/site/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/grid.html"> Grid </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/icons.html"> Icons </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/site/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/site/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/menus.html"> Menus </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/metadata.html"> Metadata </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/pagination.html"> Pagination </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/popovers.html"> Popovers </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tabs.html"> Tabs </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tags.html"> Tags </a>
+    </li>
+    <li>
+        <a href="/design-standards/site/components/tooltips.html"> Tooltips </a>
+    </li>
+    <!-- <li class="category">patterns</li>
+    <li>
+        <a href="patterns/dataFormats.html"> Data formats </a>
+    </li>
+    <li>
+        <a href="patterns/fileUpload.html"> File upload </a>
+    </li>
+    <li>
+        <a href="patterns/filters.html"> Filters </a>
+    </li>
+    <li>
+        <a href="patterns/help.html"> Help </a>
+    </li>
+    <li>
+        <a href="patterns/search.html"> Search </a>
+    </li>
+    <li>
+        <a href="patterns/settings.html"> Settings </a>
+    </li>
+    <li>
+        <a href="patterns/tours.html"> Tours </a>
+    </li>
+    <li>
+        <a href="patterns/wizards.html"> Wizards </a>
+    </li> -->    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Dialogs</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Dialogs provide the user with a focused way of accomplishing, confirming, or viewing something without entirely leaving a screen or page.</p>
+                <h4 id="description">Description</h4>
+                <ul>
+                    <li>Dialogs are useful for interactions that are relatively quick (less than a couple minutes)</li>
+                    <li>Dialogs float above the application until the user has taken a desired action or dismissed the dialog</li>
+                    <li>Dialogs can be used for managing settings, editing/creating simple objects, confirming an action, or any other set of information/actions that warrant not leaving the page</li>
+                    <li>Dialogs are usually opened from a click action</li>
+                    <li>Dialogs may or may not block interactions “behind” or “under” the dialog (see <a href="#modes">modes</a>)</li>
+                    <li>If there is a non-destructive dismiss/cancel, dialogs can be closed by clicking outside of the dialog</li>
+                </ul>
+                <h4 id="components">Components</h4>
+                <p><strong>Header / title bar</strong></p>
+                <ul>
+                    <li>Short and concise title</li>
+                    <li>Sentence case title</li>
+                    <li>Dismiss (X) icon if a non-destructive ‘cancel/done’ is applicable</li>
+                </ul>
+                <p><strong>Content</strong></p>
+                <ul>
+                    <li>Can contain text or UI controls focused on a particular task, process, or entitiy</li>
+                    <li>Can scroll independently depending on the content, creating a pinned header/footer</li>
+                </ul>
+                <p><strong>Footer</strong></p>
+                <ul>
+                    <li>Contains action buttons</li>
+                    <li>Primary action buttons are right aligned</li>
+                    <li>Cancel/previous buttons are left aligned</li>
+                    <li>Use button styles that match the actions/priority, but if there more than two buttons with similar actions/priority, use the default button style for them all</li>
+                    <li>Buttons should use action verbs that describe by themselves what will happen on click (e.g., ‘Delete user’ instead of ‘Ok’)</li>
+                </ul>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title">Rename file</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="" role="form">
+                                        <div class="form-group">
+                                            <label class="control-label" for="tb12">Enter a new file name</label>
+                                            <input type="text" value="dialogs.md" id="tb12" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" class="pull-left btn btn-default" type="button">Cancel</button>
+                                    <button class="btn btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Rename file<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form"</span> <span class="na">class=</span><span class="s">""</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"tb12"</span> <span class="na">class=</span><span class="s">"control-label"</span><span class="nt">&gt;</span>Enter a new file name<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"tb12"</span> <span class="na">value=</span><span class="s">"dialogs.md"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"pull-left btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span><span class="nt">&gt;</span>Save<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 600px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title">Find and replace</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="form-horizontal" role="form">
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="tb14">Find</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="tb14" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-4 control-label" for="tb13">Replace with</label>
+                                            <div class="col-sm-8">
+                                                <input type="text" id="tb13" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-sm-offset-4 col-sm-8">
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" checked="" value="option1" id="optionsCheckboxes1" name="optionsCheckboxes">Match case</label>
+                                                </div>
+                                                <div class="checkbox">
+                                                    <label>
+                                                        <input type="checkbox" checked="" value="option2" id="optionsCheckboxes2" name="optionsCheckboxes">Whole word</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" class="btn btn-default" type="button">Find</button>
+                                    <button disabled="" data-dismiss="modal" class="btn btn-default" type="button">Replace</button>
+                                    <button data-dismiss="modal" class="btn btn-default" type="button">Replace all</button>
+                                    <button data-dismiss="modal" class="btn btn-default" type="button">Done</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-header"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"modal-title"</span><span class="nt">&gt;</span>Find and replace<span class="nt">&lt;/h4&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+          <span class="nt">&lt;form</span> <span class="na">role=</span><span class="s">"form"</span> <span class="na">class=</span><span class="s">"form-horizontal"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"tb14"</span> <span class="na">class=</span><span class="s">"col-sm-4 control-label"</span><span class="nt">&gt;</span>Find<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"tb14"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"tb13"</span> <span class="na">class=</span><span class="s">"col-sm-4 control-label"</span><span class="nt">&gt;</span>Replace with<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"tb13"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-offset-4 col-sm-8"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"optionsCheckboxes"</span> <span class="na">id=</span><span class="s">"optionsCheckboxes1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>Match case<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"optionsCheckboxes"</span> <span class="na">id=</span><span class="s">"optionsCheckboxes2"</span> <span class="na">value=</span><span class="s">"option2"</span> <span class="na">checked</span><span class="nt">&gt;</span>Whole word<span class="nt">&lt;/label&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/form&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Find<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span> <span class="na">disabled</span><span class="nt">&gt;</span>Replace<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Replace all<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Done<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="text-success">Thank you!</h4>
+                                    <p>Your request has been submitted.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="pull-left btn btn-default" type="button">Back</button>
+                                    <button class="btn btn-success" type="button">View request</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-success"</span><span class="nt">&gt;</span>Thank you!<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p&gt;</span>Your request has been submitted.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"pull-left btn btn-default"</span><span class="nt">&gt;</span>Back<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-success"</span><span class="nt">&gt;</span>View request<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="confirmation">Confirmation</h3>
+                <p>A confirmation dialog is short, simple dialog that ensures the user is performing an action intentionally. This is especially useful for dangerous or irreversible operations.</p>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="text-danger">Delete this user?</h4>
+                                    <p>All user information will be deleted.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" class="pull-left btn btn-default" type="button">Cancel</button>
+                                    <button class="btn btn-danger" type="button">Delete user</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;h4</span> <span class="na">class=</span><span class="s">"text-danger"</span><span class="nt">&gt;</span>Delete this user?<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p&gt;</span>All user information will be deleted.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"pull-left btn btn-default"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Cancel<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-danger"</span><span class="nt">&gt;</span>Delete user<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-body">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4>Abandon changes?</h4>
+                                    <p>You have unsaved changes. Your changes will be lost.</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button class="pull-left btn btn-default" type="button">Leave this page</button>
+                                    <button data-dismiss="modal" class="btn btn-primary" type="button">Stay on this page</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"close"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;&lt;span</span> <span class="na">aria-hidden=</span><span class="s">"true"</span><span class="nt">&gt;</span><span class="ni">&amp;times;</span><span class="nt">&lt;/span&gt;&lt;span</span> <span class="na">class=</span><span class="s">"sr-only"</span><span class="nt">&gt;</span>Close<span class="nt">&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;h4&gt;</span>Abandon changes?<span class="nt">&lt;/h4&gt;</span>
+        <span class="nt">&lt;p&gt;</span>You have unsaved changes. Your changes will be lost.<span class="nt">&lt;/p&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-footer"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"pull-left btn btn-default"</span><span class="nt">&gt;</span>Leave this page<span class="nt">&lt;/button&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn btn-primary"</span> <span class="na">data-dismiss=</span><span class="s">"modal"</span><span class="nt">&gt;</span>Stay on this page<span class="nt">&lt;/button&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="actionless">Actionless</h3>
+                <p>An actionless dialog may block user interaction for a period of time, usually until something finishes or some other event occurs.</p>
+                <div class="pl-preview">
+                    <div style="display: block; position: relative; z-index: inherit;" class="modal fade in">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content modal-center">
+                                <div class="modal-body">
+                                    <div class="clearfix" style="margin-bottom: 6px;">
+                                        <div class="pull-left">Uploading document...</div>
+                                        <span class="pull-right text-muted">60%</span>
+                                    </div>
+                                    <div style="margin-bottom: 0;" class="progress">
+                                        <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal fade in"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-dialog"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-content modal-center"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"modal-body"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"margin-bottom: 6px;"</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"pull-left"</span><span class="nt">&gt;</span>Uploading document...<span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>60%<span class="nt">&lt;/span&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span> <span class="na">style=</span><span class="s">"margin-bottom: 0;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"60"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 60%;"</span><span class="nt">&gt;</span>
+              <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+      <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="modes">Modes</h3>
+                <p>Dialogs can prevent the user from performing actions behind/around the dialog if desired. There are 3 general modes:</p>
+                <ul>
+                    <li><strong>Modal</strong>: A modal dialog <strong>prevents</strong> the user from interacting with all other areas of the application until the dialog is dismissed.</li>
+                    <li><strong>Modeless</strong>: A modeless dialog <strong>allows</strong> the user interact with all other areas of the application without dismissing the dialog.</li>
+                    <li><strong>Mixed-modal</strong>: A mixed-modal dialog may block <strong>some</strong> areas of the application, but not others. E.g., a dialog pertaining to one document, but not another visible document.</li>
+                </ul>
+                <p>&nbsp;</p>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="live">Live</h3>
+                <div class="pl-preview">
+                    <button data-target="#myModal" data-toggle="modal" class="btn btn-default">
+                        Show modal
+                    </button>
+                    <div id="myModal" class="modal fade">
+                        <div style="width: 400px; max-width: 100%; padding: 20px;" class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button data-dismiss="modal" class="close" type="button"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                                    <h4 class="modal-title">Rename file</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form class="" role="form">
+                                        <div class="form-group">
+                                            <label class="control-label" for="tb12">Enter a new file name</label>
+                                            <input type="text" value="dialogs.md" id="tb12" class="form-control">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button data-dismiss="modal" class="pull-left btn btn-default" type="button">Cancel</button>
+                                    <button class="btn btn-primary" type="button">Save</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="../js/vendor/vendor.js"></script>
+<script src="../js/vendor/plugins.js"></script>
+<script src="../js/docs.js"></script>
+
+</body>
+
+</html>
