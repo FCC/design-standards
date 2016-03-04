@@ -1,0 +1,406 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Pagination - FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+    <div class="pl-pattern">
+        <h3>Pagination</h3>
+        <h4 id="purpose">Purpose</h4>
+        <p>Users need to navigate through pages of items.</p>
+        <h4 id="description">Description</h4>
+        <p>Collections of data are often split into multiple pages for performance reasons. Either the size of the data is too much to download at once, or the size of the data would take too long to render all at once. Pagination controls allow for the user to retrieve or view pages of data in a performant matter.</p>
+        <h4 id="basic-functionality">Basic functionality</h4>
+        <p>This pagination pattern provides a few variations of the following features:</p>
+        <ul>
+            <li>Navigating to prev/next pages</li>
+            <li>Navigating to first/last pages</li>
+            <li>Jumping to a manually entered page/item</li>
+            <li>Adjusting the number of items per page</li>
+        </ul>
+        <p>The features should be chosen based on the user’s needs, the data, and the space available. Don’t include pagination features that aren’t necessary. If your users have no need to adjust the paging size or jump to a manually entered page for a particular type of data, don’t include those features.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div class="pl-pattern">
+        <h3 id="examples">Examples</h3>
+        <p>The examples below show various configurations of pagination features. Depending on the data, you may treat your pages as item ranges <code>Showing 150-160</code> or as pages <code>Page 15 of 25</code>.</p>
+        <h4 id="full">Full</h4>
+        <p>These show possible configurations for layouts with large amounts of screen real estate.</p>
+        <div class="pl-preview">
+            <div class="btn-group">
+                <div class="btn-group dropdown">
+                    <button data-toggle="dropdown" class="btn-link btn dropdown-toggle" id="dropdownMenu1" type="button">10 per page <span class="caret"></span></button>
+                    <ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+                        <li class="dropdown-header" role="presentation">Show up to</li>
+                        <li class="active" role="presentation"><a href="#" tabindex="-1" role="menuitem">10 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">25 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">50 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">100 items</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown">
+                    <button data-toggle="dropdown" class="btn-link btn dropdown-toggle" id="dropdownMenu2" type="button">Page 15 of 25 <span class="caret"></span></button>
+                    <ul aria-labelledby="dropdownMenu2" role="menu" class="dropdown-menu">
+                        <li class="dropdown-header" role="presentation">Jump to page</li>
+                        <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="15">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default">Go</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn btn-default"><i class="icon icon-angle-left"></i></a>
+                <a href="#" class="btn btn-default">1</a>
+                <a href="#" disabled="" class="btn btn-default">...</a>
+                <a href="#" class="btn btn-default">13</a>
+                <a href="#" class="btn btn-default">14</a>
+                <a href="#" class="btn btn-default active">15</a>
+                <a href="#" class="btn btn-default">16</a>
+                <a href="#" class="btn btn-default">17</a>
+                <a href="#" disabled="" class="btn btn-default">...</a>
+                <a href="#" class="btn btn-default">25</a>
+                <a href="#" class="btn btn-default"><i class="icon icon-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu1"</span> <span class="na">class=</span><span class="s">"btn-link btn dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>10 per page <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu1"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Show up to<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>10 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>25 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>50 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>100 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu2"</span> <span class="na">class=</span><span class="s">"btn-link btn dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>Page 15 of 25 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to page<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/form&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span> 
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">disabled</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>13<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>14<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default active"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>15<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>16<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>17<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">disabled</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>25<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+        <div class="pl-preview">
+            <div class="btn-group">
+                <div class="btn-group dropdown">
+                    <button data-toggle="dropdown" class="btn-link btn dropdown-toggle" id="dropdownMenu9" type="button">10 per page <span class="caret"></span></button>
+                    <ul aria-labelledby="dropdownMenu9" role="menu" class="dropdown-menu">
+                        <li class="dropdown-header" role="presentation">Show up to</li>
+                        <li class="active" role="presentation"><a href="#" tabindex="-1" role="menuitem">10 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">25 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">50 items</a></li>
+                        <li role="presentation"><a href="#" tabindex="-1" role="menuitem">100 items</a></li>
+                    </ul>
+                </div>
+                <div class="btn-group dropdown">
+                    <button data-toggle="dropdown" class="btn-link btn dropdown-toggle" id="dropdownMenu10" type="button">Page 15 of 25 <span class="caret"></span></button>
+                    <ul aria-labelledby="dropdownMenu10" role="menu" class="dropdown-menu">
+                        <li class="dropdown-header" role="presentation">Jump to page</li>
+                        <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                            <form action="">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="15">
+                                    <div class="input-group-btn">
+                                        <button class="btn btn-default">Go</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btn-group">
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-left"></i></a>
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu9"</span> <span class="na">class=</span><span class="s">"btn-link btn dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>10 per page <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu9"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Show up to<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>10 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>25 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>50 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>100 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu10"</span> <span class="na">class=</span><span class="s">"btn-link btn dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>Page 15 of 25 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+        <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu10"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to page<span class="nt">&lt;/li&gt;</span>
+            <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                        <span class="nt">&lt;/div&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/form&gt;</span>
+            <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;/ul&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+        <h4 id="medium">Medium</h4>
+        <p>These show possible configurations for layouts with limited screen real estate.</p>
+        <div class="pl-preview">
+            <div class="btn-group dropdown">
+                <button data-toggle="dropdown" class="btn btn-link dropdown-toggle" id="dropdownMenu3" type="button">Showing 150-160 of 305 <span class="caret"></span></button>
+                <ul aria-labelledby="dropdownMenu3" role="menu" class="dropdown-menu">
+                    <li class="dropdown-header" role="presentation">Jump to item</li>
+                    <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-left"></i></a>
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu3"</span> <span class="na">class=</span><span class="s">"btn btn-link dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>Showing 150-160 of 305 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to item<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+        <div class="pl-preview">
+            <div class="btn-group dropdown">
+                <button data-toggle="dropdown" class="btn btn-link dropdown-toggle" id="dropdownMenu8" type="button">Page 15 of 25 <span class="caret"></span></button>
+                <ul aria-labelledby="dropdownMenu8" role="menu" class="dropdown-menu">
+                    <li class="dropdown-header" role="presentation">Jump to page</li>
+                    <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div class="btn-group">
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-left"></i></a>
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu8"</span> <span class="na">class=</span><span class="s">"btn btn-link dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>Page 15 of 25 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu8"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to page<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+        <div class="pl-preview">
+            <div class="btn-group dropdown">
+                <button data-toggle="dropdown" class="btn-link btn dropdown-toggle" id="dropdownMenu1" type="button">10 per page <span class="caret"></span></button>
+                <ul aria-labelledby="dropdownMenu1" role="menu" class="dropdown-menu">
+                    <li class="dropdown-header" role="presentation">Show up to</li>
+                    <li class="active" role="presentation"><a href="#" tabindex="-1" role="menuitem">10 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">25 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">50 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">100 items</a></li>
+                </ul>
+            </div>
+            <div class="btn-group dropdown">
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-left"></i></a>
+                <a href="" data-toggle="dropdown" class="btn btn-default dropdown-toggle" id="dropdownMenu7">15/25 <span class="caret"></span></a>
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-right"></i></a>
+                <ul aria-labelledby="dropdownMenu7" role="menu" class="dropdown-menu">
+                    <li class="dropdown-header" role="presentation">Jump to page</li>
+                    <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">id=</span><span class="s">"dropdownMenu1"</span> <span class="na">class=</span><span class="s">"btn-link btn dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>10 per page <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu1"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Show up to<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>10 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>25 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>50 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>100 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"dropdownMenu7"</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>15/25 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to page<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+        <h4 id="small">Small</h4>
+        <p>A possible configuration for very narrow/confined layouts.</p>
+        <div class="pl-preview">
+            <div class="btn-group dropdown">
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-left"></i></a>
+                <a href="" data-toggle="dropdown" id="dropdownMenu6" class="btn btn-default dropdown-toggle">15/25 <span class="caret"></span></a>
+                <a class="btn btn-default" href="#"><i class="icon icon-angle-right"></i></a>
+                <ul aria-labelledby="dropdownMenu6" role="menu" class="dropdown-menu">
+                    <li class="dropdown-header" role="presentation">Jump to page</li>
+                    <li role="presentation" class="padding-left-2 padding-right-2 padding-top-1 padding-bottom-1">
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="15">
+                                <div class="input-group-btn">
+                                    <button class="btn btn-default">Go</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header" role="presentation">Show up to</li>
+                    <li class="active" role="presentation"><a href="#" tabindex="-1" role="menuitem">10 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">25 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">50 items</a></li>
+                    <li role="presentation"><a href="#" tabindex="-1" role="menuitem">100 items</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-group dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-left"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn-default dropdown-toggle"</span> <span class="na">id=</span><span class="s">"dropdownMenu6"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>15/25 <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-angle-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span> <span class="na">aria-labelledby=</span><span class="s">"dropdownMenu6"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Jump to page<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"padding-left-2 padding-right-2 padding-top-1 padding-bottom-1"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;form</span> <span class="na">action=</span><span class="s">""</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"15"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">/&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"input-group-btn"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Go<span class="nt">&lt;/button&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/form&gt;</span>
+        <span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Show up to<span class="nt">&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>10 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>25 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>50 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">role=</span><span class="s">"menuitem"</span> <span class="na">tabindex=</span><span class="s">"-1"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>100 items<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+        </div>
+    </div>
+</section>
+<!--#include file="_footer.shtml" -->
+
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>
+

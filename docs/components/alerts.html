@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Alerts - FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="contextual-alerts">Contextual alerts</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need to be aware of important information related to their current activity.</p>
+                <h4 id="description">Description</h4>
+                <ul>
+                    <li>Contextual alerts are positioned above the area or form they relate to</li>
+                    <li>They are often triggered by a user interaction</li>
+                    <li>They can be closable and can have other action buttons or links.</li>
+                    <li>Alerts with low importance (info or success) can close automatically after 5 seconds (if desired)</li>
+                    <li>Alerts with high importance (warning or danger) should not close automatically, unless the situation has been resolved in some other way</li>
+                </ul>
+                <p><strong>Types:</strong></p>
+                <ul>
+                    <li><strong>Info</strong> alerts should be used when there are tips or information that a user can benefit from.</li>
+                    <li><strong>Success</strong> alerts should be used when an action was performed successfully.</li>
+                    <li><strong>Warning</strong> alerts should be used when an action is out of the ordinary or might not be desired.</li>
+                    <li><strong>Danger</strong> alerts should be used when the system has failed to perform an action, or when the user has made an error.</li>
+                </ul>
+                <div class="pl-preview">
+                <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <div style="max-width: 450px;">
+                        <div class="alert alert-info">
+                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <span class="icon icon-info"></span> Press the <strong>'A'</strong> key to automatically assign a case.
+                        </div>
+                        <div class="alert alert-success">
+                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <span class="icon icon-check"></span> Case assigned to <strong>Jerry</strong>.
+                        </div>
+                        <div class="alert alert-warning">
+                            <button type="button" class="close"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                            <span class="icon-warning icon"></span> There are more than <strong>10</strong> cases assigned to <strong>John</strong>.
+                        </div>
+                        <div class="alert alert-danger">
+                            <span class="icon-remove icon"></span> Please fix the 3 errors.
+                        </div>
+                    </div>
+                
+                    <br>
+                    <div class="highlight">
+<pre class="language-markup">
+<code>&lt;div class=&quot;alert alert-info&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+    &lt;span class=&quot;icon icon-info&quot;&gt;&lt;/span&gt; Press the &lt;strong&gt;'A'&lt;/strong&gt; key to automatically assign a case.
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-success&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+    &lt;span class=&quot;icon icon-check&quot;&gt;&lt;/span&gt; Case assigned to &lt;strong&gt;Jerry&lt;/strong&gt;.
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-warning&quot;&gt;
+    &lt;button type=&quot;button&quot; class=&quot;close&quot;&gt;&lt;span aria-hidden=&quot;true&quot;&gt;&times;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Close&lt;/span&gt;&lt;/button&gt;
+    &lt;span class=&quot;icon-warning icon&quot;&gt;&lt;/span&gt; There are more than &lt;strong&gt;10&lt;/strong&gt; cases assigned to &lt;strong&gt;John&lt;/strong&gt;.
+&lt;/div&gt;
+
+&lt;div class=&quot;alert alert-danger&quot;&gt;
+    &lt;span class=&quot;icon-remove icon&quot;&gt;&lt;/span&gt; Please fix the 3 errors.
+&lt;/div&gt;</code>
+</pre>
+                    </div>
+                    </div>
+                </div>
+                            
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>

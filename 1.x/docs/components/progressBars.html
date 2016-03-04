@@ -1,0 +1,360 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Progress and Loadings - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/docs.css" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/vendor.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="progress-bars">Progress bars</h3>
+                <p>Progress bars should be used when there is a determinate amount of time/progress related to a process (e.g., uploading a file). An indeterminate progress can be used in conjunction with a determinate progress bar.</p>
+                <h4 id="determinate-progress-bar">Determinate progress bar</h4>
+                <div class="pl-preview">
+                    <div style="max-width: 200px;">
+                        <div class="progress-label">
+                            Importing...
+                            <span class="pull-right text-muted" id="exampleProgressBarValue">60%</span>
+                        </div>
+                        <div class="progress">
+                            <div style="width: 60%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar" id="exampleProgressBar">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-labels"</span><span class="nt">&gt;</span>
+    Importing...
+    <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"exampleProgressBarValue"</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>60%<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"exampleProgressBar"</span> <span class="na">class=</span><span class="s">"progress-bar"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"60"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 60%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="indeterminate-progress-bar">Indeterminate progress bar</h4>
+                <div class="pl-preview">
+                    <div style="max-width: 200px;">
+                        <div class="progress-label">
+                            Finalizing...
+                            <span class="pull-right text-muted" id="exampleProgressBarValue">100%</span>
+                        </div>
+                        <div class="progress">
+                            <div style="width: 100%;" aria-valuemax="100" aria-valuemin="0" aria-valuenow="100" role="progressbar" class="progress-bar progress-bar-striped active">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-label"</span><span class="nt">&gt;</span>
+    Finalizing...
+    <span class="nt">&lt;span</span> <span class="na">id=</span><span class="s">"exampleProgressBarValue"</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>100%<span class="nt">&lt;/span&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"progress-bar progress-bar-striped active"</span> <span class="na">role=</span><span class="s">"progressbar"</span> <span class="na">aria-valuenow=</span><span class="s">"100"</span> <span class="na">aria-valuemin=</span><span class="s">"0"</span> <span class="na">aria-valuemax=</span><span class="s">"100"</span> <span class="na">style=</span><span class="s">"width: 100%;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="load-spinners">Load spinners</h3>
+                <p>Load spinners should be used when there is an indeterminate amount of time/progress related to a process (e.g., downloading data).</p>
+                <h4 id="loading-button-with-text">Loading button with text</h4>
+                <p>For buttons with text, the load spinner can appear where the icon would appear. The text may change to reflect the current state.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default">Load more</button>
+                    <button disabled="" class="btn btn-default"><i class="loading-icon"></i> Loading...</button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span><span class="nt">&gt;</span>Load more<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Loading...<span class="nt">&lt;/button&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-button-with-icon-only">Loading button with icon only</h4>
+                <p>If a simple action is initiated from an icon-only button, the icon can be replaced with the load spinner until the action is complete.</p>
+                <div class="pl-preview">
+                    <button class="btn btn-default btn-icon-only"><i class="icon icon-star-o"></i></button>
+                    <button disabled="" class="btn btn-default btn-icon-only loading-background"><i class="icon icon-star-o" style="visibility: hidden;"></i></button>
+                    <button class="btn btn-default btn-icon-only"><i class="icon icon-star"></i></button>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-star-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only loading-background"</span> <span class="na">disabled</span><span class="nt">&gt;&lt;i</span> <span class="na">style=</span><span class="s">"visibility: hidden;"</span> <span class="na">class=</span><span class="s">"icon icon-star-o"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn-default btn-icon-only"</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-star"</span><span class="nt">&gt;&lt;/i&gt;&lt;/button&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-overlay">Loading overlay</h4>
+                <p>In some situations during the process of loading, it may be desired to overlay and block functionality until loading is complete.</p>
+                <div class="pl-preview">
+                    <div style="position: relative; padding: 40px; background: #fff;">
+                        <table style="opacity: .5;" class="table table-inverse">
+                            <thead>
+                                <tr>
+                                    <th>Project name</th>
+                                    <th>Description</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Invoice</td>
+                                    <td><span>Add invoice confirmation</span></td>
+                                    <td><span>$4,500</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Templates</td>
+                                    <td><span>Refactor templates to use the new templating library</span></td>
+                                    <td><span>$9,000</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Payments</td>
+                                    <td><span>Process payments using third party api</span></td>
+                                    <td><span>$5,400</span></td>
+                                </tr>
+                                <tr>
+                                    <td>Account Management</td>
+                                    <td><span>Improve account management workflow</span></td>
+                                    <td><span>$6,000</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="loading-overlay">
+                            <i class="loading-icon"></i>
+                            <div>Loading...</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading-overlay"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;&lt;div&gt;</span>Loading...<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="loading-standalone">Loading standalone</h4>
+                <p>When loading data for the first time or loading additional data, use a flat load spinner with a label.</p>
+                <div class="pl-preview">
+                    <div class="loading">
+                        <i class="loading-icon"></i>
+                    </div>
+                    <div class="text-center text-muted">Loading cases...</div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"loading"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"loading-icon"</span><span class="nt">&gt;&lt;/i&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-center text-muted"</span><span class="nt">&gt;</span>Loading cases...<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="/design-standards/1.x/js/vendor/vendor.js"></script>
+<script src="/design-standards/1.x/js/vendor/plugins.js"></script>
+<script src="/design-standards/1.x/js/docs.js"></script>
+
+</body>
+
+</html>

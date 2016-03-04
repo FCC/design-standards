@@ -1,0 +1,61 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Breadcrumbs - FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Breadcrumbs</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need to understand their current location and navigate within a hierarchical navigation scheme.</p>
+                <h4 id="description">Description</h4>
+                <p>Breadcrumbs display the current path to a particular page relative to the starting point. Breadcrumbs provide a means for users to understand their current context in a hierarchical structure and the ability to navigate up the structure easily.</p>
+                <ul>
+                    <li>Breadcrumbs display the current path as links separated by carets to indicate each level.</li>
+                    <li>The navigation root is the first element, the current location is the last element</li>
+                    <li>The current location is not clickable.</li>
+                    <li>Clicking on a link takes you to that screen.</li>
+                </ul>
+                <p>Depending on the complexity of the navigational hierarchy and the type of page or application, it may make sense for the breadcrumb to represent only part of the hierarchy while sub tabs/trees/navigation represent the remaining hierarchy. In that case, you may want to make the far right element clickable.</p>
+                <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <ol class="breadcrumb">
+                        <li class="active">Home</li>
+                    </ol>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li class="active">Library</li>
+                    </ol>
+                    <ol class="breadcrumb">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Library</a></li>
+                        <li class="active">Data</li>
+                    </ol>
+                    <div class="docs-codeblock">
+                        <div class="highlight">
+<pre><code data-lang="html" class="language-html"><span class="nt">&lt;ol</span> <span class="na">class=</span><span class="s">"breadcrumb"</span><span class="nt">&gt;</span>
+  <span cla{ss="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Library<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;</span>Data<span c}lass="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></code></pre>
+                                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>

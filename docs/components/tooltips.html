@@ -1,0 +1,95 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Tooltips</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need additional, potentially optional information on demand.</p>
+                <h4 id="description">Description</h4>
+                <p>Tooltips provide information when an element is hovered over.</p>
+                <ul>
+                    <li>Tooltips are attached to an element and appear when the element is hovered over</li>
+                    <li>The show and hide delays of a tooltip may vary depending on the need, but the default is 200ms to show and 0ms to hide</li>
+                    <li>Tooltips cannot be interacted with</li>
+                </ul>
+                <p>Use tooltips for:</p>
+                <ul>
+                    <li>Icon and button descriptions</li>
+                    <li>Expanding shortened date/time stamps</li>
+                </ul>
+                <div class="pl-preview">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4">
+                            <p>Standard tooltip:</p>
+                            <div style="display: inline-block; position: relative; width: auto;" class="tooltip fade in right">
+                                <div class="tooltip-inner">I'm a tooltip!</div>
+                                <div class="tooltip-arrow"></div>
+                            </div>
+                            <br>
+                            <br>
+                        </div>
+                        <div class="col-xs-12 col-sm-4">
+                            <p>Light tooltip (for dark interfaces):</p>
+                            <div style="display: inline-block; position: relative; width: auto;" class="tooltip tooltip-light fade in right">
+                                <div class="tooltip-inner">I'm a light tooltip!</div>
+                                <div class="tooltip-arrow"></div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip fade in right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip-inner"</span><span class="nt">&gt;</span>I'm a tooltip!<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip-arrow"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip tooltip-light fade in right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip-inner"</span><span class="nt">&gt;</span>I'm a light tooltip!<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"tooltip-arrow"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="positioning">Positioning</h3>
+                <p>Tooltips can be positioned either above, below, to the left, or to the right of target element. In many situations, tooltips should be positioned dynamically based on the available space around the target element.</p>
+                <div class="pl-preview">
+                    <div style="width: 120px;">
+                        <button title="Tooltip above" data-placement="top" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Position above</button>
+                        <button title="Tooltip to left" data-placement="left" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Position left</button>
+                        <button title="Tooltip to right" data-placement="right" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Position right</button>
+                        <button title="Tooltip below" data-placement="bottom" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Position below</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="content">Content</h3>
+                <p>The content of a tooltip can vary. It’s best to keep it to a few words.</p>
+                <div class="pl-preview">
+                    <div style="width: 120px;">
+                        <button title="Print" data-placement="right" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Short</button>
+                        <button title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In semper volutpat ultrices. Mauris lobortis lacus vel ullamcorper vestibulum." data-html="true" data-placement="right" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Wrapping</button>
+                        <button title="&lt;i class=&quot;icon icon-inverse icon-calendar-o&quot;&gt;&lt;/i&gt; &nbsp; &lt;strong&gt;January 21&lt;/strong&gt;, 2014" data-html="true" data-placement="right" data-toggle="tooltip" class="btn btn-block btn-default" type="button">Rich content</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Collapsible Panels FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Collapsible panels</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need to see only relevant content.</p>
+                <h4 id="description">Description</h4>
+                <p>Collapsible panels provide users with the ability to expand and collapse content as needed. They can simplify the interface by hiding content until it is needed.</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="behaviors">Behaviors</h3>
+                <p>Collapsible panels can operate as either single-select (accordion) or multi-select.</p>
+                <ul>
+                    <li><strong>Single-select</strong> allows only one panel to be expanded at any given time. Expanding a panel collapses the previously expanded panel. This is commonly referred to as an “Accordion”.</li>
+                    <li><strong>Multi-select</strong> allows more than one panel to be expanded at any given time. Expanding a panel has no impact on the other panels.
+                        <ul>
+                            <li><strong>Expand/collapse all</strong> allows all panels to be expanded or collapsed simultaneously. It is important to note when all panels are in a “open” or “closed” state, the corresponding button should be disabled. When there are panels in both “open” and “closed” states, both buttons are enabled.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="pl-preview">
+                    <div class="panel-toggler">
+                        <a id="expand-all">Expand All</a>&nbsp;|&nbsp;<a id="collapse-all">Collapse All</a>
+                    </div>
+                    <div aria-multiselectable="true" role="tablist" id="3accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#3collapseOne" id="3headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingOne" role="tabpanel" class="panel-collapse collapse in" id="3collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#3collapseTwo" id="3headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingTwo" role="tabpanel" class="panel-collapse collapse" id="3collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#3collapseThree" id="3headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingThree" role="tabpanel" class="panel-collapse collapse" id="3collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="styles">Styles</h3>
+                <h4 id="standard">Standard</h4>
+                <p>The standard style provides more distinction between the panel and internal/surrounding content. This is useful for more complex layouts.</p>
+                <div class="pl-preview">
+                    <div aria-multiselectable="true" role="tablist" id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#collapseOne" data-parent="#accordion" id="headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingOne" role="tabpanel" class="panel-collapse collapse in" id="collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#collapseTwo" data-parent="#accordion" id="headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingTwo" role="tabpanel" class="panel-collapse collapse" id="collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#collapseThree" data-parent="#accordion" id="headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingThree" role="tabpanel" class="panel-collapse collapse" id="collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+                <h4 id="light">Light</h4>
+                <p>For simple content or layouts, the light style may work better.</p>
+                <div class="pl-preview">
+                    <div aria-multiselectable="true" role="tablist" id="2accordion" class="panel-group">
+                        <div class="panel">
+                            <div aria-controls="2collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#2collapseOne" data-parent="#2accordion" id="2headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingOne" role="tabpanel" class="panel-collapse collapse in" id="2collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div aria-controls="2collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#2collapseTwo" data-parent="#2accordion" id="2headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingTwo" role="tabpanel" class="panel-collapse collapse" id="2collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div aria-controls="2collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#2collapseThree" data-parent="#2accordion" id="2headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingThree" role="tabpanel" class="panel-collapse collapse" id="2collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>

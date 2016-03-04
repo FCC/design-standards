@@ -1,0 +1,134 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Metadata - FCC GIS Design Standards</title>
+    <!--#include file="_head-docs.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+    <div class="pl-pattern">
+        <h3>Metadata</h3>
+        <p>The metadata pattern can be used for showing label/value pairs.</p>
+        <p><strong>Do</strong></p>
+        <ul>
+            <li>Consistently use <code>#</code> or <code>number</code> in labels</li>
+            <li>Indicate empty/blank values with an em-dash (&mdash;)</li>
+            <li>Reflow columns based on available screen real estate</li>
+            <li>Sentence case labels</li>
+        </ul>
+        <h4 id="horizontal">Horizontal</h4>
+        <p>Useful for shorter labels/values.</p>
+        <div class="pl-preview">
+            <div class="row">
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>Examiner</dt>
+                        <dd>IP, Sikyin / 69776 / 1742</dd>
+                        <dt>SPE (multiple)</dt>
+                        <dd>John Olaskey</dd>
+                        <dt>Applicants</dt>
+                        <dd>Roman Amirpur</dd>
+                        <dt>Inventors</dt>
+                        <dd>Disney Dale</dd>
+                        <dt>Law firm</dt>
+                        <dd>Clayton &amp; Clayton Associates</dd>
+                    </dl>
+                </div>
+                <div class="col-md-6">
+                    <dl class="dl-horizontal">
+                        <dt>Confirmation #</dt>
+                        <dd>1662</dd>
+                        <dt>Publication #</dt>
+                        <dd><a href="">32132132132 <i class="icon icon-external-link"></i></a></dd>
+                        <dt>Patent #</dt>
+                        <dd>&mdash;</dd>
+                        <dt>Attorney docket #</dt>
+                        <dd>10951/1202</dd>
+                        <dt>Foreign priority claimed</dt>
+                        <dd>Yes</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-horizontal"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Confirmation #<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>1662<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Patent #<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span><span class="ni">&amp;mdash;</span><span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre>
+        </div>
+        <h4 id="vertical">Vertical</h4>
+        <p>Useful for longer labels/values.</p>
+        <div class="pl-preview">
+            <div class="row">
+                <div class="col-sm-6">
+                    <dl>
+                        <dt>Examiner</dt>
+                        <dd>IP, Sikyin / 69776 / 1742</dd>
+                        <dt>SPE (multiple)</dt>
+                        <dd>John Olaskey</dd>
+                    </dl>
+                </div>
+                <div class="col-sm-6">
+                    <dl>
+                        <dt>Confirmation #</dt>
+                        <dd>1662</dd>
+                        <dt>Publication #</dt>
+                        <dd><a href="">32132132132 <i class="icon icon-external-link"></i></a></dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;dl&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Examiner<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>IP, Sikyin / 69776 / 1742<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>SPE (multiple)<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>John Olaskey<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre>
+        </div>
+        <h4 id="inline">Inline</h4>
+        <p>Useful for few labels/values.</p>
+        <div class="pl-preview">
+            <div class="row">
+                <div class="col-sm-12">
+                    <dl class="dl-inline">
+                        <dt>Created</dt>
+                        <dd>Mar 5, 2014</dd>
+                        <dt>Views</dt>
+                        <dd>1,662</dd>
+                        <dt>Status</dt>
+                        <dd>Approved</dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+        <div class="highlight">
+            <pre><code data-lang="html" class="language-html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"dl-inline"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Created<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Mar 5, 2014<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Views<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>1,662<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;dt&gt;</span>Status<span class="nt">&lt;/dt&gt;</span>
+    <span class="nt">&lt;dd&gt;</span>Approved<span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre>
+        </div>
+    </div>
+</section>
+<!--#include file="_footer.shtml" -->
+
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+</body>
+
+</html>
+

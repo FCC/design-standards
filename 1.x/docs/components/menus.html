@@ -1,0 +1,339 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Menus - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/docs.css" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/vendor.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Menus</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>User needs to perform an action, and depending on space constraints or the frequency of use, the action does not need to be visible at all times.</p>
+                <h4 id="description">Description</h4>
+                <p>Menus provide a list of available actions and options. They’re used in dropdowns, selects, and context menus.</p>
+                <h4 id="basic-functionality">Basic functionality</h4>
+                <p>Menus appear relative to the control or interaction that triggered the menu. Clicking an item from the menu performs the action or selects the option. For most actions, the menu should close when a menu item is clicked. If the clicked menu item is part of a set of multi-selectable options, then the menu should stay open.</p>
+                <ul>
+                    <li>Menus may have submenus, icons, dividers, category labels, and checkboxes</li>
+                    <li>Menu items may change depending on the context (e.g., <code>Mark as read</code> vs <code>Mark as unread</code>)</li>
+                    <li>Use dividers to group related menu items</li>
+                    <li>Use submenus to separate large sets of menu items</li>
+                    <li>Include keyboard shortcuts if applicable</li>
+                    <li>Disable menu items rather than hiding to improve discoverability of features</li>
+                    <li>Indicate submenus with a caret</li>
+                    <li>Indicate dialogs with an ellipsis</li>
+                    <li>Use sentence case for menu items</li>
+                </ul>
+                <div class="pl-preview">
+                    <ul role="menu" class="dropdown-menu" style="display: inline-block; position: relative; float: none; width: 200px;">
+                        <li role="presentation"><a href="">Bold <span class="pull-right text-muted">Ctrl+B</span></a></li>
+                        <li role="presentation"><a href="">Italic <span class="pull-right text-muted">Ctrl+I</span></a></li>
+                        <li role="presentation"><a href="">Underline <span class="pull-right text-muted">Ctrl+U</span></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li role="presentation"><a href="">Font <i class="icon icon-caret-right pull-right"></i></a></li>
+                        <li role="presentation"><a href="">Font size <i class="icon icon-caret-right pull-right"></i></a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li class="disabled" role="presentation"><a>Conditional formatting...</a></li>
+                        <li class="divider" role="presentation"></li>
+                        <li role="presentation"><a href="">Clear formatting</a></li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Bold <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>Ctrl+B<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Italic <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>Ctrl+I<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Underline <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"pull-right text-muted"</span><span class="nt">&gt;</span>Ctrl+U<span class="nt">&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Font <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-caret-right pull-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Font size <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-caret-right pull-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;&lt;a&gt;</span>Conditional formatting...<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"divider"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Clear formatting<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="submenus">Submenus</h3>
+                <p>Submenus help organize menu items.</p>
+                <div class="pl-preview">
+                    <ul role="menu" class="dropdown-menu" style="display: inline-block; position: relative; float: none; width: 200px;">
+                        <li role="presentation"><a href="">Submenu item <i class="icon icon-caret-right pull-right"></i></a></li>
+                        <li class="disabled" role="presentation"><a href="">Disabled submenu item <i class="icon icon-caret-right pull-right"></i></a></li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Submenu item <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-caret-right pull-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Disabled submenu item <span class="nt">&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-caret-right pull-right"</span><span class="nt">&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="icons">Icons</h3>
+                <p>Use icons for menu items that have a common, easily recognizable icon. You don’t need an icon for every menu item, only for menu items that are more frequently used.</p>
+                <p>If you have an icon in a menu, ensure that all menu items are aligned appropriately.</p>
+                <div class="pl-preview">
+                    <ul role="menu" class="dropdown-menu has-icon" style="display: inline-block; position: relative; float: none; width: 200px;">
+                        <li role="presentation"><a href=""><i class="icon icon-fw icon-star dropdown-menu-icon"></i> Star</a></li>
+                        <li role="presentation"><a href="">Share...</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw icon-trash-o dropdown-menu-icon"></i> Remove</a></li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu has-icon"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw icon-star dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Star<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;</span>Share...<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw icon-trash-o dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Remove<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="form-controls">Form controls</h3>
+                <p>Sometimes menus can contain form elements like checkboxes. Use checkboxes for both single and multi-select options. When dealing with a multi-selectable collection of checkboxes, it’s likely beneficial to keep the menu open after items are checked. Otherwise, menus should close after items are clicked.</p>
+                <div class="pl-preview">
+                    <ul role="menu" class="dropdown-menu has-icon" style="display: inline-block; position: relative; float: none; width: 200px;">
+                        <li class="dropdown-header">Single-select</li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw dropdown-menu-icon"></i> 1.0</a></li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw icon-check dropdown-menu-icon"></i> 1.5</a></li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw dropdown-menu-icon"></i> 2.0</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li class="dropdown-header">Multi-select</li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw icon-check dropdown-menu-icon"></i> Grid lines</a></li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw icon-check dropdown-menu-icon"></i> Rulers</a></li>
+                        <li role="presentation"><a href=""><i class="icon icon-fw dropdown-menu-icon"></i> Margins</a></li>
+                    </ul>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu has-icon"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Single-select<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> 1.0<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw icon-check dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> 1.5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> 2.0<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"divider"</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"dropdown-header"</span><span class="nt">&gt;</span>Multi-select<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw icon-check dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Grid lines<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw icon-check dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Rulers<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">""</span><span class="nt">&gt;&lt;i</span> <span class="na">class=</span><span class="s">"icon icon-fw dropdown-menu-icon"</span><span class="nt">&gt;&lt;/i&gt;</span> Margins<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="/design-standards/1.x/js/vendor/vendor.js"></script>
+<script src="/design-standards/1.x/js/vendor/plugins.js"></script>
+<script src="/design-standards/1.x/js/docs.js"></script>
+
+</body>
+
+</html>
