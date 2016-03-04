@@ -1,0 +1,714 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Form controls - FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/docs.css" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/vendor.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3 id="text-box">Text box</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need to input a simple text value.</p>
+                <h4 id="description">Description</h4>
+                <p>Text boxes allow the user to input a simple text value. A text box only allows for a single line of input.</p>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form class="col-sm-12 form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="tb12">Normal</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" id="tb12" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="tb13">Disabled</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" disabled="" id="tb13" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">disabled</span><span class="nt">&gt;</span></code></pre>
+                </div>
+                <h4 id="input-masks">Input masks</h4>
+                <p>Input masks ensure that the user understands the input format required, in addition to making input less error-prone by potentially restricting the number or types of characters that can be entered.</p>
+                <p><span class="text-muted">Example uses https://github.com/RobinHerbots/jquery.inputmask for demo purposes.</span></p>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form role="form" class="form-horizontal col-sm-12">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="im1">SSN</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" data-inputmask="'mask': '999-99-9999', 'placeholder': 'ˍ'" id="im1" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="im1">Routing #</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" data-inputmask="'mask': '\\PCT/99,999,999', 'placeholder': 'ˍ'" id="im1" placeholder="PCT/" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="im1">Start date</label>
+                                    <div class="col-sm-9">
+                                        <input type="text" data-inputmask="'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'" id="im1" class="form-control">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"im1"</span> <span class="na">data-inputmask=</span><span class="s">"'mask': '999-99-9999'"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"im1"</span> <span class="na">data-inputmask=</span><span class="s">"'mask': 'PCT/99,999,999'"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">id=</span><span class="s">"im1"</span> <span class="na">data-inputmask=</span><span class="s">"'alias': 'date'"</span><span class="nt">&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="text-area">Text area</h3>
+                <h4 id="purpose-1">Purpose</h4>
+                <p>Users need to input an extended, potentially multi-line text value.</p>
+                <h4 id="description-1">Description</h4>
+                <p>Text areas allow the user to input extended, multi-line text values.</p>
+                <h4 id="sizing-and-resizing">Sizing and resizing</h4>
+                <p>Text areas can either</p>
+                <ul>
+                    <li>have a fixed, static height</li>
+                    <li>automatically grow/shrink based on the input, from a minimum number of lines (e.g., 3) to a maxmimum number of lines (e.g., 10) to ensure that space is optimally used</li>
+                    <li>have a resize handle, allowing for manual vertical and/or horizontal resizing</li>
+                </ul>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form class="col-sm-12 form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="ta12">Normal</label>
+                                    <div class="col-sm-9">
+                                        <textarea rows="2" id="ta12" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="ta13">Disabled</label>
+                                    <div class="col-sm-9">
+                                        <textarea disabled="" rows="2" id="ta13" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;textarea</span> <span class="na">class=</span><span class="s">"form-control"</span> <span class="na">rows=</span><span class="s">"2"</span><span class="nt">&gt;&lt;/textarea&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="radio-buttons">Radio buttons</h3>
+                <h4 id="purpose-2">Purpose</h4>
+                <p>Users must choose between two or more mutually exclusive options.</p>
+                <h4 id="description-2">Description</h4>
+                <ul>
+                    <li>Radio buttons come in a group of two or more mutually exclusive options</li>
+                    <li>A radio button is either checked or unchecked</li>
+                    <li>There can only be one radio button checked in a group</li>
+                    <li>Radio button labels should use sentence casing</li>
+                    <li>Use concise labels</li>
+                    <li>Provide an initially checked option when the field is not required and/or there is a sane default</li>
+                    <li>Align vertically when possible</li>
+                    <li>Align in shorter columns if there are many options</li>
+                    <li>Ensure there is adequate spacing between adjacent fields and radio/checkbox groups</li>
+                </ul>
+                <h4 id="vertical">Vertical</h4>
+                <div class="pl-preview">
+                    <div class="radio">
+                        <label>
+                            <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">Checked</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">Normal</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" disabled="" value="option3" id="optionsRadios3" name="optionsRadios">Disabled</label>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" value="option4" id="optionsRadios4" name="optionsRadios">Extended
+                            <div style="width: 300px;" class="text-muted">This option has some useful help text associated with it that elaborates on the state or purpose.</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>Checked<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"radio"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"optionsRadios"</span> <span class="na">id=</span><span class="s">"optionsRadios4"</span> <span class="na">value=</span><span class="s">"option4"</span><span class="nt">&gt;</span>Extended 
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>This option has some useful help text associated with it that elaborates on the state or purpose.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="inline">Inline</h4>
+                <div class="pl-preview">
+                    <label class="radio-inline">
+                        <input type="radio" checked="" value="option1" id="inlineRadio1" name="inlineRadioOptions"> Checked
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" value="option2" id="inlineRadio2" name="inlineRadioOptions"> Normal
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" disabled="" value="option3" id="inlineRadio3" name="inlineRadioOptions"> Disabled
+                    </label>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"inlineRadioOptions"</span> <span class="na">id=</span><span class="s">"inlineRadio1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span> Checked
+<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"radio-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"inlineRadioOptions"</span> <span class="na">id=</span><span class="s">"inlineRadio2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span> Normal
+<span class="nt">&lt;/label&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="checkboxes">Checkboxes</h3>
+                <h4 id="purpose-3">Purpose</h4>
+                <p>Users need to specify which option(s) from a set are applicable/valid/true based on a label.</p>
+                <h4 id="description-3">Description</h4>
+                <ul>
+                    <li>A set of checkboxes are used when a user is able to select none, one, or multiple options</li>
+                    <li>A single checkbox is used when a user is able to select or not select an option</li>
+                    <li>When clicked, a checkbox’s state toggles between unchecked and checked</li>
+                    <li>Checkboxes can have an indeterminate state that is set based on external interactions (e.g., indicating that some but not all items in a collection are selected)</li>
+                    <li>Checkbox labels should use sentence casing</li>
+                    <li>Use concise labels</li>
+                    <li>Align vertically when possible</li>
+                    <li>Align in shorter columns if there are many options</li>
+                    <li>The selected state of a checkbox should ideally indicate something ‘positive’ and may require the rephrasing of the label (e.g., <code>Send me weekly reminders</code>, vs. <code>Do not send me weekly reminders</code>)</li>
+                    <li>Ensure there is adequate spacing between adjacent fields and radio/checkbox groups</li>
+                </ul>
+                <h4 id="vertical-1">Vertical</h4>
+                <div class="pl-preview">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" checked="" value="option1" id="optionsCheckboxes1" name="optionsCheckboxes">Checked</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="option2" id="optionsCheckboxes2" name="optionsCheckboxes">Normal</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" disabled="" value="option3" id="optionsCheckboxes3" name="optionsCheckboxes">Disabled</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="option4" id="optionsCheckboxes4" name="optionsCheckboxes">Extended
+                            <div style="width: 300px;" class="text-muted">This option has some useful help text associated with it that elaborates on the state or purpose.</div>
+                        </label>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"optionsCheckboxes"</span> <span class="na">id=</span><span class="s">"optionsCheckboxes1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span>Checked<span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"checkbox"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;label&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">name=</span><span class="s">"optionsCheckboxes"</span> <span class="na">id=</span><span class="s">"optionsCheckboxes4"</span> <span class="na">value=</span><span class="s">"option4"</span><span class="nt">&gt;</span>
+    Extended 
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>This option has some useful help text associated with it that elaborates on the state or purpose.<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/label&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+                <h4 id="inline-1">Inline</h4>
+                <div class="pl-preview">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" checked="" value="option1" id="inlineCheckbox1"> Checked
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" value="option2" id="inlineCheckbox2"> Normal
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" disabled="" value="option3" id="inlineCheckbox3"> Disabled
+                    </label>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"inlineCheckbox1"</span> <span class="na">value=</span><span class="s">"option1"</span> <span class="na">checked</span><span class="nt">&gt;</span> Checked
+<span class="nt">&lt;/label&gt;</span> 
+<span class="nt">&lt;label</span> <span class="na">class=</span><span class="s">"checkbox-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"inlineCheckbox2"</span> <span class="na">value=</span><span class="s">"option2"</span><span class="nt">&gt;</span> Normal
+<span class="nt">&lt;/label&gt;</span></code></pre>
+                </div>
+            </div>
+            
+            <div class="pl-pattern">
+                <h3 id="select">Select</h3>
+                <h4 id="purpose-5">Purpose</h4>
+                <p>The user needs to choose an option from a predefined set.</p>
+                <h4 id="description-5">Description</h4>
+                <ul>
+                    <li>A select, sometimes referred to as a combo box, provides functionality for choosing an option from a set</li>
+                    <li>It is similar to dropdown button but facilitates item selection, filtering, and reflects the currently selected value</li>
+                    <li>When clicked, the user is shown all available options and can make a selection</li>
+                    <li>When a selection is made, the dropdown closes and the select control updates to reflect the current selection</li>
+                    <li>If there are 5 or more options, the list should allow for filtering via a text field</li>
+                    <li>For empty selects, use a placeholder in the format of <code>Select a [type]...</code> or <code>Select...</code></li>
+                </ul>
+                <p><span class="text-muted">Example uses https://github.com/ivaynberg/select2 for demo purposes.</span></p>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form class="col-sm-12 form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="se17">Normal</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control select2" id="se17">
+                                            <option value="A">Option A</option>
+                                            <option value="B">Option B</option>
+                                            <option value="C">Option C</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="se18">Filterable</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control select2" id="se18">
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="CA">California</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="DC">District Of Columbia</option>
+                                            <option value="FM">Federated States Of Micronesia</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="GU">Guam</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MH">Marshall Islands</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="MP">Northern Mariana Islands</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PW">Palau</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="PR">Puerto Rico</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VI">Virgin Islands</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="sel175">Placeholder</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control select2" data-placeholder="Select a database..." id="sel175">
+                                            <option></option>
+                                            <option value="A">mongodb</option>
+                                            <option value="B">mysql</option>
+                                            <option value="C">leveldb</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="se19">Disabled</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control select2" disabled="" id="se19">
+                                            <option value="A">Option A</option>
+                                            <option value="B">Option B</option>
+                                            <option value="C">Option C</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"se17"</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Normal<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">id=</span><span class="s">"se17"</span> <span class="na">class=</span><span class="s">"form-control select2"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"A"</span><span class="nt">&gt;</span>Option A<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"B"</span><span class="nt">&gt;</span>Option B<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"C"</span><span class="nt">&gt;</span>Option C<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="multi-select">Multi-select</h3>
+                <p>This is the native browser multi-select. <code>ctrl+click</code> (or <code>cmd+click</code>) toggles selection on an item. <code>shift+click</code> performs a range selection. A single <code>click</code> sets the selection to only that item.</p>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form class="col-sm-12 form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="se15">Normal</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" id="se15" multiple="">
+                                            <option value="A">Option A</option>
+                                            <option value="B">Option B</option>
+                                            <option value="C">Option C</option>
+                                            <option value="D">Option D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="se16">Disabled</label>
+                                    <div class="col-sm-9">
+                                        <select class="form-control" disabled="" id="se16" multiple="">
+                                            <option value="A">Option A</option>
+                                            <option value="B">Option B</option>
+                                            <option value="C">Option C</option>
+                                            <option value="D">Option D</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"se16"</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Disabled<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;select</span> <span class="na">multiple</span> <span class="na">id=</span><span class="s">"se16"</span> <span class="na">disabled</span> <span class="na">class=</span><span class="s">"form-control"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"A"</span><span class="nt">&gt;</span>Option A<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"B"</span><span class="nt">&gt;</span>Option B<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"C"</span><span class="nt">&gt;</span>Option C<span class="nt">&lt;/option&gt;</span>
+            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"D"</span><span class="nt">&gt;</span>Option D<span class="nt">&lt;/option&gt;</span>
+        <span class="nt">&lt;/select&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="date-picker">Date picker</h3>
+                <p>Depending on the JS library used for the date picker, functionality may vary.</p>
+                <p>Date pickers can provide:</p>
+                <ul>
+                    <li>Navigating years and months via previous/next arrows and/or other dropdowns</li>
+                    <li>Multi-calendar views</li>
+                    <li>Range highlighting</li>
+                    <li>Min and max allowable dates</li>
+                    <li>Highlighting/disabling of days/rows/columns (e.g., disable weekends or highlight bi-week)</li>
+                    <li>Ability to type date as well as use a calendar dropdown</li>
+                </ul>
+                <p><span class="text-muted">Example uses jQuery UI for demo purposes.</span></p>
+                <div class="pl-preview">
+                    <div style="max-width: 400px; margin: 0;" class="container-fluid">
+                        <div class="row">
+                            <form class="col-sm-12 form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="dp1">Date</label>
+                                    <div class="col-sm-9">
+                                        <span class="input-icon icon icon-calendar-o"></span>
+                                        <input type="text" class="datepicker form-control" data-inputmask="'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'" id="dp1">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label" for="dp2">Range</label>
+                                    <div class="col-sm-9">
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <span class="input-icon icon icon-calendar-o"></span>
+                                                <input type="text" class="datepicker form-control" data-inputmask="'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'" placeholder="From" id="dp2">
+                                            </div>
+                                            <div class="col-sm-6">
+                                                <span class="input-icon icon icon-calendar-o"></span>
+                                                <input type="text" class="datepicker form-control" data-inputmask="'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'" placeholder="To" id="dp3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"dp1"</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Date<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-icon icon icon-calendar-o"</span><span class="nt">&gt;&lt;/span&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"dp1"</span> <span class="na">data-inputmask=</span><span class="s">"'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"datepicker form-control"</span> <span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form-group"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"dp2"</span> <span class="na">class=</span><span class="s">"col-sm-3 control-label"</span><span class="nt">&gt;</span>Range<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-icon icon icon-calendar-o"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"dp2"</span> <span class="na">placeholder=</span><span class="s">"From"</span> <span class="na">data-inputmask=</span><span class="s">"'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"datepicker form-control"</span> <span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-6"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"input-icon icon icon-calendar-o"</span><span class="nt">&gt;&lt;/span&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"dp3"</span> <span class="na">placeholder=</span><span class="s">"To"</span> <span class="na">data-inputmask=</span><span class="s">"'mask': 'm/d/y', 'placeholder': 'mm/dd/yyyy'"</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">class=</span><span class="s">"datepicker form-control"</span> <span class="nt">&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="/design-standards/1.x/js/vendor/vendor.js"></script>
+<script src="/design-standards/1.x/js/vendor/plugins.js"></script>
+<script src="/design-standards/1.x/js/docs.js"></script>
+
+</body>
+
+</html>

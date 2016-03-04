@@ -1,23 +1,5 @@
-.pl-header {
-    /*padding: 0;
-
-  .navbar-brand {
-      width: 158px;
-      padding-left: 16px;
-      background: darken(@pl-header-bg, 5%);
-  }
-
-  .pl-uspto-logo {
-      margin-top: -2px;
-  }
-
-  .nav-collapse {
-      background: darken(@pl-header-bg, 5%);
-      padding: 12px 14px;
-      border: none;
-      float: left;
-      height: @navbar-height;
-  }*/
+/* .pl-header {
+   
     background: #13428b url("/design-standards/site/images/bg-pattern-header.png");
     box-shadow: 0px -11px 30px 0px rgba(0, 0, 0, 0.3) inset;
     padding: 15px;
@@ -32,7 +14,7 @@
     }
 }
 
-
+ */
 /* ==========================================================================
    Navbar
    ========================================================================== */
@@ -53,16 +35,11 @@
     border: 0;
 }
 
-.dropdown-menu {
+/* .dropdown-menu {
     .content-flush & {
         padding: 0;
     }
-}
-
-
-/*
-   Primary Navbar
-   ========================================================================== */
+} */
 
 .navbar-primary {
     height: 58px;
@@ -123,9 +100,10 @@
     margin: 5px 0;
     font-size: 26px;
     padding-left: 6px;
-     padding-right: 6px;
-    &:hover, &:focus {
-      color: #fff;
+    padding-right: 6px;
+    &:hover,
+    &:focus {
+        color: #fff;
     }
     @media screen and (min-width: @screen-sm-min) {
         margin-top: 10px;
@@ -143,120 +121,53 @@
     box-shadow: inset 10px -40px 80px rgba(0, 0, 0, 0.3);
     a {
         color: #fff;
+        padding-top: 20px;
         padding-left: 5px;
-        padding-right: 5px;        
-
+        padding-right: 5px;
         @media screen and (min-width: @screen-sm-min) {
-          padding-left: 15px;
-          padding-right: 15px;
-      }
+            padding-top: 27px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+    > li {
+        float: none;
+        display: inline-block;
+        position: relative;
+        height: 100%;
+        @media screen and (min-width: 992px) {
+            &.active {
+                background: rgba(25, 43, 62, 0.3) url(../images/menu-active-bg.png) 50% 100% no-repeat;
+            }
+        }
     }
     @media screen and (min-width: 768px) {
         height: 73px;
     }
-}
-
-#menu-primary .title-emphasis {
-    font-size: 1.5em;
-    font-weight: normal;
-    white-space: nowrap;
-    @media screen and (max-width: 767px) {
-        font-size: 13px;
-    }
-}
-
-
-/* @media screen and (min-width: 768px) and (max-width: 991px) {
-    line 223, ../scss/ui-components/_header.scss
-    #menu-primary .title-emphasis {
-        font-size: 2em;
-        line-height: 1;
-    }
-} */
-
-@media screen and (max-width: 991px) {
-    /* line 125, ../scss/ui-components/_header.scss */
-    #menu-primary {
+    @media screen and (max-width: 991px) {
         margin: 0;
         padding: 0 5px;
     }
-}
-
-
-/* @media screen and (min-width: 992px) {
-    line 125, ../scss/ui-components/_header.scss
-    #menu-primary {
-        height: 76px;
+    @media screen and (max-width: 991px) {
+        & > li {
+            float: left;
+        }
+        & > li:last-child {
+            width: auto;
+        }
     }
-} */
-
-
-/* line 141, ../scss/ui-components/_header.scss */
-
-#menu-primary > li {
-    float: none;
-    display: inline-block;
-    position: relative;
-    height: 100%;
-}
-
-@media screen and (max-width: 991px) {
-    #menu-primary > li {
-        float: left;
+    .title-emphasis {
+        font-size: 1.5em;
+        font-weight: normal;
+        white-space: nowrap;
+        @media screen and (max-width: 767px) {
+            font-size: 14px;
+        }
     }
-    /* line 151, ../scss/ui-components/_header.scss */
-    #menu-primary > li:last-child {
-        width: auto;
+    .text-prefix {
+        font-style: italic;
+        @media screen and (max-width: 767px) {
+            font-size: 12px;
+        }
     }
 }
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-    /* line 141, ../scss/ui-components/_header.scss */
-    #menu-primary > li {
-        height: 100%;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    /* line 158, ../scss/ui-components/_header.scss */
-    #menu-primary > li.active {
-        background: rgba(25, 43, 62, 0.3) url(../images/menu-active-bg.png) 50% 100% no-repeat;
-    }
-}
-
-
-/* line 162, ../scss/ui-components/_header.scss */
-
-#menu-primary > li.active:before {
-    background: url(../img/menu-active-pointer.png) 0 0 no-repeat;
-    content: "";
-    position: absolute;
-    display: block;
-    left: 50%;
-    top: 100%;
-    margin-left: -49px;
-    margin-top: -13px;
-    width: 98px;
-    height: 45px;
-}
-
-#menu-primary .text-prefix {
-    font-style: italic;
-}
-
-@media screen and (max-width: 767px) {
-    /* line 209, ../scss/ui-components/_header.scss */
-    #menu-primary .text-prefix {
-        font-size: 12px;
-    }
-}
-
-
-/* @media screen and (min-width: 768px) and (max-width: 991px) {
-    line 209, ../scss/ui-components/_header.scss
-    #menu-primary .text-prefix {
-        font-size: 1.7142857143em;
-        margin-bottom: 4px;
-        line-height: 1;
-    }
-} */

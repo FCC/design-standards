@@ -1,105 +1,80 @@
 <ul class="nav nav-stacked">
     <li class="category">foundation</li>
     <li>
-        <a href="/design-standards/site/foundation/colors.html"> Colors </a>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
     </li>
     <li>
-        <a href="/design-standards/site/foundation/grid.html"> Grid </a>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
     </li>
     <li>
-        <a href="/design-standards/site/foundation/icons.html"> Icons </a>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
     </li>
     <li>
-        <a href="/design-standards/site/foundation/layouts.html"> Layouts </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/foundation/links.html"> Links </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/foundation/typography.html"> Typography </a>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
     </li>
     <li class="category">Maps</li>
     <li>
-        <a href="/design-standards/site/maps/maps.html">Anatomy of a map</a>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
     </li>
     <li class="category">components</li>
     <li>
-        <a href="/design-standards/site/components/alerts.html"> Alerts and notifications </a>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/breadcrumbs.html"> Breadcrumbs </a>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/buttons.html"> Buttons </a>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/collapsiblePanels.html"> Collapsible panels </a>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/dialogs.html"> Dialogs </a>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/formControls.html"> Form controls </a>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/forms.html"> Forms </a>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/labelsAndBadges.html"> Labels and badges </a>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/menus.html"> Menus </a>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/metadata.html"> Metadata </a>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/pagination.html"> Pagination </a>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
     </li>
     <li>
-        <a href="/design-standards/site/components/popovers.html"> Popovers </a>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
     </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
     <li>
-        <a href="/design-standards/site/components/progressBars.html"> Progress and loading </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/components/stepIndicators.html"> Step indicators </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/components/tables.html"> Tables </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/components/tabs.html"> Tabs </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/components/tags.html"> Tags </a>
-    </li>
-    <li>
-        <a href="/design-standards/site/components/tooltips.html"> Tooltips </a>
-    </li>
-    <!-- <li class="category">patterns</li>
-    <li>
-        <a href="patterns/dataFormats.html"> Data formats </a>
-    </li>
-    <li>
-        <a href="patterns/fileUpload.html"> File upload </a>
-    </li>
-    <li>
-        <a href="patterns/filters.html"> Filters </a>
-    </li>
-    <li>
-        <a href="patterns/help.html"> Help </a>
-    </li>
-    <li>
-        <a href="patterns/search.html"> Search </a>
-    </li>
-    <li>
-        <a href="patterns/settings.html"> Settings </a>
-    </li>
-    <li>
-        <a href="patterns/tours.html"> Tours </a>
-    </li>
-    <li>
-        <a href="patterns/wizards.html"> Wizards </a>
-    </li> -->    
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
 </ul>

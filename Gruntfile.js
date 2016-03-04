@@ -8,7 +8,7 @@ module.exports = function(grunt) {
     // Configurable paths
     var paths = {
         tmp: '.tmp',
-        assets: 'site',
+        assets: '1.x',
         downloads: 'downloads'
     };
 
@@ -146,7 +146,7 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: './docs/',
                     src: ['**/*.html'],
-                    dest: './site'
+                    dest: './1.x/docs'
                 }]
             }
         },
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
                     // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
                     // 'bower_components/select2/select2.js',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.all.min.js',
-                    // 'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
+                    'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
                     'front/vendor/prism/prism.js'
                 ],
                 dest: '<%= paths.assets %>/js/vendor/vendor.js'
@@ -200,12 +200,12 @@ module.exports = function(grunt) {
             vendorcss: {
                 src: [
                     'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.structure.css',
-                    'bower_components/font-awesome/css/font-awesome.css',
-                    'bower_components/select2/select2.css',
-                    'bower_components/nouislider/distribute/jquery.nouislider.min.css',
-                    'bower_components/nouislider/distribute/jquery.nouislider.pips.min.css'
+                    // 'bower_components/font-awesome/css/font-awesome.css',
+                    // 'bower_components/select2/select2.css',
+                    // 'bower_components/nouislider/distribute/jquery.nouislider.min.css',
+                    // 'bower_components/nouislider/distribute/jquery.nouislider.pips.min.css'
                 ],
-                dest: '<%= paths.assets %>/styles/vendor.css'
+                dest: '<%= paths.assets %>/css/vendor.css'
             },
             // main css
             maincss: {

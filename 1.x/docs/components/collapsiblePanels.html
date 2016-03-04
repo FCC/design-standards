@@ -1,0 +1,467 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Collapsible Panels FCC GIS Design Standards</title>
+        <link rel="shortcut icon" href="https://www.fcc.gov/sites/all/themes/fcc/favicon.ico" type="image/vnd.microsoft.icon" />
+
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="cleartype" content="on">
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/docs.css" rel="stylesheet" />
+    <link href="/design-standards/1.x/css/vendor.css" rel="stylesheet" />
+
+
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
+    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+    <nav role="navigation">
+        <div class="navbar navbar-default navbar-primary">
+            <div class="navbar-header">
+                <h1 class="navbar-brand">
+						  <a title="Home" href="http://fcc.gov" class="navbar-logo">
+							<span class="sr-only">Federal Communications Commission</span>
+						  </a>
+						</h1>
+            </div>
+            <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
+                <li>
+                    <a aria-controls="browse-by-category" href="index.html">
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
+                        <strong class="title-emphasis">Design Standards</strong>
+                    </a>
+                </li>
+            </ul>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+        </div>
+    </nav>
+</header>
+
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <ul class="nav nav-stacked">
+    <li class="category">foundation</li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/colors.html"> Colors </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/grid.html"> Grid </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/foundation/icons.html"> Icons </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/layouts.html"> Layouts </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/links.html"> Links </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
+    </li>
+    <li class="category">Maps</li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+    </li>
+    <li class="category">components</li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/breadcrumbs.html"> Breadcrumbs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/buttons.html"> Buttons </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/collapsiblePanels.html"> Collapsible panels </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/dialogs.html"> Dialogs </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/formControls.html"> Form controls </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/forms.html"> Forms </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/labelsAndBadges.html"> Labels and badges </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
+    </li>
+    <!-- <li>
+        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
+    </li>    
+</ul>
+
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Collapsible panels</h3>
+                <h4 id="purpose">Purpose</h4>
+                <p>Users need to see only relevant content.</p>
+                <h4 id="description">Description</h4>
+                <p>Collapsible panels provide users with the ability to expand and collapse content as needed. They can simplify the interface by hiding content until it is needed.</p>
+                <p>&nbsp;</p>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="behaviors">Behaviors</h3>
+                <p>Collapsible panels can operate as either single-select (accordion) or multi-select.</p>
+                <ul>
+                    <li><strong>Single-select</strong> allows only one panel to be expanded at any given time. Expanding a panel collapses the previously expanded panel. This is commonly referred to as an “Accordion”.</li>
+                    <li><strong>Multi-select</strong> allows more than one panel to be expanded at any given time. Expanding a panel has no impact on the other panels.
+                        <ul>
+                            <li><strong>Expand/collapse all</strong> allows all panels to be expanded or collapsed simultaneously. It is important to note when all panels are in a “open” or “closed” state, the corresponding button should be disabled. When there are panels in both “open” and “closed” states, both buttons are enabled.</li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="pl-preview">
+                    <div class="panel-toggler">
+                        <a id="expand-all">Expand All</a>&nbsp;|&nbsp;<a id="collapse-all">Collapse All</a>
+                    </div>
+                    <div aria-multiselectable="true" role="tablist" id="3accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#3collapseOne" id="3headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingOne" role="tabpanel" class="panel-collapse collapse in" id="3collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#3collapseTwo" id="3headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingTwo" role="tabpanel" class="panel-collapse collapse" id="3collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="3collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#3collapseThree" id="3headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="3headingThree" role="tabpanel" class="panel-collapse collapse" id="3collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+            </div>
+            <div class="pl-pattern">
+                <h3 id="styles">Styles</h3>
+                <h4 id="standard">Standard</h4>
+                <p>The standard style provides more distinction between the panel and internal/surrounding content. This is useful for more complex layouts.</p>
+                <div class="pl-preview">
+                    <div aria-multiselectable="true" role="tablist" id="accordion" class="panel-group">
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#collapseOne" data-parent="#accordion" id="headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingOne" role="tabpanel" class="panel-collapse collapse in" id="collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#collapseTwo" data-parent="#accordion" id="headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingTwo" role="tabpanel" class="panel-collapse collapse" id="collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div aria-controls="collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#collapseThree" data-parent="#accordion" id="headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="headingThree" role="tabpanel" class="panel-collapse collapse" id="collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+                <h4 id="light">Light</h4>
+                <p>For simple content or layouts, the light style may work better.</p>
+                <div class="pl-preview">
+                    <div aria-multiselectable="true" role="tablist" id="2accordion" class="panel-group">
+                        <div class="panel">
+                            <div aria-controls="2collapseOne" data-toggle="collapse" aria-expanded="true" data-target="#2collapseOne" data-parent="#2accordion" id="2headingOne" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Goods/Services
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingOne" role="tabpanel" class="panel-collapse collapse in" id="2collapseOne">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div aria-controls="2collapseTwo" data-toggle="collapse" aria-expanded="false" data-target="#2collapseTwo" data-parent="#2accordion" id="2headingTwo" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Mark info
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingTwo" role="tabpanel" class="panel-collapse collapse" id="2collapseTwo">
+                                <div class="panel-body">
+                                    Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel">
+                            <div aria-controls="2collapseThree" data-toggle="collapse" aria-expanded="false" data-target="#2collapseThree" data-parent="#2accordion" id="2headingThree" role="tab" class="panel-heading">
+                                <h4 class="panel-title">
+              <i class="icon icon-angle-right"></i>Owner/Assignment
+          </h4>
+                            </div>
+                            <div aria-labelledby="2headingThree" role="tabpanel" class="panel-collapse collapse" id="2collapseThree">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Project name</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Invoice</td>
+                                            <td><span>Add invoice confirmation</span></td>
+                                            <td><span>$4,500</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Templates</td>
+                                            <td><span>Refactor templates to use the new templating library</span></td>
+                                            <td><span>$9,000</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Payments</td>
+                                            <td><span>Process payments using third party api</span></td>
+                                            <td><span>$5,400</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Account management</td>
+                                            <td><span>Improve account management workflow</span></td>
+                                            <td><span>$6,000</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="highlight">
+                    <pre><code data-lang="html" class="language-html">// HTML</code></pre>
+                </div>
+            </div>
+        </section>
+        
+<footer>
+<div class="docs-attribution">
+    <section>
+        <div class="row">
+            <div class="col-md-6">
+                <h4>Improvements <i class="fa fa-cogs"></i></h4>
+                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
+            </div>
+            <div class="col-md-6">
+                <h4>Other Resources <i class="fa fa-link"></i></h4>
+                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+            </div>
+        </div>
+    </section>
+</div>
+    <div class="nav-footer">
+        <div class="footergriditems">
+            <div class="grid-item">
+                <address>
+                    Federal Communications Commission
+                    <br> 445 12th Street SW, Washington, DC 20554
+                </address>
+                <ul class="footermenu footermenu__phone">
+                    <li><a class="phone-link" href="tel:+18882255322">Phone: 1-888-225-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18888355322">TTY: 1-888-835-5322</a></li>
+                    <li><a class="phone-link" href="tel:+18444322275">Videophone: 1-844-432-2275</a></li>
+                    <li><a class="phone-link" href="tel:+18664180232">Fax: 1-866-418-0232</a></li>
+                    <a class="contactus" href="/about/contact">Contact Us</a>
+                </ul>
+                <ul class="socialmediaicons">
+                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li><a href="#">Website Policies &amp; Notices</a></li>
+                    <li><a href="#">FOIA</a></li>
+                    <li><a href="#">No Fear Act Data</a></li>
+                    <li><a href="#">FCC Digital Strategy</a></li>
+                    <li><a href="#">Open Government Directive</a></li>
+                    <li><a href="#">Plain Writing Act</a></li>
+                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="#">Disability Rights</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__categories">
+                    <li>CATEGORIES</li>
+                    <li><a href="/about/overview">About the FCC</a></li>
+                    <li><a href="/proceedings-actions">Proceedings &amp; Actions</a></li>
+                    <li><a href="/licensing">Licensing &amp; Databases</a></li>
+                    <li><a href="/reports-research">Reports &amp; Research</a></li>
+                    <li><a href="/news-events">News &amp; Events</a></li>
+                    <li><a href="/consumers">For Consumers</a></li>
+                </ul>
+            </div>
+            <div class="grid-item">
+                <ul class="footermenu footermenu__bureaus">
+                    <li>BUREAUS &amp; OFFICES</li>
+                    <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
+                    <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
+                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/international#block-menu-block-4">International</a></li>
+                    <li><a href="/media#block-menu-block-4">Media</a></li>
+                    <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
+                    <li><a href="#">Wireless</a></li>
+                    <li><a href="#">Wireline</a></li>
+                    <li><a href="#">Offices</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fcc-seal">
+            Federal Communications Commission
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <script src="/design-standards/1.x/js/vendor/vendor.js"></script>
+<script src="/design-standards/1.x/js/vendor/plugins.js"></script>
+<script src="/design-standards/1.x/js/docs.js"></script>
+
+</body>
+
+</html>

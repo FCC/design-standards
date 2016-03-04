@@ -16,7 +16,7 @@
             <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
                 <li>
                     <a aria-controls="browse-by-category" href="index.html">
-                        <div class="text-prefix">GISP</div>
+                        <!-- <div class="text-prefix">&nbsp;</div> -->
                         <strong class="title-emphasis">Design Standards</strong>
                     </a>
                 </li>

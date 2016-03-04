@@ -231,7 +231,7 @@ body {
             padding: 30px 40px;
             margin: 0 -40px;
             position: relative;
-            z-index: 2;
+            // z-index: 2;
             background: #fefefe;
             border-bottom: 1px solid #eee;
         }
@@ -298,99 +298,6 @@ body {
     }
 }
 
-// .pl-hero {
-//   background-color: @brand-primary;
-//   padding-bottom: 75px;
-//   // height: 300px;
-//   background-image: url(../images/hero-mockup.png);
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: center top;
-//   .btn {
-//     margin: 0 10px;
-//     min-width: 120px;
-//     // border-radius: 100px;
-//     border: 2px solid #fff;
-//     box-shadow: none;
-//     background: @brand-primary;
-//     @media (max-width: @screen-xs-max) {
-//       display: block;
-//       margin: 10px auto;
-//       max-width: 300px;
-//     }
-//   }
-//   .btn-default {
-//     color: @brand-primary;
-//     background: #fff;
-//   }
-//   .container {
-//     padding: 20px 8px;
-//   }
-//   h1 {
-//     color: #fff;
-//     font-size: 50px;
-//     font-weight: 200;
-//   }
-//   h3 {
-//     color: mix(@brand-primary, #fff, 50%);
-//     font-size: 20px;
-//     font-weight: 400;
-//   }
-// }
-// .pl-help {
-//   background-color: @pl-sidebar-bg;
-//   color: #fff;
-//   display: inline-block;
-//   width: 100%;
-//   font-size: 14px;
-//   text-align: center;
-//   h4 {
-//     color: #fff;
-//   }
-//   padding: 100px;
-//   color: mix(@pl-sidebar-bg, #fff, 50%);
-//   a {
-//     color: mix(@pl-sidebar-bg, #fff, 50%);
-//     text-decoration: underline;
-//   }
-// }
-// .pl-heading-fancy {
-//   color: @brand-success;
-//   &:after {
-//     display: block;
-//     content: "";
-//     height: 1px;
-//     background: mix(@brand-success, #fff, 75%);
-//     width: 60px;
-//     margin-top: 8px;
-//     margin-left: 0;
-//     margin-bottom: 20px;
-//   }
-// }
-// .pl-about {
-//   background: #fff;
-//   padding-top: 50px;
-//   padding-bottom: 50px;
-//   font-size: 16px;
-//   line-height: 1.6;
-//   h4 {
-//     margin-top: 21px;
-//   }
-//   .pl-padded-col {
-//     padding: 20px 40px;
-//     p {
-//       text-align: left;
-//     }
-//   }
-// }
-// .pl-uspto-logo {
-//   background-image: url(data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB2aWV3Qm94PSIwIDAgMTY5LjUgNTkuMSIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTY5LjUgNTkuMSIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+CjxnPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTE0Mi42LDE4LjdjLTEuOSwwLTMuNSwwLjYtNC43LDEuOWMtMiwyLTIuMiw1LjQtMi4yLDguOWMwLDMuNSwwLjMsNi45LDIuMiw4LjljMS4yLDEuMiwyLjgsMS45LDQuNywxLjkKCQljMS45LDAsMy42LTAuNyw0LjgtMS45YzItMiwyLjItNS40LDIuMi04LjljMC0zLjUtMC4zLTYuOS0yLjItOC45QzE0Ni4yLDE5LjMsMTQ0LjUsMTguNywxNDIuNiwxOC43eiIvPgoJPHBhdGggZmlsbD0iI0ZGRkZGRiIgZD0iTTkxLjMsNDAuM2M1LjksMCw2LjctNS4xLDYuNy0xMC44YzAtNS44LTAuOC0xMC44LTYuNy0xMC44Yy02LDAtNi44LDUtNi44LDEwLjgKCQlDODQuNSwzNS4yLDg1LjMsNDAuMyw5MS4zLDQwLjN6Ii8+Cgk8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTYyLjksMGgtNDQuMnYxMy4yaDYuM3Y1aC02LjN2MTguMmMwLDIuNCwxLjIsMy44LDMuNiwzLjhoMi43djUuNmgtMy45Yy02LjEsMC04LjktNC40LTguOS05VjE4LjJoLTMuNwoJCXYtNWgzLjdWMEg2LjdDMywwLDAsMywwLDYuN3Y0NS44YzAsMy43LDMsNi43LDYuNyw2LjdINzhWMTMuMmg2LjR2My41YzIuNC0zLDUuMS0zLjksOC42LTMuOWMzLjMsMCw2LjIsMS4xLDgsMi45CgkJYzMuMSwzLjIsMy43LDguNCwzLjcsMTMuN2MwLDUuMy0wLjUsMTAuNi0zLjcsMTMuOGMtMS44LDEuOC00LjYsMi45LTcuOSwyLjljLTMuNSwwLTYuMi0wLjgtOC41LTMuN3YxNi43aDc4LjQKCQljMy43LDAsNi43LTMsNi43LTYuN1Y2LjdDMTY5LjUsMywxNjYuNSwwLDE2Mi45LDB6IE0zOS43LDQ1LjhoLTYuNHYtMy4zYy0yLjIsMi40LTUuNCwzLjctOC43LDMuN2MtMy4zLDAtNi4xLTEuMS04LTMKCQljLTIuNS0yLjQtMy4zLTUuNS0zLjMtOS4yVjEzLjJoNi41djE5LjhjMCw1LjEsMi45LDcuMyw2LjUsNy4zYzMuNywwLDYuNy0yLjIsNi43LTcuM1YxMy4yaDYuNVY0NS44eiBNNTguNyw0Ni4xCgkJYy01LjMsMC05LjgtMC45LTEzLjctNC43bDQuMy00LjNjMi42LDIuNyw2LjIsMy40LDkuNCwzLjRjNCwwLDcuMS0xLjQsNy4xLTQuNWMwLTIuMi0xLjItMy41LTQuNC0zLjlsLTUuMi0wLjQKCQljLTYuMi0wLjYtOS42LTMuMy05LjYtOWMwLTYuNCw1LjUtOS45LDEyLjMtOS45YzQuOSwwLDksMSwxMi4xLDMuN2wtNC4xLDQuMmMtMi4xLTEuNy00LjktMi40LTgtMi40Yy00LDAtNS45LDEuNy01LjksNC4yCgkJYzAsMi4yLDEuMywzLjQsNC41LDMuN2w0LjYsMC40YzYuNywwLjYsMTAuMywzLjUsMTAuMyw5LjJDNzIuMiw0Mi42LDY2LjUsNDYuMSw1OC43LDQ2LjF6IE0xNTIuMyw0Mi4zYy0yLjEsMi4yLTUuMywzLjktOS44LDMuOQoJCWMtNC40LDAtNy42LTEuNy05LjctMy45Yy0zLjEtMy4yLTMuOS03LjMtMy45LTEyLjhjMC01LjUsMC44LTkuNiwzLjktMTIuOGMyLjEtMi4yLDUuMy0zLjksOS43LTMuOWM0LjQsMCw3LjYsMS43LDkuOCwzLjkKCQljMy4xLDMuMiwzLjksNy4zLDMuOSwxMi44QzE1Ni4yLDM1LDE1NS40LDM5LjEsMTUyLjMsNDIuM3oiLz4KPC9nPgo8L3N2Zz4=);
-//   background-size: fit;
-//   width: 2.868020305em;
-//   height: 1em;
-//   display: inline-block;
-//   vertical-align: bottom;
-// }
 .pl-pattern-layouts {
     img {
         float: left;
