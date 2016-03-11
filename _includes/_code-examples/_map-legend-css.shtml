@@ -1,0 +1,11 @@
+<pre class="language-css">
+<code>#map-legend {    
+  background-color: #fff;
+  border: solid 1px #999;
+  bottom: 10px; 
+  left: 10px;          
+  position: absolute;       
+  visibility: none;
+  z-index: 2;
+}</code>
+</pre>

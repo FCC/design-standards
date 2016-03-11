@@ -22,109 +22,85 @@
                     <div id="map-container">
                         <div id="div-legend" style="position: absolute; bottom: 10px; left: 10px; background-color: #FFFFFF; border: solid 1px #999999; z-index: 2; visibility: visible: none">
                             <table style="margin: 5px">
-                                <tr>
-                                    <td colspan="3">
-                                        <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
-                                        <button class="btn-closeLegend btn btn-xs pull-right">
-                                            <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="0" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #ffffcc; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> No residential services at 200 kbps or above</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="1" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #c7e9b4; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential services of at least 200 kbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="2" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #7fcdbb; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential services of at least 10 Mbps/1 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="3" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #bdd7e7; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 25 Mbps/3 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="4" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="5" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
-                                </tr>
-                                <tr style="height: 1px; background-color: #cccccc">
-                                    <td colspan=3></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="6" class="checkbox-provider">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0"></div>
-                                    </td>
-                                    <td> Tribal land</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="7" class="checkbox-provider">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0"></div>
-                                    </td>
-                                    <td> Urban area</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
+                                            <button class="btn-closeLegend btn btn-xs pull-right">
+                                                <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr style="height: 1px; background-color: #cccccc">
+                                        <td colspan=3></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        </td>
+                                        <td> Tribal land</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        </td>
+                                        <td> Urban area</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div id="div-legend-icon" style="position: absolute; bottom: 10px; left: 10px;z-index: 1; cursor: pointer;" title="Map Legend">
                             <span class="icon icon-list"></span>
                         </div>
                     </div>
-                    <!-- <div class="docs-codeblock">
-                        <ul class="nav nav-pills" role="tablist">                            
-                            <li class="active" role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="active" role="presentation"><a href="#ex1-html" aria-controls="profile" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
-                                <div class="highlight"></div>
+                                <div class="highlight">
+                                    <!-- #include file="_code-examples/_map-legend-html.shtml" -->
+                                </div>
+                            </div>
+                            <div class="tab-pane active" id="ex1-css" role="tabpanel">
+                                <div class="highlight">
+                                    <!-- #include file="_code-examples/_map-legend-css.shtml" -->
+                                </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
-    </div>
-    </section>
-    <!--#include file="_footer.shtml" -->
+        </section>
+        <!--#include file="_footer.shtml" -->
     </div>
     <!--#include file="_scripts-footer.shtml" -->
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-                        var map = L.mapbox.map('map-container', 'mapbox.streets')
-                                .setView([40, -74.50], 9);*/
+                                var map = L.mapbox.map('map-container', 'mapbox.streets')
+                                        .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
@@ -155,14 +131,14 @@
     }).addTo(map);
 
     $('.btn-closeLegend').on("click", function(e) {
-            $//hide legend
-            $('#div-legend').css("visibility", "hidden");
-        });
+        $ //hide legend
+        $('#div-legend').css("visibility", "hidden");
+    });
 
     $('#div-legend-icon').on("click", function(e) {
-        $//show legend
+        $ //show legend
         $('#div-legend').css("visibility", "visible");
-    });  
+    });
     </script>
 </body>
 
