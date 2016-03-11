@@ -21,8 +21,8 @@ module.exports = function(grunt) {
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
-                files: ['front/scripts/{,*/}*.js', 'docs/**/*.html'],
-                tasks: ['jshint', 'ssi', 'concat:mainjs']
+                files: ['front/scripts/{,*/}*.js', 'docs/**/*.html','_includes/**/*.shtml'],
+                tasks: ['ssi', 'copy']
             },
             less: {
                 files: ['bootstrap-gisp/less/**/*.less', 'front/styles/**/*.less'],
@@ -75,7 +75,7 @@ module.exports = function(grunt) {
         less: {
             options: {
                 paths: ['bootstrap-gisp/less', 'bower_components'],
-                compress: true,
+                compress: false,
                 sourceMap: true
             },
             dist: {
@@ -187,10 +187,10 @@ module.exports = function(grunt) {
                 dest: '<%= paths.assets %>/js/vendor/vendor.js'
             },
             // main js
-            mainjs: {
-                src: ['front/scripts/docs.js'],
-                dest: '<%= paths.assets %>/js/docs.js'
-            },
+            // mainjs: {
+            //     src: ['front/scripts/docs.js'],
+            //     dest: '<%= paths.assets %>/js/docs.js'
+            // },
             // appDemo js
             // appDemojs: {
             //     src: ['front/scripts/appDemo.js'],
@@ -255,8 +255,16 @@ module.exports = function(grunt) {
                     cwd: 'bootstrap-gisp',
                     src: '**/*',
                     dest: '<%= paths.downloads %>/'
-                }, { // minified css to downloads folders
-
+                }, {
+                    expand: true,
+                    cwd: 'front/scripts',
+                    src: '*.js',
+                    dest: '<%= paths.assets %>/js'
+                }, {
+                    expand: true,
+                    cwd: 'front/images',
+                    src: '{,*/}*.{png,gif,jpeg,jpg}',
+                    dest: '<%= paths.assets %>/images'
                 }]
             },
             release: {
@@ -286,9 +294,9 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'jshint',
+        // 'jshint',
         'less',
-        'imagemin',
+        // 'imagemin',
         'usebanner',
         'ssi',
         'concat',

@@ -1,0 +1,45 @@
+<pre class="language-markup">
+<code>&lt;div class=&quot;search-field input-group&quot;&gt;
+    &lt;div class=&quot;search__group&quot;&gt;
+        &lt;div class=&quot;search__input&quot;&gt;
+            &lt;div class=&quot;input-group&quot;&gt;
+                &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button aria-expanded=&quot;false&quot; data-toggle=&quot;dropdown&quot; class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot;&gt;&lt;span id=&quot;btn-label&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul id=&quot;input-search-switch&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; data-value=&quot;loc&quot;&gt;Street&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; data-value=&quot;latlon-decimal&quot;&gt;Coordinates&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;input id=&quot;input-location&quot; class=&quot;form-control ui-autocomplete-input ui-corner-all&quot; type=&quot;search&quot; placeholder=&quot;Enter Address&quot; style=&quot;display: block&quot; autocomplete=&quot;off&quot;&gt;
+                &lt;div id=&quot;input-latlon-decimal&quot; class=&quot;form-control&quot; type=&quot;search&quot; placeholder=&quot;Enter Latlon decimal&quot; style=&quot;display: none&quot;&gt;
+                    &lt;table id=&quot;table-latlon-decimal&quot;&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Latitude:
+                                    &lt;input id=&quot;latitude&quot; placeholder=&quot;41.234567&quot; style=&quot;width: 150px; height: 20px; border: solid 1px #eee&quot;&gt;
+                                &lt;/td&gt;
+                                &lt;td width=&quot;75&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Longitude:
+                                    &lt;input id=&quot;longitude&quot; placeholder=&quot;-91.234567&quot; style=&quot;width: 150px; height: 20px; border: solid 1px #eee&quot;&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;input-group-btn&quot; id=&quot;span-location-search&quot; style=&quot;display: table-cell&quot;&gt;                        
+&lt;button class=&quot;btn__search btn btn-default&quot; type=&quot;submit&quot; id=&quot;input-loc-search&quot; title=&quot;Location Search&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot;&gt;&lt;span class=&quot;icon icon-search&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Location Search&lt;/span&gt;&lt;/button&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;input-group-btn&quot; id=&quot;span-latlon-decimal-search&quot; style=&quot;display: none&quot;&gt;                        
+&lt;button class=&quot;btn-search btn btn-default&quot; id=&quot;input-latlon-decimal-search&quot; title=&quot;Decimal Latlon Search&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot;&gt;&lt;span class=&quot;icon icon-search&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Decimal Lat/Lon Search&lt;/span&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btn__groupLoc&quot;&gt;
+            &lt;span class=&quot;input-group-btn&quot;&gt;  
+&lt;button class=&quot;btn__geoLocation btn btn-default st&quot; title=&quot;Get Current Location&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; id=&quot;btn-geoLocation&quot; type=&quot;button&quot; data-original-title=&quot;Get Current Location&quot;&gt;
+&lt;span class=&quot;icon icon-location-arrow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Get Current Location&lt;/span&gt;&lt;/button&gt;
+            &lt;button class=&quot;btn__nationLocation btn btn-default st&quot; title=&quot;Nationwide&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; id=&quot;btn-nationLocation&quot; type=&quot;button&quot; data-original-title=&quot;Nationwide&quot;&gt;&lt;span class=&quot;icon icon-globe&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Nationwide&lt;/span&gt;&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
