@@ -300,39 +300,5 @@
         $(this).next('tr[data-pl-detail-row]').toggle();
     });
 
-
-    /* google analytics download tracking */
-
-    function _checkFile(src, extensions) {
-        if (typeof src !== 'string') {
-            return false;
-        }
-        var ext = src.split('?')[0];
-        ext = ext.split('.');
-        ext = ext[ext.length - 1];
-        if (ext) {
-            for (var i = 0; i < extensions.length; i++) {
-                if (extensions[i] === ext) {
-                    return ext;
-                }
-            }
-        }
-        return false;
-    }
-
-    if (window.__gaTracker) {
-        var ext = 'xls,xlsx,doc,docx,ppt,pptx,pdf,txt,zip';
-        ext += ',rar,7z,exe,wma,mov,avi,wmv,mp3,csv,tsv';
-        ext = ext.split(',');
-
-        $('a').on('mousedown', function() {
-            var el = this;
-            if (el.href) {
-                var match = _checkFile.call(null, el.href, ext);
-                if (match) {
-                    window.__gaTracker('patternLibrary.send', 'event', 'Download', match, el.href);
-                }
-            }
-        });
-    }
+    
 })();
