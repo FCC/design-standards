@@ -177,117 +177,141 @@
                     <div id="map-container">
                         <div id="div-legend" style="position: absolute; bottom: 10px; left: 10px; background-color: #FFFFFF; border: solid 1px #999999; z-index: 2; visibility: visible: none">
                             <table style="margin: 5px">
-                                <tr>
-                                    <td colspan="3">
-                                        <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
-                                        <button class="btn-closeLegend btn btn-xs pull-right">
-                                            <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
-                                        </button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="0" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #ffffcc; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> No residential services at 200 kbps or above</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="1" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #c7e9b4; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential services of at least 200 kbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="2" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #7fcdbb; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential services of at least 10 Mbps/1 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="3" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #bdd7e7; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 25 Mbps/3 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="4" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input id="5" class="checkbox-provider" checked="" type="checkbox">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999"></div>
-                                    </td>
-                                    <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
-                                </tr>
-                                <tr style="height: 1px; background-color: #cccccc">
-                                    <td colspan=3></td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="6" class="checkbox-provider">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0"></div>
-                                    </td>
-                                    <td> Tribal land</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" id="7" class="checkbox-provider">&nbsp;</td>
-                                    <td style="width: 28px; height: 28px;">
-                                        <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0"></div>
-                                    </td>
-                                    <td> Urban area</td>
-                                </tr>
+                                <thead>
+                                    <tr>
+                                        <td colspan="3">
+                                            <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
+                                            <button class="btn-closeLegend btn btn-xs pull-right">
+                                                <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr style="height: 1px; background-color: #cccccc">
+                                        <td colspan=3></td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        </td>
+                                        <td> Tribal land</td>
+                                    </tr>
+                                    <tr>
+                                        
+                                        <td style="width: 28px; height: 28px;">
+                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        </td>
+                                        <td> Urban area</td>
+                                    </tr>
+                                </tbody>
                             </table>
                         </div>
                         <div id="div-legend-icon" style="position: absolute; bottom: 10px; left: 10px;z-index: 1; cursor: pointer;" title="Map Legend">
                             <span class="icon icon-list"></span>
                         </div>
                     </div>
-                    <!-- <div class="docs-codeblock">
-                        <ul class="nav nav-pills" role="tablist">                            
-                            <li class="active" role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="active" role="presentation"><a href="#ex1-html" aria-controls="profile" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
-                                <div class="highlight"></div>
+                                <div class="highlight">
+                                    <pre class="language-markup">
+<code>&lt;div id=&quot;div-legend&quot;&gt;
+  &lt;table&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;td colspan=&quot;3&quot;&gt;
+          &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt; &lt;span class=&quot;map-legend-name&quot;&gt;Map Legend&lt;/span&gt;
+          &lt;button class=&quot;btn-closeLegend btn btn-xs pull-right&quot;&gt;&lt;span class=&quot;icon icon-remove&quot;&gt;&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;Hide legend&lt;/span&gt;&lt;/button&gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div style=&quot;width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999&quot;&gt;&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt; Residential Broadband of at least 50 Mbps/5 Mbps&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td style=&quot;width: 28px; height: 28px;&quot;&gt;
+          &lt;div style=&quot;width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999&quot;&gt;&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt; Residential Broadband of at least 100 Mbps/5 Mbps&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td colspan=3&gt;&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div style=&quot;width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0&quot;&gt;&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt; Tribal land&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;
+          &lt;div style=&quot;width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0&quot;&gt;&lt;/div&gt;
+        &lt;/td&gt;
+        &lt;td&gt; Urban area&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;div id=&quot;div-legend-icon&quot; title=&quot;Map Legend&quot;&gt;
+  &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;</code>
+</pre>
+
+                                </div>
+                            </div>
+                            <div class="tab-pane active" id="ex1-css" role="tabpanel">
+                                <div class="highlight">
+                                    <pre class="language-css">
+<code>#map-legend {    
+  background-color: #fff;
+  border: solid 1px #999;
+  bottom: 10px; 
+  left: 10px;          
+  position: absolute;       
+  visibility: none;
+  z-index: 2;
+}</code>
+</pre>
+
+                                </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
+        </section>
+        <footer>
+    <div class="docs-attribution">
+        <section>
+            <p class="h5">Attribution</p>
+            <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
+        </section>
     </div>
-    </section>
-    
-<footer>
-<div class="docs-attribution">
-    <section>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Improvements <i class="fa fa-cogs"></i></h4>
-                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
-            </div>
-            <div class="col-md-6">
-                <h4>Other Resources <i class="fa fa-link"></i></h4>
-                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
-            </div>
-        </div>
-    </section>
-</div>
     <div class="nav-footer">
         <div class="footergriditems">
             <div class="grid-item">
@@ -307,18 +331,19 @@
                     <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
                     <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
                     <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                    <li><a class="social-media instagram" href="https://www.instagram.com/fcc">Instagram</a></li>
                 </ul>
             </div>
             <div class="grid-item">
                 <ul class="footermenu footermenu__categories">
-                    <li><a href="#">Website Policies &amp; Notices</a></li>
-                    <li><a href="#">FOIA</a></li>
-                    <li><a href="#">No Fear Act Data</a></li>
-                    <li><a href="#">FCC Digital Strategy</a></li>
-                    <li><a href="#">Open Government Directive</a></li>
-                    <li><a href="#">Plain Writing Act</a></li>
-                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
-                    <li><a href="#">Disability Rights</a></li>
+                    <li><a href="/general/website-notices">Website Policies &amp; Notices</a></li>
+                    <li><a href="/general/foia-0">FOIA</a></li>
+                    <li><a href="/general/no-fear-act-data">No Fear Act Data</a></li>
+                    <li><a href="/digitalstrategy">FCC Digital Strategy</a></li>
+                    <li><a href="/general/open-government-fcc">Open Government Directive</a></li>
+                    <li><a href="/general/plain-writing-fcc">Plain Writing Act</a></li>
+                    <li><a href="/general/rss-feeds-and-email-updates-fcc">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="/general/disability-rights-office">Disability Rights</a></li>
                 </ul>
             </div>
             <div class="grid-item">
@@ -337,13 +362,13 @@
                     <li>BUREAUS &amp; OFFICES</li>
                     <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
                     <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
-                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/inspector-general">Inspector General</a></li>
                     <li><a href="/international#block-menu-block-4">International</a></li>
                     <li><a href="/media#block-menu-block-4">Media</a></li>
                     <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
-                    <li><a href="#">Wireless</a></li>
-                    <li><a href="#">Wireline</a></li>
-                    <li><a href="#">Offices</a></li>
+                    <li><a href="/wireless-telecommunications#block-menu-block-4">Wireless</a></li>
+                    <li><a href="/wireline-competition#block-menu-block-4">Wireline</a></li>
+                    <li><a href="/offices-bureaus#block-menu-block-4">Offices</a></li>
                 </ul>
             </div>
         </div>
@@ -361,8 +386,8 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-                        var map = L.mapbox.map('map-container', 'mapbox.streets')
-                                .setView([40, -74.50], 9);*/
+                                var map = L.mapbox.map('map-container', 'mapbox.streets')
+                                        .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
@@ -393,14 +418,14 @@
     }).addTo(map);
 
     $('.btn-closeLegend').on("click", function(e) {
-            $//hide legend
-            $('#div-legend').css("visibility", "hidden");
-        });
+        $ //hide legend
+        $('#div-legend').css("visibility", "hidden");
+    });
 
     $('#div-legend-icon').on("click", function(e) {
-        $//show legend
+        $ //show legend
         $('#div-legend').css("visibility", "visible");
-    });  
+    });
     </script>
 </body>
 

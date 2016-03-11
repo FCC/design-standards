@@ -43,7 +43,7 @@ var clickedBlockStyle = { color: "#000", opacity: 0.5, fillOpacity: 0.1, fillCol
 
 $('#btn-nationLocation').on("click", function() {
     //map.fitBounds(bounds_us);
-    map.setView([50, -115], 3);
+    map.setView([38.82, -94.96], 4);
 });
 
 
@@ -186,7 +186,8 @@ function fetchCounty(lat, lng) {
             if (map.hasLayer(clickedCountyLayer)) {
                 map.removeLayer(clickedCountyLayer);
             }
-            clickedCountyLayer = L.mapbox.featureLayer(data).setStyle(clickedCountyStyle).addTo(map);
+            // clickedCountyLayer = L.mapbox.featureLayer(data).setStyle(clickedCountyStyle).addTo(map);
+            clickedCountyLayer = L.mapbox.featureLayer(data).setStyle(clickedCountyStyle);
             if (countyLayerData.features.length === 0 || countyLayerData.features[0].properties.county_fips !== data.features[0].properties.county_fips) {
                 map.fitBounds(clickedCountyLayer.getBounds());
             }
@@ -208,7 +209,7 @@ function fetchCounty(lat, lng) {
                 var density = Math.round(density1 * 100) / 100;
             }
 
-            var text = "<span class=\"county-name\">" + p.county_name + ", " + p.state_abbr + "</span><p><p>";
+            /*var text = "<span class=\"county-name\">" + p.county_name + ", " + p.state_abbr + "</span><p><p>";
 
             text += "<table width=100% class=\"county-table\">";
             text += "<tr><td>Total Population:</td><td class=\"td-value\"> " + addComma(p.alltotalpop) + "</td></tr>" +
@@ -219,9 +220,9 @@ function fetchCounty(lat, lng) {
                 "<tr><td>Percent Rural Pop w/o Access: </td><td class=\"td-value\">" + ruralunscent + "%</td></tr>";
 
 
-            text += "</table>";
+            text += "</table>";*/
 
-            $('#display-county').html(text);
+            // $('#display-county').html(text);
             countyLayerData = data;
 
         }
