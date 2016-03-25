@@ -1,0 +1,97 @@
+<pre class="language-js">
+<code>L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
+            attributionControl: true,
+            maxZoom: 18,
+            minZoom: 3
+        })
+        .setView([38.889465, -76.998437], 17);
+
+    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
+    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
+    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    L.control.layers({
+            'Street': baseStreet.addTo(map),
+            'Satellite': baseSatellite,
+            'Terrain': baseTerrain
+        },
+        null, {
+            position: 'topleft'
+        }
+    ).addTo(map);
+
+    L.control.scale({
+        position: 'bottomleft'
+    }).addTo(map);
+
+    function popup(feature, layer) {
+        var popupContent = '<p>Latitude: ' + feature.geometry.coordinates[1] + ' </p><p>Longitude: ' + feature.geometry.coordinates[0] + '</p>';
+
+        if (feature.properties && feature.properties.popupContent) {
+            popupContent += feature.properties.popupContent;
+        }
+
+        layer.bindPopup(popupContent);
+    }
+
+
+    L.geoJson(commonFeatures, {
+        style: function(feature) {
+            return feature.properties;
+        }
+    }).addTo(map);
+
+    L.geoJson(polygonFill, {
+        style: function(feature) {
+            return feature.properties;
+        }
+    }).addTo(map);
+
+    L.geoJson(thinLine, {
+        style: L.mapbox.simplestyle.style
+    }).addTo(map);
+
+
+    L.geoJson(thickLine, {
+        style: L.mapbox.simplestyle.style
+    }).addTo(map);
+
+    L.geoJson(defaultMarker, {
+        style: function(feature) {
+            return feature.properties;
+        },
+        onEachFeature: popup
+
+    }).addTo(map);
+
+    L.geoJson(customMarker, {
+        pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+                icon: customIcon
+            });
+        },
+        style: function(feature) {
+            return feature.properties;
+        },
+        onEachFeature: popup
+
+    }).addTo(map);
+
+    L.geoJson(circlePointer, {
+        style: function(feature) {
+            return feature.properties && feature.properties.style;
+        },
+        onEachFeature: popup,
+        pointToLayer: function(feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: "#00ff00",
+                color: "#00ff00",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+        }
+    }).addTo(map);</code>
+</pre>
