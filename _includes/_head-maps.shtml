@@ -16,4 +16,8 @@
 	    width: 100%;
 	    position: relative;
 	}
+
+	.leaflet-popup-content-wrapper {
+        box-shadow: 0 3px 14px rgba(0,0,0,0.4);
+    }
 	</style>

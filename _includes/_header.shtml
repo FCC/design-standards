@@ -15,7 +15,7 @@
             </div>
             <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
                 <li>
-                    <a aria-controls="browse-by-category" href="index.html">
+                    <a aria-controls="browse-by-category" href="/design-standards/1.x/docs/index.html">
                         <!-- <div class="text-prefix">&nbsp;</div> -->
                         <strong class="title-emphasis">Design Standards</strong>
                     </a>

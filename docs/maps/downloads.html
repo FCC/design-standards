@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Downloads - FCC GISP Design Standards</title>
+    <!--#include file="_head-maps.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Downloads</h3>
+                <p>Use the following link or button styles when providing downloadable files:</p>
+
+                <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Icon</th>
+                                <th>File format</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="icon icon-file-code-o"></span></td>
+                                <td>XML</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon-cloud-download"></span></td>
+                                <td>Download</td>
+                            </tr>
+                            <tr>
+                                <td><span class="icon icon-file-excel-o"></span></td>
+                                <td>Excel</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+    <script>
+    /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+                var map = L.mapbox.map('map-container', 'mapbox.streets')
+                        .setView([40, -74.50], 9);*/
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
+            attributionControl: true,
+            maxZoom: 15,
+            minZoom: 3
+        })
+        .setView([38.82, -94.96], 4);
+
+    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
+    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
+    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
+
+    L.control.layers({
+            'Street': baseStreet.addTo(map),
+            'Satellite': baseSatellite,
+            'Terrain': baseTerrain
+        },
+        null, {
+            position: 'topleft'
+        }
+    ).addTo(map);
+
+    L.control.scale({
+        position: 'bottomleft'
+    }).addTo(map);
+    </script>
+</body>
+
+</html>
