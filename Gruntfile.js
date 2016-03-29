@@ -177,12 +177,12 @@ module.exports = function(grunt) {
             // misc vendor
             vendorjs: {
                 src: ['bower_components/jquery/dist/jquery.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
                     // 'bower_components/select2/select2.js',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.all.min.js',
                     'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
