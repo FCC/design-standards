@@ -315,7 +315,8 @@
                             <div class="tab-pane" id="ex1-js" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-js">
-<code>L.control.layers({
+<code>/* Add layer control */
+L.control.layers({
     'Street': baseStreet,
     'Satellite': baseSatellite,
     'Terrain': baseTerrain
@@ -331,6 +332,7 @@
 }
 ).addTo(map);
 
+/* Buttons to open/close legend */
 $('.btn-closeLegend').on("click", function(e) {
     $('#legend')
         .hide('fast')

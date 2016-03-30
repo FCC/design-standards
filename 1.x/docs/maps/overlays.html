@@ -184,7 +184,8 @@
                         <div class="tab-content">
                             <div id="ex1-js" class="tab-pane active" role="tabpanel">
                                 <pre class="language-js">
-<code>function popup(feature, layer) {
+<code>/* Marker tooltip */
+function popup(feature, layer) {
     var popupContent = '<p>Latitude: ' + feature.geometry.coordinates[1] + ' </p><p>Longitude: ' + feature.geometry.coordinates[0] + '</p>';
 
     if (feature.properties && feature.properties.popupContent) {
@@ -194,26 +195,31 @@
     layer.bindPopup(popupContent);
 }
 
+/* Add polygon examples with no fill and opacity */
 L.geoJson(commonFeatures, {
     style: function(feature) {
         return feature.properties;
     }
 }).addTo(map);
 
+/* Add polygon example with fill */
 L.geoJson(polygonFill, {
     style: function(feature) {
         return feature.properties;
     }
 }).addTo(map);
 
+/* Add example thin line */
 L.geoJson(thinLine, {
     style: L.mapbox.simplestyle.style
 }).addTo(map);
 
+/* Add example thick line */
 L.geoJson(thickLine, {
     style: L.mapbox.simplestyle.style
 }).addTo(map);
 
+/* Add example default marker */
 L.geoJson(defaultMarker, {
     style: function(feature) {
         return feature.properties;
@@ -222,6 +228,7 @@ L.geoJson(defaultMarker, {
 
 }).addTo(map);
 
+/* Add example custom marker */
 L.geoJson(customMarker, {
     pointToLayer: function(feature, latlng) {
         return L.marker(latlng, {
@@ -235,6 +242,7 @@ L.geoJson(customMarker, {
 
 }).addTo(map);
 
+/* Add example cirlce pointer */
 L.geoJson(circlePointer, {
     style: function(feature) {
         return feature.properties && feature.properties.style;

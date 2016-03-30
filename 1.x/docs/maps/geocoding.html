@@ -336,7 +336,8 @@
                             <div class="tab-pane" id="ex1-js" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-js">
-<code>$('#btn-geoLocation').click(function(event) {
+<code>/* Get current location */
+$('#btn-geoLocation').click(function(event) {
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position) {
             var geo_lat = position.coords.latitude;
