@@ -167,114 +167,110 @@
         <section class="pl-content">
             <div class="pl-pattern">
                 <h3>Legends</h3>
-                <p>The map legend should be positioned at the bottom left corner of the map container.</p>
+                <p>The map legend should be positioned at the bottom left corner of the map container. If the map layers listed in the legend can be toggled (show/hide display), then they should also appear in the layer control after the list of base layers (street, satellite, terrain).</p>
                 <div class="pl-preview">
                     <h5 class="docs-hd-example">Example &amp; Code</h5>
                     <div id="map-container">
-                        <div id="div-legend" style="position: absolute; bottom: 10px; left: 10px; background-color: #FFFFFF; border: solid 1px #999999; z-index: 2; visibility: visible: none">
-                            <table style="margin: 5px">
+                        <div id="legend" class="map-legend" aria-expanded="true">
+                            <table class="table-legend">
                                 <thead>
                                     <tr>
-                                        <td colspan="3">
+                                        <th colspan="3">
                                             <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
-                                            <button class="btn-closeLegend btn btn-xs pull-right">
+                                            <button class="btn-closeLegend btn btn-xs">
                                                 <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
                                             </button>
-                                        </td>
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    
                                     <tr>
-                                        
-                                        <td style="width: 28px; height: 28px;">
-                                            <div style="width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999"></div>
+                                        <td>
+                                            <div class="symbol" style="background-color: #3182bd;"></div>
                                         </td>
                                         <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
                                     </tr>
-                                    <tr>
-                                        
-                                        <td style="width: 28px; height: 28px;">
-                                            <div style="width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999"></div>
+                                    <tr class="divider">
+                                        <td>
+                                            <div class="symbol" style="background-color: #08306b;"></div>
                                         </td>
                                         <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
                                     </tr>
-                                    <tr style="height: 1px; background-color: #cccccc">
-                                        <td colspan=3></td>
-                                    </tr>
                                     <tr>
-                                        
-                                        <td style="width: 28px; height: 28px;">
-                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        <td>
+                                            <div class="symbol" style="background-image: url(/design-standards/1.x/images/legend-thumb-slash.png);"></div>
                                         </td>
                                         <td> Tribal land</td>
                                     </tr>
                                     <tr>
-                                        
-                                        <td style="width: 28px; height: 28px;">
-                                            <div style="width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0"></div>
+                                        <td>
+                                            <div class="symbol" style="background-image: url(/design-standards/1.x/images/legend-thumb-dot.png);"></div>
                                         </td>
                                         <td> Urban area</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div id="div-legend-icon" style="position: absolute; bottom: 10px; left: 10px;z-index: 1; cursor: pointer;" title="Map Legend">
+                        <button id="btn-openLegend" class="btn-openLegend leaflet-control-layers">
                             <span class="icon icon-list"></span>
-                        </div>
+                            <span class="sr-only">Map Legend</span>
+                        </button>
                     </div>
                     <div class="docs-codeblock">
                         <ul class="nav nav-pills" role="tablist">
                             <li class="active" role="presentation"><a href="#ex1-html" aria-controls="profile" role="tab" data-toggle="tab">HTML</a></li>
                             <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
+                            <li role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-markup">
-<code>&lt;div id=&quot;div-legend&quot;&gt;
-  &lt;table&gt;
-    &lt;thead&gt;
-      &lt;tr&gt;
-        &lt;td colspan=&quot;3&quot;&gt;
-          &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt; &lt;span class=&quot;map-legend-name&quot;&gt;Map Legend&lt;/span&gt;
-          &lt;button class=&quot;btn-closeLegend btn btn-xs pull-right&quot;&gt;&lt;span class=&quot;icon icon-remove&quot;&gt;&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;Hide legend&lt;/span&gt;&lt;/button&gt;
-        &lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/thead&gt;
-    &lt;tbody&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;div style=&quot;width: 20px; height: 20px; background-color: #3182bd; opacity: 1.0; border: solid 1px #999999&quot;&gt;&lt;/div&gt;
-        &lt;/td&gt;
-        &lt;td&gt; Residential Broadband of at least 50 Mbps/5 Mbps&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td style=&quot;width: 28px; height: 28px;&quot;&gt;
-          &lt;div style=&quot;width: 20px; height: 20px; background-color: #08306b; opacity: 1.0; border: solid 1px #999999&quot;&gt;&lt;/div&gt;
-        &lt;/td&gt;
-        &lt;td&gt; Residential Broadband of at least 100 Mbps/5 Mbps&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td colspan=3&gt;&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;div style=&quot;width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-slash.png); border: solid 1px #cccccc; opacity: 1.0&quot;&gt;&lt;/div&gt;
-        &lt;/td&gt;
-        &lt;td&gt; Tribal land&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-        &lt;td&gt;
-          &lt;div style=&quot;width: 20px; height: 20px; background-color: #FFFFFF; background-image: url(/design-standards/1.x/images/legend-thumb-dot.png); border: solid 1px #cccccc; opacity: 1.0&quot;&gt;&lt;/div&gt;
-        &lt;/td&gt;
-        &lt;td&gt; Urban area&lt;/td&gt;
-      &lt;/tr&gt;
-    &lt;/tbody&gt;
-  &lt;/table&gt;
-&lt;/div&gt;
-&lt;div id=&quot;div-legend-icon&quot; title=&quot;Map Legend&quot;&gt;
-  &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt;
+<code>&lt;div id=&quot;map-container&quot;&gt;
+    &lt;div id=&quot;legend&quot; class=&quot;map-legend&quot; aria-expanded=&quot;true&quot;&gt;
+        &lt;table class=&quot;table-legend&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th colspan=&quot;3&quot;&gt;
+                        &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt; &lt;span class=&quot;map-legend-name&quot;&gt;Map Legend&lt;/span&gt;
+                        &lt;button class=&quot;btn-closeLegend btn btn-xs&quot;&gt;
+                            &lt;span class=&quot;icon icon-remove&quot;&gt;&lt;/span&gt; &lt;span class=&quot;sr-only&quot;&gt;Hide legend&lt;/span&gt;
+                        &lt;/button&gt;
+                    &lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;symbol&quot; style=&quot;background-color: #3182bd;&quot;&gt;&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt; Residential Broadband of at least 50 Mbps/5 Mbps&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;symbol&quot; style=&quot;background-color: #08306b;&quot;&gt;&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt; Residential Broadband of at least 100 Mbps/5 Mbps&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class=&quot;divider&quot;&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;symbol&quot; style=&quot;background-image: url(/design-standards/1.x/images/legend-thumb-slash.png);&quot;&gt;&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt; Tribal land&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;
+                        &lt;div class=&quot;symbol&quot; style=&quot;background-image: url(/design-standards/1.x/images/legend-thumb-dot.png);&quot;&gt;&lt;/div&gt;
+                    &lt;/td&gt;
+                    &lt;td&gt; Urban area&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;button id=&quot;btn-openLegend&quot; class=&quot;btn-openLegend leaflet-control-layers&quot;&gt;
+        &lt;span class=&quot;icon icon-list&quot;&gt;&lt;/span&gt;
+        &lt;span class=&quot;sr-only&quot;&gt;Map Legend&lt;/span&gt;
+    &lt;/button&gt;
 &lt;/div&gt;</code>
 </pre>
 
@@ -283,17 +279,70 @@
                             <div class="tab-pane" id="ex1-css" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-css">
-<code>#map-legend {    
-  background-color: #fff;
-  border: solid 1px #999;
-  bottom: 10px; 
-  left: 10px;          
-  position: absolute;       
-  visibility: none;
-  z-index: 2;
-}</code>
+<code>.map-legend {   
+   background-color: #fff; 
+   border: solid 1px #999; 
+   bottom: 10px; 
+   left: 10px; 
+   position: absolute; 
+   z-index: 2;
+}
+
+.table-legend {
+    margin: 5px;
+}
+
+.table-legend tbody td {
+    padding: 3px;
+}
+
+.table-legend tbody td:first-child {
+    padding-left: 0;
+}
+
+.table-legend .symbol {
+    background-color: #fff;
+    border: solid 1px #999;
+    height: 20px;
+    width: 20px;
+}
+
+</code>
 </pre>
 
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-js" role="tabpanel">
+                                <div class="highlight">
+                                    <pre class="language-js">
+<code>L.control.layers({
+    'Street': baseStreet,
+    'Satellite': baseSatellite,
+    'Terrain': baseTerrain
+}, 
+{
+   '50 Mbps/5 Mbps': bpr_50,
+   '100 Mbps/5 Mbps': bpr_100,
+   'Tribal land': bpr_tribal,
+   'Urban area': bpr_county_layer_urban 
+},         
+{
+    position: 'topleft'
+}
+).addTo(map);
+
+$('.btn-closeLegend').on("click", function(e) {
+    $('#legend')
+        .hide('fast')
+        .attr('aria-expanded', false);
+});
+
+$('#btn-openLegend').on("click", function(e) {
+    $('#legend')
+        .show('fast')
+        .attr('aria-expanded', true);
+});</code>
+</pre>
                                 </div>
                             </div>
                         </div>
@@ -382,10 +431,13 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-                                var map = L.mapbox.map('map-container', 'mapbox.streets')
-                                        .setView([40, -74.50], 9);*/
+                                            var map = L.mapbox.map('map-container', 'mapbox.streets')
+                                                    .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var geo_host = "http://www.broadbandmap.gov",
+        geo_space = "fcc";
+
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
             attributionControl: true,
             maxZoom: 15,
@@ -393,18 +445,41 @@
         })
         .setView([38.82, -94.96], 4);
 
-    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
-    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
-    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+    var baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map),
+        baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g'),
+        baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    var bpr_50 = L.mapbox.tileLayer('fcc.fffd995f').setZIndex(15).addTo(map);
+    var bpr_100 = L.mapbox.tileLayer('fcc.91a6e516').setZIndex(16).addTo(map);
+
+    var bpr_county_layer_urban = L.tileLayer.wms(geo_host + '/geoserver/wms', {
+        format: 'image/png',
+        transparent: true,
+        layers: geo_space + ':bpr_county_layer_urban_only',
+        styles: 'bpr_layer_urban'
+    }).setZIndex(21);
+    
+    var bpr_tribal = L.tileLayer.wms(geo_host + '/geoserver/wms', {
+        format: 'image/png',
+        transparent: true,
+        layers: geo_space + ':bpr_tribal',
+        styles: 'bpr_tribal'
+    }).setZIndex(22);
 
     map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
 
     L.control.layers({
-            'Street': baseStreet.addTo(map),
+            'Street': baseStreet,
             'Satellite': baseSatellite,
             'Terrain': baseTerrain
-        },
-        null, {
+        }, 
+        {
+           '50 Mbps/5 Mbps': bpr_50,
+           '100 Mbps/5 Mbps': bpr_100,
+           'Tribal land': bpr_tribal,
+           'Urban area': bpr_county_layer_urban 
+        },         
+        {
             position: 'topleft'
         }
     ).addTo(map);
@@ -414,13 +489,16 @@
     }).addTo(map);
 
     $('.btn-closeLegend').on("click", function(e) {
-        $ //hide legend
-        $('#div-legend').css("visibility", "hidden");
+        $('#legend')
+            .hide('fast')
+            .attr('aria-expanded', false);
+
     });
 
-    $('#div-legend-icon').on("click", function(e) {
-        $ //show legend
-        $('#div-legend').css("visibility", "visible");
+    $('#btn-openLegend').on("click", function(e) {
+        $('#legend')
+            .show('fast')
+            .attr('aria-expanded', true);
     });
     </script>
 </body>

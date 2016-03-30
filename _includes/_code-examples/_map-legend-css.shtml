@@ -1,11 +1,31 @@
 <pre class="language-css">
-<code>#map-legend {    
-  background-color: #fff;
-  border: solid 1px #999;
-  bottom: 10px; 
-  left: 10px;          
-  position: absolute;       
-  visibility: none;
-  z-index: 2;
-}</code>
+<code>.map-legend {   
+   background-color: #fff; 
+   border: solid 1px #999; 
+   bottom: 10px; 
+   left: 10px; 
+   position: absolute; 
+   z-index: 2;
+}
+
+.table-legend {
+    margin: 5px;
+}
+
+.table-legend tbody td {
+    padding: 3px;
+}
+
+.table-legend tbody td:first-child {
+    padding-left: 0;
+}
+
+.table-legend .symbol {
+    background-color: #fff;
+    border: solid 1px #999;
+    height: 20px;
+    width: 20px;
+}
+
+</code>
 </pre>

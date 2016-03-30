@@ -23,7 +23,7 @@ L.control.layers({
 ).addTo(map);
 
 L.control.scale({
-    position: 'bottomleft'
+    position: 'bottomright'
 }).addTo(map);
 
 geocoder = L.mapbox.geocoder('mapbox.places-v1');

@@ -16,7 +16,7 @@
         <section class="pl-content">
             <div class="pl-pattern">
                 <h3>Map Controls</h3>
-                <p>At a minimum, a map should have the following controls or features:</p>
+                <p>At a minimum, a map should have the following controls or features. </p>
                 <div class="table-responsive">
                     <table class="docs-table-mapAnatomy table table-bordered">
                         <thead>
@@ -40,7 +40,7 @@
                                     <b>Zoom</b>
                                     
                                 </td>
-                                <td>top left</td>
+                                <td>top left above layers control</td>
                             </tr>
                             <tr>
                                 <td>
@@ -52,16 +52,16 @@
                                 </td>
                                 <td>
                                     <b>Layers</b>
-                                    <p>Maps should have with 3 base layers:</p>
+                                    <p>Maps should have 3 base layers:</p>
                                     <ul>
                                         <li>street (default)</li>
                                         <li>satellite</li>
                                         <li>terrain</li>
                                     </ul>
                                 </td>
-                                <td>top left next to zoom</td>
+                                <td>top left below zoom control</td>
                             </tr>
-                            <tr>
+                            <!-- <tr>
                                 <td>
                                     <button type="button" class="leaflet-control-layers btn-legend">
                                         <span>
@@ -74,8 +74,8 @@
                                     <b>Legend</b>
                                     
                                 </td>
-                                <td>bottom left corner above scale</td>
-                            </tr>
+                                <td>bottom left corner</td>
+                            </tr> -->
                             <tr>
                                 <td>
                                     <div class="clearfix" style="display: inline-block">
@@ -89,7 +89,7 @@
                                     <b>Scale</b>
                                     
                                 </td>
-                                <td>bottom left corner</td>
+                                <td>bottom right corner above attribution</td>
                             </tr>
                             <tr>
                                 <td>
@@ -101,7 +101,7 @@
                                     <p class="h6"><b>Example</b></p>
                                     <img src="/design-standards/front/images/map-attribution-ex.png" alt="Example attribution" title="Example attribution">
                                 </td>
-                                <td>bottom right corner</td>
+                                <td>bottom right corner below scale</td>
                             </tr>
                         </tbody>
                     </table>
@@ -111,12 +111,12 @@
                     <div id="map-container"></div>
                     <div class="docs-codeblock">
                         <ul class="nav nav-pills" role="tablist">
-                            <li role="presentation" class="active"><a href="#ex1-html" aria-controls="home" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-html" aria-controls="home" role="tab" data-toggle="tab">HTML</a></li>
                             <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
-                            <li role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
+                            <li class="active" role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
                         </ul>
                         <div class="tab-content">
-                            <div class="tab-pane active" id="ex1-html" role="tabpanel">
+                            <div class="tab-pane" id="ex1-html" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-markup">
 <code>&lt;div id="map-container"&gt;&lt;/div&gt;</code>
@@ -133,33 +133,39 @@
 </pre>
                                 </div>
                             </div>
-                            <div class="tab-pane" id="ex1-js" role="tabpanel">
+                            <div class="tab-pane active" id="ex1-js" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-js">
-<code>var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
-        attributionControl: true,
-        maxZoom: 15,
-        minZoom: 3
-    })
-    .setView([38.82, -94.96], 4);
+<code>/* Add zoom control */
+L.control.zoom({
+    position: 'topleft'
+});
 
-baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
-baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
-baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+/* Define base layers */
+var baseStreet = L.mapbox.tileLayer(streetLayerURL),
+    baseSatellite = L.mapbox.tileLayer(satelliteLayerURL),
+    baseTerrain = L.mapbox.tileLayer(terrainLayerURL),
 
+/* Add layers toggle button and layer switch */
 L.control.layers({
-        'Street': baseStreet.addTo(map),a
+        'Street': baseStreet,
         'Satellite': baseSatellite,
         'Terrain': baseTerrain
-    },
-    null, {
+    }, 
+    null, 
+    {
         position: 'topleft'
     }
 ).addTo(map);
 
+/* Add scale */
 L.control.scale({
-    position: 'bottomleft'
-}).addTo(map);</code>
+    position: 'bottomright'
+}).addTo(map);
+
+/* Add attribution */
+map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
+</code>
 
                                 </pre>
                                 </div>
@@ -203,8 +209,21 @@ L.control.scale({
     ).addTo(map);
 
     L.control.scale({
-        position: 'bottomleft'
+        position: 'bottomright'
     }).addTo(map);
+
+    $('.btn-closeLegend').on("click", function(e) {
+        $('#legend')
+            .hide('fast')
+            .attr('aria-expanded', false);
+
+    });
+
+    $('#btn-openLegend').on("click", function(e) {
+        $('#legend')
+            .show('fast')
+            .attr('aria-expanded', true);
+    });
     </script>
 </body>
 
