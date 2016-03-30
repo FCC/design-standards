@@ -80,52 +80,17 @@
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
                                 <div class="highlight">
-                                    <pre class="language-markup">
-<code>&lt;div id="map-container"&gt;&lt;/div&gt;</code>
-</pre>
+                                    <!--#include file="_code-examples/_search-bar-html.shtml" -->
                                 </div>
                             </div>
                             <div class="tab-pane" id="ex1-css" role="tabpanel">
                                 <div class="highlight">
-                                    <pre class="language-css">
-<code>#map-container { 
-  height: 400px; 
-  width:100%; 
-}</code>
-</pre>
+                                    <!--#include file="_code-examples/_search-bar-css.shtml" -->
                                 </div>
                             </div>
                             <div class="tab-pane" id="ex1-js" role="tabpanel">
                                 <div class="highlight">
-                                    <pre class="language-js">
-<code>var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
-        attributionControl: true,
-        maxZoom: 15,
-        minZoom: 3
-    })
-    .setView([38.82, -94.96], 4);
-
-baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
-baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
-baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
-
-map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
-
-L.control.layers({
-        'Street': baseStreet.addTo(map),a
-        'Satellite': baseSatellite,
-        'Terrain': baseTerrain
-    },
-    null, {
-        position: 'topleft'
-    }
-).addTo(map);
-
-L.control.scale({
-    position: 'bottomleft'
-}).addTo(map);</code>
-
-                                </pre>
+                                    <!--#include file="_code-examples/_search-bar-js.shtml" -->
                                 </div>
                             </div>
                         </div>

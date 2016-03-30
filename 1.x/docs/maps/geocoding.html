@@ -232,51 +232,137 @@
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-markup">
-<code>&lt;div id="map-container"&gt;&lt;/div&gt;</code>
-</pre>
+<code>&lt;div class=&quot;search-field input-group&quot;&gt;
+    &lt;div class=&quot;search__group&quot;&gt;
+        &lt;div class=&quot;search__input&quot;&gt;
+            &lt;div class=&quot;input-group&quot;&gt;
+                &lt;div class=&quot;input-group-btn&quot;&gt;
+                    &lt;button aria-expanded=&quot;false&quot; data-toggle=&quot;dropdown&quot; class=&quot;btn btn-default dropdown-toggle&quot; type=&quot;button&quot;&gt;&lt;span id=&quot;btn-label&quot;&gt;Address&lt;/span&gt; &lt;span class=&quot;caret&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                    &lt;ul id=&quot;input-search-switch&quot; role=&quot;menu&quot; class=&quot;dropdown-menu&quot;&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; data-value=&quot;loc&quot;&gt;Address&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href=&quot;#&quot; data-value=&quot;latlon-decimal&quot;&gt;Coordinates&lt;/a&gt;&lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+                &lt;input id=&quot;input-location&quot; class=&quot;form-control ui-autocomplete-input ui-corner-all&quot; type=&quot;search&quot; placeholder=&quot;Enter Address&quot; style=&quot;display: block&quot; autocomplete=&quot;off&quot;&gt;
+                &lt;div id=&quot;input-latlon-decimal&quot; class=&quot;form-control&quot; type=&quot;search&quot; placeholder=&quot;Enter Latlon decimal&quot; style=&quot;display: none&quot;&gt;
+                    &lt;table id=&quot;table-latlon-decimal&quot;&gt;
+                        &lt;tbody&gt;
+                            &lt;tr&gt;
+                                &lt;td&gt;Latitude:
+                                    &lt;input id=&quot;latitude&quot; placeholder=&quot;41.234567&quot; style=&quot;width: 150px; height: 20px; border: solid 1px #eee&quot;&gt;
+                                &lt;/td&gt;
+                                &lt;td width=&quot;75&quot;&gt;&lt;/td&gt;
+                                &lt;td&gt;Longitude:
+                                    &lt;input id=&quot;longitude&quot; placeholder=&quot;-91.234567&quot; style=&quot;width: 150px; height: 20px; border: solid 1px #eee&quot;&gt;
+                                &lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/tbody&gt;
+                    &lt;/table&gt;
+                &lt;/div&gt;
+                &lt;span class=&quot;input-group-btn&quot; id=&quot;span-location-search&quot; style=&quot;display: table-cell&quot;&gt;                        
+&lt;button class=&quot;btn__search btn btn-default&quot; type=&quot;submit&quot; id=&quot;input-loc-search&quot; title=&quot;Location Search&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot;&gt;&lt;span class=&quot;icon icon-search&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Location Search&lt;/span&gt;&lt;/button&gt;
+                &lt;/span&gt;
+                &lt;span class=&quot;input-group-btn&quot; id=&quot;span-latlon-decimal-search&quot; style=&quot;display: none&quot;&gt;                        
+&lt;button class=&quot;btn-search btn btn-default&quot; id=&quot;input-latlon-decimal-search&quot; title=&quot;Decimal Latlon Search&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot;&gt;&lt;span class=&quot;icon icon-search&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Decimal Lat/Lon Search&lt;/span&gt;&lt;/button&gt;
+                &lt;/span&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;btn__groupLoc&quot;&gt;
+            &lt;span class=&quot;input-group-btn&quot;&gt;  
+&lt;button class=&quot;btn__geoLocation btn btn-default st&quot; title=&quot;Get Current Location&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; id=&quot;btn-geoLocation&quot; type=&quot;button&quot; data-original-title=&quot;Get Current Location&quot;&gt;
+&lt;span class=&quot;icon icon-location-arrow&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Get Current Location&lt;/span&gt;&lt;/button&gt;
+            &lt;button class=&quot;btn__nationLocation btn btn-default st&quot; title=&quot;Nationwide&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; id=&quot;btn-nationLocation&quot; type=&quot;button&quot; data-original-title=&quot;Nationwide&quot;&gt;&lt;span class=&quot;icon icon-globe&quot;&gt;&lt;/span&gt;&lt;span class=&quot;sr-only&quot;&gt;Nationwide&lt;/span&gt;&lt;/button&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
                                 </div>
                             </div>
                             <div class="tab-pane" id="ex1-css" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-css">
-<code>#map-container { 
-  height: 400px; 
-  width:100%; 
+<code>.btn-group {
+  display: table-cell;
+}
+
+.search-field {
+  margin: 15px 0;
+  width: 100%;
+}
+
+.search-field .btn.btn__geoLocation {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding: 7px 12px 5px;
+}
+
+.search-field .btn.btn__nationLocation {
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+.search-field .btn__search {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+  margin: 0 0px 0 -1px;
+}
+
+.search-field .search__group {
+  display: table-row;
+}
+
+.search-field .search__input,
+.search-field .btn__groupLoc {
+  display: table-cell;
+}
+
+.search-field .search__input {
+  width: 100%;
+}
+
+.search-field .search__input .input-group {
+  width: 98%;
+}
+
+.search-field .dropdown-menu {
+  z-index: 1001;
 }</code>
 </pre>
+
+
                                 </div>
                             </div>
                             <div class="tab-pane" id="ex1-js" role="tabpanel">
                                 <div class="highlight">
                                     <pre class="language-js">
-<code>var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
-        attributionControl: true,
-        maxZoom: 15,
-        minZoom: 3
-    })
-    .setView([38.82, -94.96], 4);
+<code>$('#btn-geoLocation').click(function(event) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var geo_lat = position.coords.latitude;
+            var geo_lon = position.coords.longitude;
+            var geo_acc = position.coords.accuracy;
 
-baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
-baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
-baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+            geo_lat = Math.round(geo_lat * 1000000) / 1000000.0;
+            geo_lon = Math.round(geo_lon * 1000000) / 1000000.0;
+            locationLat = geo_lat;
+            locationLon = geo_lon;
 
-map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
+            setPosition(geo_lat, geo_lon);            
 
-L.control.layers({
-        'Street': baseStreet.addTo(map),a
-        'Satellite': baseSatellite,
-        'Terrain': baseTerrain
-    },
-    null, {
-        position: 'topleft'
+        }, function(error) {            
+            alert('Sorry, your current location could not be found. \nPlease use the search box to enter your location.');
+        }, {
+            timeout: 4000
+        });
+    } else {
+        alert('Sorry, your current location could not be found. \nPlease use the search box to enter your location.');
     }
-).addTo(map);
 
-L.control.scale({
-    position: 'bottomleft'
-}).addTo(map);</code>
+    return false;
+});</code>
+</pre>
 
-                                </pre>
                                 </div>
                             </div>
                         </div>
