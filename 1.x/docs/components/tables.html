@@ -36,7 +36,7 @@
             </div>
             <ul aria-hidden="true" id="menu-primary" class="nav navbar-nav nav-offcanvas-right">
                 <li>
-                    <a aria-controls="browse-by-category" href="index.html">
+                    <a aria-controls="browse-by-category" href="/design-standards/1.x/docs/index.html">
                         <!-- <div class="text-prefix">&nbsp;</div> -->
                         <strong class="title-emphasis">Design Standards</strong>
                     </a>
@@ -69,10 +69,31 @@
     <li>
         <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
     </li>
+    
     <li class="category">Maps</li>
     <li>
-        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+        <a href="/design-standards/1.x/docs/maps/basemaps.html">Base maps</a>
     </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/controls.html">Controls</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/downloads.html">Downloads</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/geocoding.html">Geocoding</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/legends.html">Legends</a>
+    </li>    
+    <!-- <li>
+        <a href="#">Markers</a>
+    </li> -->
+    <li>
+        <a href="/design-standards/1.x/docs/maps/overlays.html">Overlays</a>
+    </li>
+
+
     <li class="category">components</li>
     <li>
         <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
@@ -1165,22 +1186,13 @@
         </div>
     </div>
 </section>
-
 <footer>
-<div class="docs-attribution">
-    <section>
-        <div class="row">
-            <div class="col-md-6">
-                <h4>Improvements <i class="fa fa-cogs"></i></h4>
-                <p>These pages are for design standards for GIS maps and was created by the developers at the FCC. We will continue to update and maintain this style guide. Please help us improve by <a href="https://github.com/FCC/design-standards/issues">submitting an issue</a> or <a href="https://github.com/FCC/design-standards/pulls">submit a pull request</a> in GitHub.</p>
-            </div>
-            <div class="col-md-6">
-                <h4>Other Resources <i class="fa fa-link"></i></h4>
-                <p>To maintain a proper standard across all the U.S. federal government website <a href="https://uspto.github.io/designpatterns/" target="_blank">USPTO UI Design Library</a>, <a href="https://playbook.cio.gov/designstandards/" target="_blank">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="_blank">CFPB Design Manual</a> were used.</p>
-            </div>
-        </div>
-    </section>
-</div>
+    <div class="docs-attribution">
+        <section>
+            <p class="h5">Attribution</p>            
+            <p>These standards were derived from the <a href="https://uspto.github.io/designpatterns/" target="new">USPTO UI Design Library</a> along with guidance from the <a href="https://playbook.cio.gov/designstandards/" target="new">U.S. Web Design Standards</a> and <a href="https://cfpb.github.io/design-manual/index.html" target="new">CFPB Design Manual</a> in order to support best-practices for design across the U.S. Government.  We hope the FCC Design Standards can serve as a foundation for discussing and practicing human-centered design in government.</p>
+        </section>
+    </div>
     <div class="nav-footer">
         <div class="footergriditems">
             <div class="grid-item">
@@ -1196,22 +1208,22 @@
                     <a class="contactus" href="/about/contact">Contact Us</a>
                 </ul>
                 <ul class="socialmediaicons">
-                    <li><a class="social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
-                    <li><a class="social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
-                    <li><a class="social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
-                    <li><a class="social-media flickr" href="https://www.flickr.com/photos/fccdotgov">Flickr</a></li>
+                    <li><a class="link-ext social-media twitter" href="https://twitter.com/fcc">Twitter</a></li>
+                    <li><a class="link-ext social-media facebook" href="https://www.facebook.com/FCC">Facebook</a></li>
+                    <li><a class="link-ext social-media youtube" href="https://www.youtube.com/user/fccdotgovvideo">Youtube</a></li>
+                    <li><a class="link-ext social-media instagram" href="https://www.instagram.com/fcc">Instagram</a></li>
                 </ul>
             </div>
             <div class="grid-item">
                 <ul class="footermenu footermenu__categories">
-                    <li><a href="#">Website Policies &amp; Notices</a></li>
-                    <li><a href="#">FOIA</a></li>
-                    <li><a href="#">No Fear Act Data</a></li>
-                    <li><a href="#">FCC Digital Strategy</a></li>
-                    <li><a href="#">Open Government Directive</a></li>
-                    <li><a href="#">Plain Writing Act</a></li>
-                    <li><a href="#">RSS Feeds &amp; Email Updates</a></li>
-                    <li><a href="#">Disability Rights</a></li>
+                    <li><a href="/general/website-notices">Website Policies &amp; Notices</a></li>
+                    <li><a href="/general/foia-0">FOIA</a></li>
+                    <li><a href="/general/no-fear-act-data">No Fear Act Data</a></li>
+                    <li><a href="/digitalstrategy">FCC Digital Strategy</a></li>
+                    <li><a href="/general/open-government-fcc">Open Government Directive</a></li>
+                    <li><a href="/general/plain-writing-fcc">Plain Writing Act</a></li>
+                    <li><a href="/general/rss-feeds-and-email-updates-fcc">RSS Feeds &amp; Email Updates</a></li>
+                    <li><a href="/general/disability-rights-office">Disability Rights</a></li>
                 </ul>
             </div>
             <div class="grid-item">
@@ -1230,13 +1242,13 @@
                     <li>BUREAUS &amp; OFFICES</li>
                     <li><a href="/consumer-and-governmental-affairs#block-menu-block-4">Consumer</a></li>
                     <li><a href="/enforcement#block-menu-block-4">Enforcement</a></li>
-                    <li><a href="#">Inspector General</a></li>
+                    <li><a href="/inspector-general">Inspector General</a></li>
                     <li><a href="/international#block-menu-block-4">International</a></li>
                     <li><a href="/media#block-menu-block-4">Media</a></li>
                     <li><a href="/public-safety-and-homeland-security#block-menu-block-4">Public Safety</a></li>
-                    <li><a href="#">Wireless</a></li>
-                    <li><a href="#">Wireline</a></li>
-                    <li><a href="#">Offices</a></li>
+                    <li><a href="/wireless-telecommunications#block-menu-block-4">Wireless</a></li>
+                    <li><a href="/wireline-competition#block-menu-block-4">Wireline</a></li>
+                    <li><a href="/offices-bureaus#block-menu-block-4">Offices</a></li>
                 </ul>
             </div>
         </div>

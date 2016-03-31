@@ -21,12 +21,12 @@ module.exports = function(grunt) {
         // Watches files for changes and runs tasks based on the changed files
         watch: {
             js: {
-                files: ['front/scripts/{,*/}*.js', 'docs/**/*.html'],
-                tasks: ['jshint', 'ssi', 'concat:mainjs']
+                files: ['front/scripts/{,*/}*.js', 'docs/**/*.html','_includes/**/*.shtml'],
+                tasks: ['ssi', 'copy']
             },
             less: {
                 files: ['bootstrap-gisp/less/**/*.less', 'front/styles/**/*.less'],
-                tasks: ['less', 'usebanner', 'concat:maincss', 'autoprefixer']
+                tasks: ['less', 'usebanner', 'autoprefixer']
             }
         },
 
@@ -37,8 +37,8 @@ module.exports = function(grunt) {
                     dot: true,
                     src: [
                         '<%= paths.tmp %>',
-                        '<%= paths.assets %>',
-                        '<%= paths.downloads %>'
+                        '<%= paths.assets %>'
+                        // '<%= paths.downloads %>'
                     ]
                 }]
             },
@@ -75,17 +75,19 @@ module.exports = function(grunt) {
         less: {
             options: {
                 paths: ['bootstrap-gisp/less', 'bower_components'],
-                compress: true,
+                compress: false,
                 sourceMap: true
             },
             dist: {
-                files: [{
-                    expand: true,
-                    cwd: 'bootstrap-gisp/less',
-                    src: ['bootstrap-gisp.less', 'gisp-theme.less'],
-                    dest: '<%= paths.downloads %>/css/',
-                    ext: '.min.css'
-                }, {
+                files: [
+                // {
+                //     expand: true,
+                //     cwd: 'bootstrap-gisp/less',
+                //     src: ['bootstrap-gisp.less', 'gisp-theme.less'],
+                //     dest: '<%= paths.downloads %>/css/',
+                //     ext: '.min.css'
+                // }, 
+                {
                     expand: true,
                     cwd: 'front/styles',
                     src: ['docs.less'],
@@ -113,12 +115,14 @@ module.exports = function(grunt) {
                     cwd: '<%= paths.assets %>/styles/',
                     src: '{,*/}*.css',
                     dest: '<%= paths.assets %>/styles/'
-                }, {
-                    expand: true,
-                    cwd: '<%= paths.downloads %>/css/',
-                    src: 'bootstrap-gisp.min.css',
-                    dest: '<%= paths.downloads %>/css/',
-                }]
+                }
+                //  {
+                //     expand: true,
+                //     cwd: '<%= paths.downloads %>/css/',
+                //     src: 'bootstrap-gisp.min.css',
+                //     dest: '<%= paths.downloads %>/css/',
+                // }
+                ]
             }
         },
 
@@ -173,12 +177,12 @@ module.exports = function(grunt) {
             // misc vendor
             vendorjs: {
                 src: ['bower_components/jquery/dist/jquery.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
-                    // 'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.date.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
+                    'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
                     // 'bower_components/select2/select2.js',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.all.min.js',
                     'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
@@ -187,10 +191,10 @@ module.exports = function(grunt) {
                 dest: '<%= paths.assets %>/js/vendor/vendor.js'
             },
             // main js
-            mainjs: {
-                src: ['front/scripts/docs.js'],
-                dest: '<%= paths.assets %>/js/docs.js'
-            },
+            // mainjs: {
+            //     src: ['front/scripts/docs.js'],
+            //     dest: '<%= paths.assets %>/js/docs.js'
+            // },
             // appDemo js
             // appDemojs: {
             //     src: ['front/scripts/appDemo.js'],
@@ -206,12 +210,12 @@ module.exports = function(grunt) {
                     // 'bower_components/nouislider/distribute/jquery.nouislider.pips.min.css'
                 ],
                 dest: '<%= paths.assets %>/css/vendor.css'
-            },
-            // main css
-            maincss: {
-                src: ['<%= paths.assets %>/styles/pattern-library.css'],
-                dest: '<%= paths.assets %>/styles/main.css'
             }
+            // main css
+            // maincss: {
+            //     src: ['<%= paths.assets %>/styles/pattern-library.css'],
+            //     dest: '<%= paths.assets %>/styles/main.css'
+            // }
         },
 
         // Add a banner to the top of the generated LESS file.
@@ -223,7 +227,7 @@ module.exports = function(grunt) {
                     linebreak: true
                 },
                 files: {
-                    src: ['<%= paths.downloads %>/css/bootstrap-gisp.min.css'],
+                    src: ['<%= paths.assets %>/css/docs.css'],
                 }
             }
         },
@@ -231,13 +235,15 @@ module.exports = function(grunt) {
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
-                files: [{ // htmlshiv and matchMedia polyfill for <= IE9
-                    dot: true,
-                    expand: true,
-                    cwd: 'front/vendor/',
-                    src: ['html5shiv/*.*', 'matchMedia/*.*'],
-                    dest: '<%= paths.assets %>/vendor/'
-                }, { // fonts to fonts folder
+                files: [
+                // { // htmlshiv and matchMedia polyfill for <= IE9
+                //     dot: true,
+                //     expand: true,
+                //     cwd: 'front/vendor/',
+                //     src: ['html5shiv/*.*', 'matchMedia/*.*'],
+                //     dest: '<%= paths.assets %>/vendor/'
+                // }, 
+                { // fonts to fonts folder
                     dot: true,
                     expand: true,
                     cwd: 'bower_components/font-awesome/fonts',
@@ -249,14 +255,24 @@ module.exports = function(grunt) {
                     cwd: 'front/',
                     src: 'favicon.ico',
                     dest: '<%= paths.assets %>/'
-                }, { // bootstrap-gisp src to downloads folder
-                    dot: false,
+                }, 
+                // { // bootstrap-gisp src to downloads folder
+                //     dot: false,
+                //     expand: true,
+                //     cwd: 'bootstrap-gisp',
+                //     src: '**/*',
+                //     dest: '<%= paths.downloads %>/'
+                // }, 
+                {
                     expand: true,
-                    cwd: 'bootstrap-gisp',
-                    src: '**/*',
-                    dest: '<%= paths.downloads %>/'
-                }, { // minified css to downloads folders
-
+                    cwd: 'front/scripts',
+                    src: '*.js',
+                    dest: '<%= paths.assets %>/js'
+                }, {
+                    expand: true,
+                    cwd: 'front/images',
+                    src: '{,*/}*.{png,gif,jpeg,jpg}',
+                    dest: '<%= paths.assets %>/images'
                 }]
             },
             release: {
@@ -267,12 +283,12 @@ module.exports = function(grunt) {
                     expand: true
                 }]
             }
-        },
+        }
 
         // Zips up src less files, images, and minified css
-        zip: {
-            '<%= paths.downloads %>/fcc-gisp-design-standards-<%= config.version %>.zip': ['<%= paths.downloads %>/**/*']
-        },
+        // zip: {
+        //     '<%= paths.downloads %>/fcc-gisp-design-standards-<%= config.version %>.zip': ['<%= paths.downloads %>/**/*']
+        // },
 
         //Jekyll Tasks
         /*jekyll: {
@@ -286,33 +302,33 @@ module.exports = function(grunt) {
 
     grunt.registerTask('build', [
         'clean:dist',
-        'jshint',
+        // 'jshint',
         'less',
-        'imagemin',
+        // 'imagemin',
         'usebanner',
         'ssi',
         'concat',
         'autoprefixer',
-        'copy:dist',
-        'zip'
+        'copy:dist'
+        // 'zip'
     ]);
 
     // Use caution, this will overwrite files.
     //This will overwrite the 1x folder
-    grunt.registerTask('doversionedrelease', [
-        'clean:dist',
-        'jshint',
-        'less',
-        'imagemin',
-        'usebanner',
-        'concat',
-        'autoprefixer',
-        'copy:dist',
-        'zip',
-        'jekyll:release',
-        'copy:release'
+    // grunt.registerTask('doversionedrelease', [
+    //     'clean:dist',
+    //     'jshint',
+    //     'less',
+    //     'imagemin',
+    //     'usebanner',
+    //     'concat',
+    //     'autoprefixer',
+    //     'copy:dist',
+    //     'zip',
+    //     'jekyll:release',
+    //     'copy:release'
 
-    ]);
+    // ]);
 
     grunt.registerTask('default', [
         'build'
