@@ -1,0 +1,28 @@
+<pre class="language-js">
+<code>/* Get current location */
+$('#btn-geoLocation').click(function(event) {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            var geo_lat = position.coords.latitude;
+            var geo_lon = position.coords.longitude;
+            var geo_acc = position.coords.accuracy;
+
+            geo_lat = Math.round(geo_lat * 1000000) / 1000000.0;
+            geo_lon = Math.round(geo_lon * 1000000) / 1000000.0;
+            locationLat = geo_lat;
+            locationLon = geo_lon;
+
+            setPosition(geo_lat, geo_lon);            
+
+        }, function(error) {            
+            alert('Sorry, your current location could not be found. \nPlease use the search box to enter your location.');
+        }, {
+            timeout: 4000
+        });
+    } else {
+        alert('Sorry, your current location could not be found. \nPlease use the search box to enter your location.');
+    }
+
+    return false;
+});</code>
+</pre>

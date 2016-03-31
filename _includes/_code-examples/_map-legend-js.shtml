@@ -1,0 +1,31 @@
+<pre class="language-js">
+<code>/* Add layer control */
+L.control.layers({
+    'Street': baseStreet,
+    'Satellite': baseSatellite,
+    'Terrain': baseTerrain
+}, 
+{
+   '50 Mbps/5 Mbps': bpr_50,
+   '100 Mbps/5 Mbps': bpr_100,
+   'Tribal land': bpr_tribal,
+   'Urban area': bpr_county_layer_urban 
+},         
+{
+    position: 'topleft'
+}
+).addTo(map);
+
+/* Buttons to open/close legend */
+$('.btn-closeLegend').on("click", function(e) {
+    $('#legend')
+        .hide('fast')
+        .attr('aria-expanded', false);
+});
+
+$('#btn-openLegend').on("click", function(e) {
+    $('#legend')
+        .show('fast')
+        .attr('aria-expanded', true);
+});</code>
+</pre>
