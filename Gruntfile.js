@@ -75,18 +75,11 @@ module.exports = function(grunt) {
         less: {
             options: {
                 paths: ['bootstrap-gisp/less', 'bower_components'],
-                compress: false,
+                compress: true,
                 sourceMap: true
             },
             dist: {
-                files: [
-                // {
-                //     expand: true,
-                //     cwd: 'bootstrap-gisp/less',
-                //     src: ['bootstrap-gisp.less', 'gisp-theme.less'],
-                //     dest: '<%= paths.downloads %>/css/',
-                //     ext: '.min.css'
-                // }, 
+                files: [                
                 {
                     expand: true,
                     cwd: 'front/styles',
@@ -94,13 +87,7 @@ module.exports = function(grunt) {
                     dest: '<%= paths.assets %>/css',
                     ext: '.css'
                 }]
-                //  {
-                //     expand: true,
-                //     cwd: 'front/styles/appDemo',
-                //     src: ['appDemo.less'],
-                //     dest: '<%= paths.assets %>/styles',
-                //     ext: '.min.css'
-                // }
+                
             }
         },
 
@@ -183,39 +170,21 @@ module.exports = function(grunt) {
                     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.numeric.extensions.js',
                     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.phone.extensions.js',
                     'bower_components/jquery.inputmask/dist/inputmask/jquery.inputmask.regex.extensions.js',
-                    // 'bower_components/select2/select2.js',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.all.min.js',
                     'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.js',
                     'front/vendor/prism/prism.js'
                 ],
                 dest: '<%= paths.assets %>/js/vendor/vendor.js'
-            },
-            // main js
-            // mainjs: {
-            //     src: ['front/scripts/docs.js'],
-            //     dest: '<%= paths.assets %>/js/docs.js'
-            // },
-            // appDemo js
-            // appDemojs: {
-            //     src: ['front/scripts/appDemo.js'],
-            //     dest: '<%= paths.assets %>/scripts/appDemo.js'
-            // },
+            },            
             // vendor css
             vendorcss: {
                 src: [
                     'front/vendor/jquery-ui-1.11.1.custom/jquery-ui.structure.css',
-                    // 'bower_components/font-awesome/css/font-awesome.css',
-                    // 'bower_components/select2/select2.css',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.min.css',
                     // 'bower_components/nouislider/distribute/jquery.nouislider.pips.min.css'
                 ],
                 dest: '<%= paths.assets %>/css/vendor.css'
-            }
-            // main css
-            // maincss: {
-            //     src: ['<%= paths.assets %>/styles/pattern-library.css'],
-            //     dest: '<%= paths.assets %>/styles/main.css'
-            // }
+            }            
         },
 
         // Add a banner to the top of the generated LESS file.
@@ -235,14 +204,7 @@ module.exports = function(grunt) {
         // Copies remaining files to places other tasks can use
         copy: {
             dist: {
-                files: [
-                // { // htmlshiv and matchMedia polyfill for <= IE9
-                //     dot: true,
-                //     expand: true,
-                //     cwd: 'front/vendor/',
-                //     src: ['html5shiv/*.*', 'matchMedia/*.*'],
-                //     dest: '<%= paths.assets %>/vendor/'
-                // }, 
+                files: [                
                 { // fonts to fonts folder
                     dot: true,
                     expand: true,
@@ -255,14 +217,7 @@ module.exports = function(grunt) {
                     cwd: 'front/',
                     src: 'favicon.ico',
                     dest: '<%= paths.assets %>/'
-                }, 
-                // { // bootstrap-gisp src to downloads folder
-                //     dot: false,
-                //     expand: true,
-                //     cwd: 'bootstrap-gisp',
-                //     src: '**/*',
-                //     dest: '<%= paths.downloads %>/'
-                // }, 
+                },                 
                 {
                     expand: true,
                     cwd: 'front/scripts',
@@ -271,64 +226,31 @@ module.exports = function(grunt) {
                 }, {
                     expand: true,
                     cwd: 'front/images',
-                    src: '{,*/}*.{png,gif,jpeg,jpg}',
+                    src: '**/*.*',
                     dest: '<%= paths.assets %>/images'
                 }]
             },
-            release: {
-                files: [{ // Do things for a full release
-                    cwd: '_site/',
-                    src: ['**/*', '!**/1.x/**'],
-                    dest: '1.x/',
-                    expand: true
-                }]
-            }
-        }
-
-        // Zips up src less files, images, and minified css
-        // zip: {
-        //     '<%= paths.downloads %>/fcc-gisp-design-standards-<%= config.version %>.zip': ['<%= paths.downloads %>/**/*']
-        // },
-
-        //Jekyll Tasks
-        /*jekyll: {
-            release: {
-                options: {
-                    config: '_config_release.yml'
-                }
-            }
-        }*/
+             // Do things for a full releas
+            // release: {
+            //     files: [{e
+            //         cwd: '_site/',
+            //         src: ['**/*', '!**/1.x/**'],
+            //         dest: '1.x/',
+            //         expand: true
+            //     }]
+            // }
+        }        
     });
 
     grunt.registerTask('build', [
         'clean:dist',
-        // 'jshint',
         'less',
-        // 'imagemin',
         'usebanner',
         'ssi',
         'concat',
         'autoprefixer',
         'copy:dist'
-        // 'zip'
-    ]);
-
-    // Use caution, this will overwrite files.
-    //This will overwrite the 1x folder
-    // grunt.registerTask('doversionedrelease', [
-    //     'clean:dist',
-    //     'jshint',
-    //     'less',
-    //     'imagemin',
-    //     'usebanner',
-    //     'concat',
-    //     'autoprefixer',
-    //     'copy:dist',
-    //     'zip',
-    //     'jekyll:release',
-    //     'copy:release'
-
-    // ]);
+    ]);    
 
     grunt.registerTask('default', [
         'build'
