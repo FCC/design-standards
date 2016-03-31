@@ -16,7 +16,6 @@
         <section class="pl-content">
             <div class="pl-pattern">
                 <h3>Downloads</h3>
-                
                 <p>When providing data files for downloads, use the following file formats:</p>
                 <ul>
                     <li>Shapefile</li>
@@ -26,14 +25,15 @@
                 </ul>
                 <br>
                 <p>For other file formats, the following icons can be used with the download link:</p>
-                <table class="docs-table-downloads table table-bordered">
+                <div class="table-responsive">
+                    <table class="docs-table-downloads table table-bordered">
                         <thead>
                             <tr>
                                 <th>Icon</th>
-                                <th>File format</th>                                
+                                <th>File format</th>
                             </tr>
                         </thead>
-                        <tbody>                            
+                        <tbody>
                             <tr>
                                 <td><span class="icon icon-download"></span></td>
                                 <td>Download</td>
@@ -52,7 +52,7 @@
                             </tr>
                         </tbody>
                     </table>
-                
+                </div>
             </div>
         </section>
         <!--#include file="_footer.shtml" -->
@@ -61,8 +61,8 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-                var map = L.mapbox.map('map-container', 'mapbox.streets')
-                        .setView([40, -74.50], 9);*/
+                    var map = L.mapbox.map('map-container', 'mapbox.streets')
+                            .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {

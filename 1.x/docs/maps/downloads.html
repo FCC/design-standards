@@ -34,8 +34,7 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
-    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">    
     <nav role="navigation">
         <div class="navbar navbar-default navbar-primary">
             <div class="navbar-header">
@@ -53,7 +52,7 @@
                     </a>
                 </li>
             </ul>
-            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i><span class="sr-only">Toggle sidebar</span></button>
         </div>
     </nav>
 </header>
@@ -96,10 +95,7 @@
     </li>
     <li>
         <a href="/design-standards/1.x/docs/maps/legends.html">Legends</a>
-    </li>    
-    <!-- <li>
-        <a href="#">Markers</a>
-    </li> -->
+    </li>        
     <li>
         <a href="/design-standards/1.x/docs/maps/overlays.html">Overlays</a>
     </li>
@@ -132,31 +128,19 @@
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
-    </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
-    </li> -->
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
-    </li>
-    <li>
-        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
-    </li>
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
     </li>    
@@ -166,7 +150,6 @@
         <section class="pl-content">
             <div class="pl-pattern">
                 <h3>Downloads</h3>
-                
                 <p>When providing data files for downloads, use the following file formats:</p>
                 <ul>
                     <li>Shapefile</li>
@@ -176,14 +159,15 @@
                 </ul>
                 <br>
                 <p>For other file formats, the following icons can be used with the download link:</p>
-                <table class="docs-table-downloads table table-bordered">
+                <div class="table-responsive">
+                    <table class="docs-table-downloads table table-bordered">
                         <thead>
                             <tr>
                                 <th>Icon</th>
-                                <th>File format</th>                                
+                                <th>File format</th>
                             </tr>
                         </thead>
-                        <tbody>                            
+                        <tbody>
                             <tr>
                                 <td><span class="icon icon-download"></span></td>
                                 <td>Download</td>
@@ -202,7 +186,7 @@
                             </tr>
                         </tbody>
                     </table>
-                
+                </div>
             </div>
         </section>
         <footer>
@@ -286,8 +270,8 @@
     <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
     <script>
     /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
-                var map = L.mapbox.map('map-container', 'mapbox.streets')
-                        .setView([40, -74.50], 9);*/
+                    var map = L.mapbox.map('map-container', 'mapbox.streets')
+                            .setView([40, -74.50], 9);*/
 
     L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
     var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
