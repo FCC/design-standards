@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Geocoding - FCC GIS Design Standards</title>
+    <!--#include file="_head-maps.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Geocoding</h3>
+                <h4 id="search">Search</h4>
+                <p>The Search bar should be placed at the top of the map. It should include the following features:</p>
+                <ul>
+                    <li>Button menu to select search type (address or coordinates)</li>
+                    <li>Input text box to enter either address or coordinates</li>
+                    <li>Get Current Location button</li>
+                    <li>Reset map to Nationwide view</li>
+                </ul>             
+                <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <div class="search-field input-group">
+                        <div class="search__group">
+                            <div class="search__input">
+                                <div class="input-group">
+                                    <div class="input-group-btn">
+                                        <button aria-expanded="false" data-toggle="dropdown" class="btn btn-default dropdown-toggle" type="button"><span id="btn-label">Address</span> <span class="caret"></span></button>
+                                        <ul id="input-search-switch" role="menu" class="dropdown-menu">
+                                            <li><a href="#" data-value="loc">Address</a></li>
+                                            <li><a href="#" data-value="latlon-decimal">Coordinates</a></li>
+                                        </ul>
+                                    </div>
+                                    <input id="input-location" class="form-control ui-autocomplete-input ui-corner-all" type="search" placeholder="Enter Address" style="display: block" autocomplete="off">
+                                    <div id="input-latlon-decimal" class="form-control" type="search" placeholder="Enter Latlon decimal" style="display: none">
+                                        <table id="table-latlon-decimal">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Latitude:
+                                                        <input id="latitude" placeholder="41.234567" style="width: 150px; height: 20px; border: solid 1px #eee">
+                                                    </td>
+                                                    <td width="75"></td>
+                                                    <td>Longitude:
+                                                        <input id="longitude" placeholder="-91.234567" style="width: 150px; height: 20px; border: solid 1px #eee">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <span class="input-group-btn" id="span-location-search" style="display: table-cell">                        
+                                    <button class="btn__search btn btn-default" type="submit" id="input-loc-search" title="Location Search" data-toggle="tooltip" data-placement="top"><span class="icon icon-search"></span><span class="sr-only">Location Search</span></button>
+                                    </span>
+                                    <span class="input-group-btn" id="span-latlon-decimal-search" style="display: none">                        
+                                    <button class="btn-search btn btn-default" id="input-latlon-decimal-search" title="Decimal Latlon Search" data-toggle="tooltip" data-placement="top"><span class="icon icon-search"></span><span class="sr-only">Decimal Lat/Lon Search</span></button>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="btn__groupLoc">
+                                <span class="input-group-btn">  
+                                <button class="btn__geoLocation btn btn-default st" title="Get Current Location" data-toggle="tooltip" data-placement="top" id="btn-geoLocation" type="button" data-original-title="Get Current Location">
+                                <span class="icon icon-location-arrow"></span><span class="sr-only">Get Current Location</span></button>
+                                <button class="btn__nationLocation btn btn-default st" title="Nationwide" data-toggle="tooltip" data-placement="top" id="btn-nationLocation" type="button" data-original-title="Nationwide"><span class="icon icon-globe"></span><span class="sr-only">Nationwide</span></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map-container"></div>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="active"><a href="#ex1-html" aria-controls="home" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
+                            <li role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="ex1-html" role="tabpanel">
+                                <div class="highlight">
+                                    <!--#include file="_code-examples/_search-bar-html.shtml" -->
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-css" role="tabpanel">
+                                <div class="highlight">
+                                    <!--#include file="_code-examples/_search-bar-css.shtml" -->
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-js" role="tabpanel">
+                                <div class="highlight">
+                                    <!--#include file="_code-examples/_search-bar-js.shtml" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="/design-standards/1.x/js/geocoding.js"></script>
+    
+</body>
+
+</html>

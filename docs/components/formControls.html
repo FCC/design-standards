@@ -52,7 +52,7 @@
                         <div class="row">
                             <form role="form" class="form-horizontal col-sm-12">
                                 <div class="form-group">
-                                    <label class="col-sm-3 control-label" for="im1">SSN</label>
+                                    <label class="col-sm-3 control-label" for="im1">Phone</label>
                                     <div class="col-sm-9">
                                         <input type="text" data-inputmask="'mask': '999-99-9999', 'placeholder': 'ˍ'" id="im1" class="form-control">
                                     </div>
@@ -508,6 +508,9 @@
         <!--#include file="_footer.shtml" -->
     </div>
     <!--#include file="_scripts-footer.shtml" -->
+    <script>
+        $('[data-inputmask]').inputmask();
+    </script>
 </body>
 
 </html>
