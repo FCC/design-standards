@@ -34,8 +34,7 @@
     <!--[if lt IE 9]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">
-    <div class="jumpLinks"> <a href="#skiptarget1" class="sr-only focusable">Skip to main content</a> <a href="#skiptarget3" class="sr-only focusable">Skip to footer and contact information</a> </div>
+<header class="navbar navbar-default navbar-primary navbar-fixed-top site-header">    
     <nav role="navigation">
         <div class="navbar navbar-default navbar-primary">
             <div class="navbar-header">
@@ -53,7 +52,7 @@
                     </a>
                 </li>
             </ul>
-            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i></button>
+            <button type="button" class="nav-collapse btn btn-link"><i class="icon icon-bars"></i><span class="sr-only">Toggle sidebar</span></button>
         </div>
     </nav>
 </header>
@@ -96,10 +95,7 @@
     </li>
     <li>
         <a href="/design-standards/1.x/docs/maps/legends.html">Legends</a>
-    </li>    
-    <!-- <li>
-        <a href="#">Markers</a>
-    </li> -->
+    </li>        
     <li>
         <a href="/design-standards/1.x/docs/maps/overlays.html">Overlays</a>
     </li>
@@ -132,31 +128,19 @@
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
-    </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
-    </li> -->
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
-    </li>
-    <li>
-        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
-    </li>
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
     </li>    
@@ -257,9 +241,9 @@
                     <div id="map-container"></div>
                     <div class="docs-codeblock">
                         <ul class="nav nav-pills" role="tablist">
-                            <li role="presentation" class="active"><a href="#ex1-html" aria-controls="home" role="tab" data-toggle="tab">HTML</a></li>
-                            <li role="presentation"><a href="#ex1-css" aria-controls="profile" role="tab" data-toggle="tab">CSS</a></li>
-                            <li role="presentation"><a href="#ex1-js" aria-controls="profile" role="tab" data-toggle="tab">JS</a></li>
+                            <li role="presentation" class="active"><a href="#ex1-html" aria-controls="ex1-html" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="ex1-css" role="ex1-" data-toggle="tab">CSS</a></li>
+                            <li role="presentation"><a href="#ex1-js" aria-controls="ex1-js" role="tab" data-toggle="tab">JS</a></li>
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane active" id="ex1-html" role="tabpanel">
