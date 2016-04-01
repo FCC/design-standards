@@ -1,0 +1,173 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Legends - FCC GIS Design Standards</title>
+    <!--#include file="_head-maps.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Legends</h3>
+                <p>The map legend should be positioned at the bottom left corner of the map container. If the map layers listed in the legend can be toggled (show/hide display), then they should also appear in the layer control after the list of base layers (street, satellite, terrain).</p>
+                <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <div id="map-container">
+                        <div id="legend" class="map-legend" aria-expanded="true">
+                            <table class="table-legend">
+                                <thead>
+                                    <tr>
+                                        <th colspan="3">
+                                            <span class="icon icon-list"></span> <span class="map-legend-name">Map Legend</span>
+                                            <button class="btn-closeLegend btn btn-xs">
+                                                <span class="icon icon-remove"></span> <span class="sr-only">Hide legend</span>
+                                            </button>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="symbol" style="background-color: #3182bd;"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 50 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr class="divider">
+                                        <td>
+                                            <div class="symbol" style="background-color: #08306b;"></div>
+                                        </td>
+                                        <td> Residential Broadband of at least 100 Mbps/5 Mbps</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="symbol" style="background-image: url(/design-standards/1.x/images/legend-thumb-slash.png);"></div>
+                                        </td>
+                                        <td> Tribal land</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="symbol" style="background-image: url(/design-standards/1.x/images/legend-thumb-dot.png);"></div>
+                                        </td>
+                                        <td> Urban area</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <button id="btn-openLegend" class="btn-openLegend leaflet-control-layers">
+                            <span class="icon icon-list"></span>
+                            <span class="sr-only">Map Legend</span>
+                        </button>
+                    </div>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li class="active" role="presentation"><a href="#ex1-html" aria-controls="ex1-html" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="ex1-css" role="tab" data-toggle="tab">CSS</a></li>
+                            <li role="presentation"><a href="#ex1-js" aria-controls="ex1-js" role="tab" data-toggle="tab">JS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="ex1-html" role="tabpanel">
+                                <div class="highlight">
+                                    <!-- #include file="_code-examples/_map-legend-html.shtml" -->
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-css" role="tabpanel">
+                                <div class="highlight">
+                                    <!-- #include file="_code-examples/_map-legend-css.shtml" -->
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-js" role="tabpanel">
+                                <div class="highlight">
+                                    <!-- #include file="_code-examples/_map-legend-js.shtml" -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+    <script>
+    /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+                                            var map = L.mapbox.map('map-container', 'mapbox.streets')
+                                                    .setView([40, -74.50], 9);*/
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var geo_host = "http://www.broadbandmap.gov",
+        geo_space = "fcc";
+
+    var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
+            attributionControl: true,
+            maxZoom: 15,
+            minZoom: 3
+        })
+        .setView([38.82, -94.96], 4);
+
+    var baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map),
+        baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g'),
+        baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    var bpr_50 = L.mapbox.tileLayer('fcc.fffd995f').setZIndex(15).addTo(map);
+    var bpr_100 = L.mapbox.tileLayer('fcc.91a6e516').setZIndex(16).addTo(map);
+
+    var bpr_county_layer_urban = L.tileLayer.wms(geo_host + '/geoserver/wms', {
+        format: 'image/png',
+        transparent: true,
+        layers: geo_space + ':bpr_county_layer_urban_only',
+        styles: 'bpr_layer_urban'
+    }).setZIndex(21);
+    
+    var bpr_tribal = L.tileLayer.wms(geo_host + '/geoserver/wms', {
+        format: 'image/png',
+        transparent: true,
+        layers: geo_space + ':bpr_tribal',
+        styles: 'bpr_tribal'
+    }).setZIndex(22);
+
+    map.attributionControl.addAttribution('<a href="#void">FCC [Name of Map]</a>');
+
+    L.control.layers({
+            'Street': baseStreet,
+            'Satellite': baseSatellite,
+            'Terrain': baseTerrain
+        }, 
+        {
+           '50 Mbps/5 Mbps': bpr_50,
+           '100 Mbps/5 Mbps': bpr_100,
+           'Tribal land': bpr_tribal,
+           'Urban area': bpr_county_layer_urban 
+        },         
+        {
+            position: 'topleft'
+        }
+    ).addTo(map);
+
+    L.control.scale({
+        position: 'bottomright'
+    }).addTo(map);
+
+    $('.btn-closeLegend').on("click", function(e) {
+        $('#legend')
+            .hide('fast')
+            .attr('aria-expanded', false);
+
+    });
+
+    $('#btn-openLegend').on("click", function(e) {
+        $('#legend')
+            .show('fast')
+            .attr('aria-expanded', true);
+    });
+    </script>
+</body>
+
+</html>

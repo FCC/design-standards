@@ -18,10 +18,28 @@
     <li>
         <a href="/design-standards/1.x/docs/foundation/typography.html"> Typography </a>
     </li>
+    
     <li class="category">Maps</li>
     <li>
-        <a href="/design-standards/1.x/docs/maps/maps.html">Anatomy of a map</a>
+        <a href="/design-standards/1.x/docs/maps/basemaps.html">Base maps</a>
     </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/controls.html">Controls</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/downloads.html">Downloads</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/geocoding.html">Geocoding</a>
+    </li>
+    <li>
+        <a href="/design-standards/1.x/docs/maps/legends.html">Legends</a>
+    </li>        
+    <li>
+        <a href="/design-standards/1.x/docs/maps/overlays.html">Overlays</a>
+    </li>
+
+
     <li class="category">components</li>
     <li>
         <a href="/design-standards/1.x/docs/components/alerts.html"> Alerts and notifications </a>
@@ -49,31 +67,19 @@
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/menus.html"> Menus </a>
-    </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/metadata.html"> Metadata </a>
-    </li> -->
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/pagination.html"> Pagination </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/popovers.html"> Popovers </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/progressBars.html"> Progress and loading </a>
-    </li>
-    <li>
-        <a href="/design-standards/1.x/docs/components/stepIndicators.html"> Step indicators </a>
-    </li>
+    </li>    
     <li>
         <a href="/design-standards/1.x/docs/components/tables.html"> Tables </a>
     </li>
     <li>
         <a href="/design-standards/1.x/docs/components/tabs.html"> Tabs </a>
     </li>
-    <!-- <li>
-        <a href="/design-standards/1.x/docs/components/tags.html"> Tags </a>
-    </li> -->
     <li>
         <a href="/design-standards/1.x/docs/components/tooltips.html"> Tooltips </a>
     </li>    

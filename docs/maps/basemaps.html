@@ -1,0 +1,128 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Base Maps - FCC GIS Design Standards</title>
+    <!--#include file="_head-maps.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Base map</h3>
+                <p>A base map should include the following three layers:</p>
+                <ul>
+                    <li>street (default)</li>
+                    <li>satellite</li>
+                    <li>terrain</li>
+                </ul>
+                <p>Add a layers button to allow users to switch between the different layers. The layer options should display when the user hovers the cursor over the button.</p>
+                <div class="clearfix" style="display: inline-block; vertical-align: top;">
+                    <div class="leaflet-control-zoom leaflet-bar leaflet-control layers">
+                        <a class="leaflet-control-layers-toggle" href="#" title="Layers"><span class="sr-only">Layers</span></a>
+                    </div>
+                </div>
+                <img src="/design-standards/1.x/images/layers-menu-ex.png" alt="Layers menu" title="Layers menu">
+                <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <div id="map-container"></div>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation"><a href="#ex1-html" aria-controls="ex1-html" role="tab" data-toggle="tab">HTML</a></li>
+                            <li role="presentation"><a href="#ex1-css" aria-controls="ex1-css" role="tab" data-toggle="tab">CSS</a></li>
+                            <li class="active" role="presentation"><a href="#ex1-js" aria-controls="ex1-js" role="tab" data-toggle="tab">JS</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane" id="ex1-html" role="tabpanel">
+                                <div class="highlight">
+                                    <pre class="language-markup">
+<code>&lt;div id="map-container"&gt;&lt;/div&gt;</code>
+</pre>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="ex1-css" role="tabpanel">
+                                <div class="highlight">
+                                    <pre class="language-css">
+<code>#map-container { 
+  height: 400px; 
+  width:100%; 
+}</code>
+</pre>
+                                </div>
+                            </div>
+                            <div class="tab-pane active" id="ex1-js" role="tabpanel">
+                                <div class="highlight">
+                                    <pre class="language-js">
+<code>/* Define base layers */
+var baseStreet = L.mapbox.tileLayer(streetLayerURL),
+    baseSatellite = L.mapbox.tileLayer(satelliteLayerURL),
+    baseTerrain = L.mapbox.tileLayer(terrainLayerURL),
+
+/* Add layers toggle button and layer switch */
+L.control.layers({
+        'Street': baseStreet,
+        'Satellite': baseSatellite,
+        'Terrain': baseTerrain
+    }, 
+    null, 
+    {
+        position: 'topleft'
+    }
+).addTo(map);
+</code>
+
+                                </pre>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+    <script>
+    /*L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+                        var map = L.mapbox.map('map-container', 'mapbox.streets')
+                                .setView([40, -74.50], 9);*/
+
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
+            attributionControl: true,
+            maxZoom: 15,
+            minZoom: 3
+        })
+        .setView([38.82, -94.96], 4);
+
+    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge');
+    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
+    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    map.attributionControl.addAttribution('<a href="#void">FCC - Base map example</a>');
+
+    L.control.layers({
+            'Street': baseStreet,
+            'Satellite': baseSatellite,
+            'Terrain': baseTerrain
+        }, 
+        null,
+        {
+            position: 'topleft'
+        }
+    ).addTo(map);
+
+    L.control.scale({
+        position: 'bottomright'
+    }).addTo(map);
+    </script>
+</body>
+
+</html>

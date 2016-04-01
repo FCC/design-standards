@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Overlays - FCC GIS Design Standards</title>
+    <!--#include file="_head-maps.shtml" -->
+</head>
+
+<body>
+    <!--#include file="_header.shtml" -->
+    <div class="pl-container">
+        <nav class="docs-sidebar">
+            <!--#include file="_sidebar.shtml" -->
+        </nav>
+        <section class="pl-content">
+            <div class="pl-pattern">
+                <h3>Overlays</h3>
+                <p>Overlays can consist of any combination of polygons, lines, and points.</p>
+                <ul>
+                    <li>Polygon fills can be solid, transparent, or semi-transparent. A variety of fill patterns (such as diagnols or dots) or images can also be used.</li>
+                    <li>Line thickness should vary based on zoom level. As the map is zoomed out lines should become thinner and as the map is zoomed in lines should become thicker.</li>
+                    <li>Points can be displayed a markers, images, or circles.</li>
+                </ul>
+                <div class="pl-preview">
+                    <h5 class="docs-hd-example">Example &amp; Code</h5>
+                    <div id="map-container"></div>
+                    <div class="docs-codeblock">
+                        <ul class="nav nav-pills" role="tablist">
+                            <li role="presentation" class="active"><a href="#ex1-js" aria-controls="ex1-js" role="tab" data-toggle="tab">JS</a></li>
+                            <li role="presentation"><a href="#ex1-json" aria-controls="ex1-json" role="tab" data-toggle="tab">GeoJSON</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="ex1-js" class="tab-pane active" role="tabpanel">
+                                <!-- #include file="_code-examples/_map-overlay-js.shtml" -->
+                            </div>
+                            <div id="ex1-json" class="tab-pane" role="tabpanel">
+                                <!-- #include file="_code-examples/_map-overlay-json.shtml" -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--#include file="_footer.shtml" -->
+    </div>
+    <!--#include file="_scripts-footer.shtml" -->
+    <script src="https://api.tiles.mapbox.com/mapbox.js/v2.3.0/mapbox.js"></script>
+    <script src="/design-standards/1.x/js/ex-overlays-data.js"></script>
+    <script>
+    L.mapbox.accessToken = 'pk.eyJ1IjoiY29tcHV0ZWNoIiwiYSI6InMyblMya3cifQ.P8yppesHki5qMyxTc2CNLg';
+    var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
+            attributionControl: true,
+            maxZoom: 18,
+            minZoom: 3
+        })
+        .setView([38.889465, -76.998437], 17);
+
+    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
+    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
+    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+
+    L.control.layers({
+            'Street': baseStreet.addTo(map),
+            'Satellite': baseSatellite,
+            'Terrain': baseTerrain
+        },
+        null, {
+            position: 'topleft'
+        }
+    ).addTo(map);
+
+    L.control.scale({
+        position: 'bottomright'
+    }).addTo(map);
+
+    function popup(feature, layer) {
+        var popupContent = '<p>Latitude: ' + feature.geometry.coordinates[1] + ' </p><p>Longitude: ' + feature.geometry.coordinates[0] + '</p>';
+
+        if (feature.properties && feature.properties.popupContent) {
+            popupContent += feature.properties.popupContent;
+        }
+
+        layer.bindPopup(popupContent);
+    }
+
+
+    L.geoJson(commonFeatures, {
+        style: function(feature) {
+            return feature.properties;
+        }
+    }).addTo(map);
+
+    L.geoJson(polygonFill, {
+        style: function(feature) {
+            return feature.properties;
+        }
+    }).addTo(map);
+
+    var thinLine = L.geoJson(thinLine, {
+        style: L.mapbox.simplestyle.style
+    }).addTo(map);
+
+
+    var thickLine = L.geoJson(thickLine, {
+        style: L.mapbox.simplestyle.style
+    }).addTo(map);
+
+    map.on('zoomend', function() {
+        var zoomLevel = map.getZoom(),
+            weight = 1;
+
+        if (zoomLevel > 16) {
+            weight = 10;
+        } else if (zoomLevel === 16) {
+            weight = 7;
+        } else if (zoomLevel === 15){
+            weight = 4;
+        } else if (zoomLevel < 14) {
+            weight = 1;
+        }
+
+        thickLine.setStyle({
+            weight: weight
+        });
+
+        thinLine.setStyle({
+            weight: zoomLevel <= 16 ? 2 : 5
+        })
+    });
+
+    L.geoJson(defaultMarker, {
+        style: function(feature) {
+            return feature.properties;
+        },
+        onEachFeature: popup
+
+    }).addTo(map);
+
+    L.geoJson(customMarker, {
+        pointToLayer: function(feature, latlng) {
+            return L.marker(latlng, {
+                icon: customIcon
+            });
+        },
+        style: function(feature) {
+            return feature.properties;
+        },
+        onEachFeature: popup
+
+    }).addTo(map);
+
+    L.geoJson(circlePointer, {
+        style: function(feature) {
+            return feature.properties && feature.properties.style;
+        },
+        onEachFeature: popup,
+        pointToLayer: function(feature, latlng) {
+            return L.circleMarker(latlng, {
+                radius: 8,
+                fillColor: "#00ff00",
+                color: "#00ff00",
+                weight: 1,
+                opacity: 1,
+                fillOpacity: 0.8
+            });
+        }
+    }).addTo(map);
+    </script>
+</body>
+
+</html>
