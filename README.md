@@ -1,7 +1,7 @@
 
 # FCC Design Standards
 
-FCC Design Standards were originally created for the FCC GIS Program to maintain a consistent user experience across maps, visualizations, and other applications. The Design Standards cover foundational styles, individual components, and complex patterns. They define how interactions behave, what they look like, and how they could be implemented.
+FCC Design Standards were originally created to maintain a consistent user experience across maps, visualizations, and other applications. The Design Standards cover foundational styles, individual components, and complex patterns. They define how interactions behave, what they look like, and how they could be implemented.
 Supporting files
 
 ![Alt text](/1.x/images/ex-page-01.png?raw=true "FCC Design Standards Screenshot")
