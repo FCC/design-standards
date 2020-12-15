@@ -56,9 +56,15 @@
         })
         .setView([38.889465, -76.998437], 17);
 
-    baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
-    baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
-    baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+//     baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map);
+//     baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g');
+//     baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+        
+ baseStreet = L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10').addTo(map);
+ baseSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v11');
+ baseTerrain = L.mapbox.styleLayer('mapbox://styles/mapbox/outdoors-v10');      
+        
+        
 
     L.control.layers({
             'Street': baseStreet.addTo(map),
