@@ -431,9 +431,9 @@ $('#btn-openLegend').on("click", function(e) {
         })
         .setView([38.82, -94.96], 4);
 
-    var baseStreet = L.mapbox.tileLayer('fcc.k74ed5ge').addTo(map),
-        baseSatellite = L.mapbox.tileLayer('fcc.k74d7n0g'),
-        baseTerrain = L.mapbox.tileLayer('fcc.k74cm3ol');
+    var baseStreet = L.mapbox.styleLayer('mapbox://styles/mapbox/light-v10').addTo(map),
+        baseSatellite = L.mapbox.styleLayer('mapbox://styles/mapbox/satellite-streets-v11'),
+        baseTerrain = L.mapbox.styleLayer('mapbox://styles/mapbox/outdoors-v10');
 
     var bpr_50 = L.mapbox.tileLayer('fcc.fffd995f').setZIndex(15).addTo(map);
     var bpr_100 = L.mapbox.tileLayer('fcc.91a6e516').setZIndex(16).addTo(map);
