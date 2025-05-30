@@ -1,4 +1,4 @@
-L.mapbox.accessToken = 'pk.eyJ1IjoiZmNjIiwiYSI6InBiaGMyLU0ifQ.LOmVYpUCFv2yWpbvxDdQNg';
+L.mapbox.accessToken = 'pk.eyJ1IjoiZmNjIiwiYSI6ImNtYmIxMWYxOTFmMjQyanEwcXMzZ2ptZjgifQ.QwL9YqsqopFfsNKEu7BOtQ';
 var map = L.mapbox.map('map-container', 'fcc.k74ed5ge', {
         attributionControl: true,
         maxZoom: 15,
